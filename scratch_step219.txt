@@ -1,0 +1,863 @@
+<USER_REQUEST>
+design a page for this {
+  "project": {
+    "name": "Kenya Built Environment Bill Viewer",
+    "type": "Interactive Legislative Document Viewer",
+    "jurisdiction": "Kenya",
+    "purpose": "Create an interactive viewer for the proposed Kenya Built Environment Professions and Practice Bill.",
+    "core_instruction": "Assume the Bill has already been created and its structure and substantive policy are fixed. The application is not responsible for creating, rewriting or changing the Bill. Its purpose is to present, explain, navigate, analyse and explore the Bill."
+  },
+
+  "viewer_principle": {
+    "primary_goal": "Make a complex Kenyan Bill understandable to lawyers, professionals, policymakers, Parliament, regulators, stakeholders and ordinary citizens.",
+    "secondary_goal": "Allow users to move seamlessly between the actual legislative text and a plain-language explanation and analysis of each provision.",
+    "important_rule": "The viewer must distinguish clearly between the actual Bill text and explanatory analysis.",
+    "content_integrity": "The Bill text must never be silently modified by the viewer."
+  },
+
+  "bill": {
+    "title": "THE BUILT ENVIRONMENT PROFESSIONS AND PRACTICE BILL, 2026",
+
+    "long_title": "A Bill for an Act of Parliament to provide for the regulation, registration and practice of built environment professions; to establish a framework for coordination of built environment professional regulators; to protect the public interest in the planning, design, construction, alteration, operation and maintenance of the built environment; to provide for competency-based registration, professional practice, continuing professional development, professional indemnity insurance, professional conduct and discipline; to promote safety, accessibility, sustainability, innovation and accountability in the built environment; and for connected purposes.",
+
+    "status": "Proposed Bill",
+
+    "bill_structure": [
+      {
+        "part": "PART I",
+        "title": "PRELIMINARY",
+        "sections": [
+          "Short title",
+          "Interpretation",
+          "Objects of the Act",
+          "Guiding principles",
+          "Application and relationship with other written laws"
+        ]
+      },
+      {
+        "part": "PART II",
+        "title": "KENYA BUILT ENVIRONMENT REGULATORY COUNCIL",
+        "sections": [
+          "Establishment of the Council",
+          "Legal status",
+          "Functions",
+          "Independence",
+          "Composition",
+          "Appointment and tenure",
+          "Qualifications and disqualifications",
+          "Committees",
+          "Chief Executive/Registrar",
+          "Conflict of interest",
+          "Public accountability",
+          "Annual reporting"
+        ]
+      },
+      {
+        "part": "PART III",
+        "title": "REGULATED BUILT ENVIRONMENT PROFESSIONS",
+        "sections": [
+          "Designation of professions",
+          "Recognition of existing statutory professional regulators",
+          "Profession-specific regulatory autonomy",
+          "Recognition of new professions",
+          "Relationship between umbrella Council and profession regulators"
+        ]
+      },
+      {
+        "part": "PART IV",
+        "title": "REGISTRATION AND PROFESSIONAL CATEGORIES",
+        "sections": [
+          "Requirement for registration",
+          "Categories of registration",
+          "Student registration",
+          "Graduate/Candidate registration",
+          "Technician registration",
+          "Technologist registration",
+          "Professional registration",
+          "Specialist registration",
+          "Temporary and foreign registration",
+          "Competency-based registration",
+          "Education and qualification requirements",
+          "Practical experience",
+          "Professional examinations",
+          "Recognition of prior learning",
+          "Recognition of foreign qualifications",
+          "Application for registration",
+          "Registration decisions",
+          "Suspension and cancellation of registration",
+          "Restoration of registration"
+        ]
+      },
+      {
+        "part": "PART V",
+        "title": "PROFESSIONAL REGISTER AND DIGITAL VERIFICATION",
+        "sections": [
+          "Establishment of national professional register",
+          "Information contained in register",
+          "Public access",
+          "Digital verification",
+          "Digital certificates",
+          "Data protection",
+          "Correction of information",
+          "Audit trails"
+        ]
+      },
+      {
+        "part": "PART VI",
+        "title": "PRACTISING CERTIFICATES AND CONTINUING PROFESSIONAL DEVELOPMENT",
+        "sections": [
+          "Requirement for practising certificate",
+          "Application",
+          "Conditions",
+          "Validity",
+          "Renewal",
+          "Continuing professional development",
+          "CPD compliance",
+          "Professional indemnity insurance",
+          "Suspension and non-renewal"
+        ]
+      },
+      {
+        "part": "PART VII",
+        "title": "REGISTRATION AND REGULATION OF PROFESSIONAL FIRMS",
+        "sections": [
+          "Requirement for firm registration",
+          "Eligibility of firms",
+          "Responsible professional",
+          "Multidisciplinary firms",
+          "Foreign firms",
+          "Joint ventures",
+          "Professional independence",
+          "Quality management",
+          "Professional records",
+          "Professional indemnity insurance"
+        ]
+      },
+      {
+        "part": "PART VIII",
+        "title": "COMPETENCY AND SCOPE OF PROFESSIONAL WORK",
+        "sections": [
+          "Competency framework",
+          "Risk-based regulation",
+          "Risk classification",
+          "Reserved professional work",
+          "Technician and technologist scope",
+          "Professional scope",
+          "Specialist scope",
+          "Supervision",
+          "Delegation",
+          "Independent checking",
+          "Peer review",
+          "Multidisciplinary projects",
+          "Digital and BIM practice"
+        ]
+      },
+      {
+        "part": "PART IX",
+        "title": "PROFESSIONAL CONDUCT AND ETHICS",
+        "sections": [
+          "Code of professional conduct",
+          "Public interest",
+          "Competence",
+          "Professional independence",
+          "Conflicts of interest",
+          "Confidentiality",
+          "Client duties",
+          "Advertising",
+          "Misrepresentation",
+          "Environmental responsibility",
+          "Accessibility",
+          "Professional records",
+          "Duty concerning serious public safety risks"
+        ]
+      },
+      {
+        "part": "PART X",
+        "title": "CONSUMER PROTECTION AND PROFESSIONAL SERVICES",
+        "sections": [
+          "Written terms of engagement",
+          "Minimum client information",
+          "Scope of services",
+          "Fees and payment terms",
+          "Client documents",
+          "Complaints",
+          "Alternative dispute resolution",
+          "Professional insurance information",
+          "Consumer awareness"
+        ]
+      },
+      {
+        "part": "PART XI",
+        "title": "COMPLAINTS, INVESTIGATION AND DISCIPLINE",
+        "sections": [
+          "Right to complain",
+          "Receipt and assessment of complaints",
+          "Investigation",
+          "Investigatory powers",
+          "Notice of allegations",
+          "Disciplinary Committee",
+          "Fair hearing",
+          "Evidence",
+          "Decisions",
+          "Sanctions",
+          "Interim measures",
+          "Appeals",
+          "Restoration and reinstatement"
+        ]
+      },
+      {
+        "part": "PART XII",
+        "title": "OFFENCES AND ENFORCEMENT",
+        "sections": [
+          "Unlawful practice",
+          "Masquerading",
+          "False representation",
+          "False registration documents",
+          "Unauthorised use of professional titles",
+          "False certification",
+          "Corporate offences",
+          "Obstruction",
+          "Penalties",
+          "Continuing offences"
+        ]
+      },
+      {
+        "part": "PART XIII",
+        "title": "EDUCATION, TRAINING, COMPETENCE AND RESEARCH",
+        "sections": [
+          "Accreditation",
+          "Competency standards",
+          "Professional education",
+          "Practical training",
+          "Professional examinations",
+          "Continuing professional development",
+          "Research",
+          "Innovation",
+          "Indigenous knowledge",
+          "Emerging technologies"
+        ]
+      },
+      {
+        "part": "PART XIV",
+        "title": "BUILT ENVIRONMENT, SAFETY, ACCESSIBILITY AND SUSTAINABILITY",
+        "sections": [
+          "Public safety",
+          "Building and life safety",
+          "Accessibility",
+          "Universal design",
+          "Environmental responsibility",
+          "Climate resilience",
+          "Sustainable development",
+          "Disaster resilience",
+          "Energy and resource efficiency"
+        ]
+      },
+      {
+        "part": "PART XV",
+        "title": "RELATIONSHIP WITH NATIONAL AND COUNTY GOVERNMENT",
+        "sections": [
+          "National professional regulation",
+          "County development control",
+          "Information sharing",
+          "Professional verification for approvals",
+          "Coordination mechanisms",
+          "Avoidance of duplication",
+          "Intergovernmental cooperation"
+        ]
+      },
+      {
+        "part": "PART XVI",
+        "title": "GOVERNANCE, FINANCE AND ACCOUNTABILITY",
+        "sections": [
+          "Funds",
+          "Fees",
+          "Financial management",
+          "Audit",
+          "Annual reports",
+          "Performance reporting",
+          "Public accountability",
+          "Parliamentary oversight"
+        ]
+      },
+      {
+        "part": "PART XVII",
+        "title": "REGULATIONS, STANDARDS AND DELEGATED LEGISLATION",
+        "sections": [
+          "Power to make regulations",
+          "Standards",
+          "Consultation",
+          "Public participation",
+          "Publication",
+          "Review",
+          "Limits on delegated powers"
+        ]
+      },
+      {
+        "part": "PART XVIII",
+        "title": "TRANSITIONAL AND CONSEQUENTIAL PROVISIONS",
+        "sections": [
+          "Existing registrations",
+          "Existing practising certificates",
+          "Existing professionals",
+          "Existing technicians and technologists",
+          "Existing firms",
+          "Existing examinations",
+          "Existing disciplinary matters",
+          "Existing regulations",
+          "Transitional licences",
+          "Repeal of Cap. 525",
+          "Consequential amendments",
+          "Savings provisions",
+          "Review of Act"
+        ]
+      }
+    ],
+
+    "schedules": [
+      "First Schedule — Governance and composition",
+      "Second Schedule — Registration categories",
+      "Third Schedule — Competency framework",
+      "Fourth Schedule — Risk classification",
+      "Fifth Schedule — Code of professional conduct",
+      "Sixth Schedule — Transitional arrangements",
+      "Seventh Schedule — Consequential amendments",
+      "Eighth Schedule — Repeals"
+    ]
+  },
+
+  "viewer_layout": {
+    "desktop": {
+      "left_sidebar": "Bill structure/navigation",
+      "main_content": "Bill text",
+      "right_sidebar": "Section analysis"
+    },
+
+    "mobile": {
+      "navigation": "Collapsible Bill structure",
+      "content": "Bill text",
+      "analysis": "Slide-up or tabbed analysis panel"
+    }
+  },
+
+  "home_screen": {
+    "title": "Kenya Built Environment Professions and Practice Bill, 2026",
+
+    "show": [
+      "Bill status",
+      "Long title",
+      "Number of Parts",
+      "Number of sections",
+      "Number of schedules",
+      "Core objectives",
+      "Key reforms",
+      "Quick navigation"
+    ],
+
+    "key_reforms": [
+      "Modern built-environment regulatory framework",
+      "Risk-based professional regulation",
+      "Competency-based registration",
+      "Technician and technologist recognition",
+      "Professional firm regulation",
+      "Digital professional register",
+      "Consumer protection",
+      "Professional discipline",
+      "Accessibility",
+      "Climate resilience",
+      "Sustainability",
+      "Multidisciplinary practice",
+      "Modern digital/BIM practice",
+      "National-county coordination"
+    ]
+  },
+
+  "bill_navigation": {
+    "sidebar": {
+      "show": [
+        "Part number",
+        "Part title",
+        "Section numbers",
+        "Section titles"
+      ],
+      "behaviour": [
+        "Expandable Parts",
+        "Clickable sections",
+        "Current-section highlighting",
+        "Search within Bill",
+        "Remember last position"
+      ]
+    },
+
+    "navigation_actions": [
+      "Previous section",
+      "Next section",
+      "Previous Part",
+      "Next Part",
+      "Jump to section",
+      "Jump to schedule",
+      "Return to top"
+    ]
+  },
+
+  "bill_text_view": {
+    "purpose": "Display the actual legislative text in a formal legislative-document style.",
+
+    "formatting": {
+      "part_heading": "Large formal heading",
+      "section_number": "Prominent section number",
+      "section_title": "Bold legislative heading",
+      "subsections": "Indented numbered provisions",
+      "paragraphs": "Standard legislative formatting",
+      "definitions": "Highlight defined terms",
+      "cross_references": "Clickable"
+    },
+
+    "controls": [
+      "Increase text size",
+      "Decrease text size",
+      "Toggle plain reading mode",
+      "Print",
+      "Export",
+      "Copy citation",
+      "Bookmark section"
+    ]
+  },
+
+  "section_analysis": {
+    "display_when": "User selects a section",
+
+    "tabs": [
+      {
+        "name": "Overview",
+        "content": [
+          "What this section does",
+          "Why it exists",
+          "Plain-English explanation"
+        ]
+      },
+      {
+        "name": "Policy",
+        "content": [
+          "Policy objective",
+          "Problem being addressed",
+          "Expected outcome"
+        ]
+      },
+      {
+        "name": "Legal Context",
+        "content": [
+          "Relationship to Cap. 525",
+          "Relationship to other Kenyan legislation",
+          "Cross-references"
+        ]
+      },
+      {
+        "name": "Constitution",
+        "content": [
+          "Relevant constitutional principles",
+          "Potential constitutional considerations"
+        ]
+      },
+      {
+        "name": "Comparative",
+        "content": [
+          "International approaches",
+          "Relevant best practices"
+        ]
+      },
+      {
+        "name": "Impact",
+        "content": [
+          "Professionals",
+          "Consumers",
+          "Government",
+          "Counties",
+          "Businesses",
+          "Public safety"
+        ]
+      },
+      {
+        "name": "Red Team",
+        "content": [
+          "Potential loopholes",
+          "Potential abuse",
+          "Potential unintended consequences",
+          "Potential objections"
+        ]
+      }
+    ]
+  },
+
+  "part_overview": {
+    "when_selected": "Show a dedicated overview page for the selected Part.",
+
+    "display": [
+      "Part title",
+      "Purpose",
+      "Why this Part exists",
+      "Sections contained within it",
+      "Major reforms",
+      "How it connects to other Parts",
+      "Key stakeholders affected",
+      "Potential controversies",
+      "Implementation considerations"
+    ]
+  },
+
+  "bill_map": {
+    "feature": "Visual map of the entire Bill",
+
+    "show_relationships": [
+      "Institutions",
+      "Registration",
+      "Professional practice",
+      "Firms",
+      "Competency",
+      "Ethics",
+      "Consumer protection",
+      "Discipline",
+      "Enforcement",
+      "Education",
+      "Safety",
+      "Sustainability",
+      "County government",
+      "Digital regulation",
+      "Transition"
+    ],
+
+    "interaction": "Clicking an element opens the relevant Part and sections."
+  },
+
+  "search": {
+    "global_search": true,
+
+    "search_targets": [
+      "Section numbers",
+      "Section titles",
+      "Legislative text",
+      "Defined terms",
+      "Institutions",
+      "Professions",
+      "Offences",
+      "Penalties",
+      "Regulations",
+      "Concepts"
+    ],
+
+    "results": {
+      "show": [
+        "Section number",
+        "Section title",
+        "Matching text",
+        "Part",
+        "Relevance"
+      ]
+    }
+  },
+
+  "cross_reference_system": {
+    "purpose": "Allow users to understand how provisions interact.",
+
+    "features": [
+      "Clickable section references",
+      "Backlinks",
+      "Related provisions",
+      "Definitions used by section",
+      "Sections depending on selected section",
+      "Schedules connected to section"
+    ]
+  },
+
+  "definitions_view": {
+    "purpose": "Create a dedicated dictionary of terms defined in the Bill.",
+
+    "features": [
+      "Alphabetical list",
+      "Search",
+      "Definition",
+      "Sections using the term",
+      "Related terms",
+      "Clickable references"
+    ]
+  },
+
+  "schedule_view": {
+    "show": [
+      "Schedule number",
+      "Schedule title",
+      "Full schedule text",
+      "Sections linked to schedule",
+      "Plain-language explanation"
+    ]
+  },
+
+  "comparison_mode": {
+    "purpose": "Allow users to compare the proposed Bill with previous regulatory frameworks.",
+
+    "comparison_documents": [
+      "Proposed Bill",
+      "Cap. 525",
+      "Architects Bill 2026",
+      "Quantity Surveyors Bill 2026"
+    ],
+
+    "display": [
+      "Side-by-side provisions",
+      "New provisions",
+      "Removed provisions",
+      "Changed provisions",
+      "Unchanged concepts"
+    ],
+
+    "important_rule": "Comparison is explanatory only and must not alter the proposed Bill."
+  },
+
+  "analysis_dashboard": {
+    "purpose": "Give users a high-level understanding of the Bill.",
+
+    "categories": [
+      "Public protection",
+      "Professional regulation",
+      "Consumer protection",
+      "Safety",
+      "Digital regulation",
+      "Sustainability",
+      "Accessibility",
+      "Competition",
+      "County government",
+      "Education",
+      "Discipline",
+      "Enforcement"
+    ],
+
+    "visualisations": [
+      "Bill structure map",
+      "Regulatory architecture",
+      "Professional registration pathway",
+      "Disciplinary pathway",
+      "Risk-based regulation pathway",
+      "Institutional relationship map"
+    ]
+  },
+
+  "professional_registration_view": {
+    "feature": "Interactive explanation of the proposed professional registration system.",
+
+    "show": [
+      "Student",
+      "Graduate/Candidate",
+      "Technician",
+      "Technologist",
+      "Professional",
+      "Specialist",
+      "Temporary/Foreign Practitioner"
+    ],
+
+    "for_each_category": [
+      "Who qualifies",
+      "Required education",
+      "Experience",
+      "Assessment",
+      "Permitted scope",
+      "Supervision",
+      "Progression pathway"
+    ]
+  },
+
+  "risk_based_regulation_view": {
+    "feature": "Interactive explanation of how risk determines professional requirements.",
+
+    "show": [
+      "Low-risk projects",
+      "Ordinary projects",
+      "Complex projects",
+      "High-consequence projects"
+    ],
+
+    "for_each_level": [
+      "Typical projects",
+      "Required competence",
+      "Professional involvement",
+      "Supervision",
+      "Independent checking",
+      "Peer review",
+      "Insurance"
+    ]
+  },
+
+  "user_modes": {
+    "general_public": {
+      "description": "Simplified explanations",
+      "features": [
+        "Plain English",
+        "Bill summary",
+        "What this means for citizens",
+        "Why the law matters"
+      ]
+    },
+
+    "professional": {
+      "description": "Detailed professional analysis",
+      "features": [
+        "Scope of practice",
+        "Registration",
+        "CPD",
+        "Firm requirements",
+        "Discipline",
+        "Professional obligations"
+      ]
+    },
+
+    "lawyer": {
+      "description": "Detailed legal view",
+      "features": [
+        "Definitions",
+        "Cross-references",
+        "Constitutional issues",
+        "Legal interactions",
+        "Consequential amendments",
+        "Drafting notes"
+      ]
+    },
+
+    "policymaker": {
+      "description": "Policy and implementation view",
+      "features": [
+        "Objectives",
+        "Impacts",
+        "Institutional architecture",
+        "Implementation",
+        "Stakeholder implications"
+      ]
+    }
+  },
+
+  "citation_and_source_system": {
+    "principle": "Every explanatory analysis must be traceable to its source.",
+    "source_types": [
+      "Bill text",
+      "Kenyan legislation",
+      "Constitution",
+      "Regulations",
+      "Case law",
+      "Official policy documents",
+      "International legislation",
+      "Research"
+    ],
+
+    "display": [
+      "Source title",
+      "Source type",
+      "Relevant provision",
+      "Link where available"
+    ]
+  },
+
+  "version_control": {
+    "feature": true,
+
+    "show": [
+      "Bill version",
+      "Date",
+      "Changes",
+      "Amendments",
+      "Previous version",
+      "Current version"
+    ],
+
+    "future_ready": true
+  },
+
+  "export": {
+    "formats": [
+      "PDF",
+      "Word",
+      "Plain text",
+      "Structured JSON"
+    ],
+
+    "export_options": [
+      "Full Bill",
+      "Selected Part",
+      "Selected section",
+      "Bill plus analysis",
+      "Plain-language version",
+      "Comparison report"
+    ]
+  },
+
+  "user_actions": [
+    "Read Bill",
+    "Search Bill",
+    "Explore structure",
+    "Open section analysis",
+    "Compare provisions",
+    "View definitions",
+    "View schedules",
+    "Bookmark provision",
+    "Share provision",
+    "Copy citation",
+    "Print",
+    "Export",
+    "View regulatory map"
+  ],
+
+  "design_direction": {
+    "style": "Professional Kenyan legislative technology platform",
+    "visual_character": [
+      "Clean",
+      "Authoritative",
+      "Modern",
+      "Trustworthy",
+      "Readable",
+      "Institutional",
+      "Accessible"
+    ],
+
+    "avoid": [
+      "Overly decorative design",
+      "Government website clutter",
+      "Excessive animations",
+      "Ambiguous icons",
+      "Crowded layouts",
+      "Chatbot-first interface"
+    ],
+
+    "priority": "Content readability and navigation are more important than visual decoration."
+  },
+
+  "critical_rule": {
+    "statement": "The viewer is a presentation and analysis layer around the proposed Bill.",
+    "never_do": [
+      "Do not rewrite the Bill automatically.",
+      "Do not alter legislative text when generating explanations.",
+      "Do not silently add provisions.",
+      "Do not remove provisions.",
+      "Do not present analysis as legislation.",
+      "Do not confuse existing Kenyan law with the proposed Bill."
+    ]
+  },
+
+  "final_experience": {
+    "user_should_be_able_to": [
+      "Understand the entire Bill in minutes.",
+      "Navigate directly to any Part or section.",
+      "Read the exact legislative wording.",
+      "Understand every section in plain English.",
+      "See why every section exists.",
+      "Understand the policy behind every provision.",
+      "See how sections connect to one another.",
+      "Explore definitions and schedules.",
+      "Understand the professional registration system.",
+      "Understand the risk-based regulatory system.",
+      "See the impact on professionals, consumers and government.",
+      "Compare the proposed framework with existing legislation.",
+      "Identify potentially controversial provisions.",
+      "Export and share the Bill."
+    ]
+  }
+}
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-08-14T14:30:32+03:00.
+</ADDITIONAL_METADATA>
