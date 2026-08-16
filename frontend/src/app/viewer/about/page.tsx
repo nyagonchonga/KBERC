@@ -184,6 +184,29 @@ export default function AboutPage() {
     }
   ];
 
+  const statutoryParts = [
+    { num: "PART I", label: "Preliminary (Sections 1–3)", scope: "Short title, commencement date, statutory definitions, objects of the Act, and overarching public-safety principles." },
+    { num: "PART II", label: "Establishment of KBERC Council (Sections 4–15)", scope: "Statutory incorporation of the Kenya Built Environment Regulatory Council, Apex Council constitution, and secretariat." },
+    { num: "PART III", label: "Professional Boards & Discipline Colleges (Sections 16–23)", scope: "Establishment of 8 Professional Colleges (Architects, Engineers, QSs, Planners, LA, ID, CPM, TVET Technologists)." },
+    { num: "PART IV", label: "Registration of Lead Professionals & Cadres (Sections 24–44)", scope: "Qualification criteria, 3-year logbooks, TVET indexing, candidate examinations, and foreign practitioner JVs." },
+    { num: "PART V", label: "Practicing Certificates & Digital QR Seals (Sections 45–54)", scope: "Annual practicing licensing, mandatory 50 CPD points, cryptographically verifiable Digital QR Seals (Sec 57)." },
+    { num: "PART VI", label: "Regulation of Consultancies & Consortia (Sections 55–64)", scope: "51% local equity mandates, multidisciplinary consortium accreditation, and KES 50M-200M Professional Indemnity Insurance." },
+    { num: "PART VII", label: "Building Control & Site Inspection Gates (Sections 65–85)", scope: "Eurocode Building Risk Classification (Classes A–E), mandatory stage inspections, and Forms KBERC-1 to 6." },
+    { num: "PART VIII", label: "Structural Safety Audits & Peer Reviews (Sections 86–102)", scope: "Dual independent structural peer reviews for high-rises (Sec 89), geotechnical audits, and structural safety sign-offs." },
+    { num: "Part IX", label: "Consumer Protection & Defect Liability Allocations (Sections 103–120)", scope: "Gazetted scale of minimum fees, client escrow protections, and 10-Year Statutory Defect Liability Allocation (Schedule 11)." },
+    { num: "PART X", label: "Built Environment Appeals Tribunal - BEAT (Sections 121–135)", scope: "60-day appellate hearing rules, tribunal quorum, filing fees, and High Court referral procedure." },
+    { num: "PART XI", label: "Financial Provisions & Emergency Fund (Sections 136–145)", scope: "KBERC annual budget, 5% Disaster Emergency Inquiry Fund (Sec 135), and Parliamentary audit loggings." },
+    { num: "PART XII", label: "Professional Ethics & Integrity Rules (Sections 146–155)", scope: "Code of conduct, anti-stamp renting prohibitions, conflict of interest disclosures, and professional integrity bounds." },
+    { num: "PART XIII", label: "Continuing Professional Development - CPD (Sections 156–165)", scope: "Annual minimum 50 CPD units, accredited provider framework, and license renewal verification." },
+    { num: "PART XIV", label: "Disciplinary Inquiries & Sanctions (Sections 166–175)", scope: "Disciplinary Committee hearing workflow, gazetted reprimands, practicing license suspensions, and fine tariffs." },
+    { num: "PART XV", label: "Offences, Penalties & Piercing Corporate Veil (Sections 176–185)", scope: "Fines up to KES 5 Million, 5-year custodial sentences, illegal practice bans, and corporate director liability." },
+    { num: "PART XVI", label: "Emergency Structural Failure Response (Sections 186–192)", scope: "6-Hour Forensic Audit Team dispatch post-collapse, emergency evacuation, and demolition authorization." },
+    { num: "PART XVII", label: "Inter-Agency Joint Coordination (Sections 193–198)", scope: "Statutory integration with NEMA, NCA, EPRA, and real-time API sync with 47 County E-Approval Portals." },
+    { num: "PART XVIII", label: "Delegated Legislation & Regulations (Sections 199–202)", scope: "Cabinet Secretary statutory orders, parliamentary regulations, and gazetted practice guidelines." },
+    { num: "PART XIX", label: "Repeal Savings & 12-Month Transition (Sections 203–206)", scope: "Repeal of 1968 Cap 525, BORAQS asset transition, acquired rights preservation, and 12-month license migration." },
+    { num: "PART XX", label: "Miscellaneous Provisions & Execution (Sections 207–208)", scope: "Evidentiary rules, digital register authentication, protection from personal liability, and official commencement." }
+  ];
+
   const statutorySchedules = [
     { num: "Schedule 1", title: "Code of Conduct, Professional Ethics & Practice Rules", scope: "Mandatory ethical standards, conflict of interest disclosures, anti-corruption rules, and professional integrity bounds." },
     { num: "Schedule 2", title: "Built Environment Appeals Tribunal Rules & Procedure", scope: "60-day appellate hearing timeline, filing fees, tribunal quorum, and High Court referral gates." },
@@ -247,7 +270,7 @@ export default function AboutPage() {
               Detailed Background &amp; Consensus Origins
             </h1>
             <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-4xl">
-              The comprehensive statutory history, legislative deficiencies of legacy Cap 525, 2024–2026 sector current affairs, multi-board reform domains, and structural innovations behind <strong>The Built Environment Professions &amp; Practice Bill 2026</strong>.
+              The comprehensive statutory history, legislative deficiencies of legacy Cap 525, 2024–2026 sector current affairs, multi-board reform domains, 20 statutory parts breakdown, and structural innovations behind <strong>The Built Environment Professions &amp; Practice Bill 2026</strong>.
             </p>
           </div>
 
@@ -369,11 +392,45 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* 5. THE 14 STATUTORY SCHEDULES CARDS */}
+          {/* 5. THE 20 STATUTORY PARTS BREAKDOWN */}
           <section className="space-y-6">
-            <h2 className="text-xl md:text-2xl font-black text-slate-900">
-              The 14 Statutory Schedules Regulatory Matrix
-            </h2>
+            <div className="flex items-center justify-between border-b-2 border-red-700 pb-3">
+              <h2 className="text-xl md:text-2xl font-black text-slate-900">
+                The 20 Statutory Parts Executive Breakdown
+              </h2>
+              <span className="text-xs font-black text-red-700 bg-red-50 px-3 py-1 border border-red-200 uppercase">
+                SECTIONS 1 TO 208
+              </span>
+            </div>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Executive structural overview of all 20 Statutory Parts comprising the Master Consensus Bill 2026:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {statutoryParts.map((p, pIdx) => (
+                <div key={pIdx} className="bg-slate-50 border border-slate-300 border-l-4 border-l-red-700 p-5 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-black text-red-700 uppercase bg-red-100 px-2 py-0.5">{p.num}</span>
+                    <Link href={`/viewer/interactive/${pIdx + 1}`} className="text-xs font-bold text-slate-500 hover:text-red-700 transition-colors">
+                      View Part Dossier →
+                    </Link>
+                  </div>
+                  <h3 className="text-sm md:text-base font-bold text-slate-900">{p.label}</h3>
+                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed">{p.scope}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* 6. THE 14 STATUTORY SCHEDULES CARDS */}
+          <section className="space-y-6">
+            <div className="flex items-center justify-between border-b-2 border-sky-700 pb-3">
+              <h2 className="text-xl md:text-2xl font-black text-slate-900">
+                The 14 Statutory Schedules Regulatory Matrix
+              </h2>
+              <span className="text-xs font-black text-sky-700 bg-sky-50 px-3 py-1 border border-sky-200 uppercase">
+                SCHEDULES 1 TO 14
+              </span>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {statutorySchedules.map((s, sIdx) => (
                 <div key={sIdx} className="bg-slate-50 border border-slate-300 border-l-4 border-l-sky-600 p-5 space-y-2">
@@ -385,7 +442,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* 6. PRINCIPAL AUTHOR ACCREDITATION DOSSIER CARD */}
+          {/* 7. PRINCIPAL AUTHOR ACCREDITATION DOSSIER CARD */}
           <footer className="bg-slate-900 text-slate-100 p-6 md:p-8 space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <span className="text-xs font-black text-emerald-400 bg-emerald-950/80 px-3 py-1 border border-emerald-800 uppercase inline-block">
