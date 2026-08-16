@@ -1515,6 +1515,74 @@ export default function ReadViewer() {
           font-family: sans-serif;
           letter-spacing: 0.04em;
         }
+
+        /* ─── Mobile Screen-Fit Responsive Override ────────────────────────────── */
+        @media (max-width: 767px) {
+          .a4-page {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            max-height: none !important;
+            padding: 16px 12px !important;
+            margin: 0 0 16px 0 !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+          }
+          .page-content {
+            height: auto !important;
+            overflow: visible !important;
+          }
+          .page-header {
+            position: static !important;
+            margin-bottom: 12px !important;
+            padding-bottom: 6px !important;
+          }
+          .page-footer {
+            position: static !important;
+            margin-top: 16px !important;
+            padding-top: 8px !important;
+          }
+          .a4-watermark-text {
+            font-size: 85px !important;
+          }
+          .a4-section-block {
+            flex-direction: column !important;
+            gap: 4px !important;
+            margin-bottom: 12px !important;
+          }
+          .a4-section-margin {
+            width: 100% !important;
+            min-width: 0 !important;
+            max-width: 100% !important;
+            text-align: left !important;
+            padding-right: 0 !important;
+            margin-bottom: 2px !important;
+          }
+          .a4-section-margin-title {
+            font-size: 10px !important;
+            color: #0f172a !important;
+            font-weight: 800 !important;
+            background: #f1f5f9 !important;
+            padding: 2px 6px !important;
+            border-radius: 4px !important;
+            display: inline-block !important;
+            border-left: 2px solid #b91c1c !important;
+          }
+          .a4-section-body {
+            width: 100% !important;
+          }
+          .a4-section-text {
+            font-size: 13px !important;
+            line-height: 1.65 !important;
+          }
+          .a4-subclause-text {
+            padding-left: 10px !important;
+            text-indent: 0 !important;
+          }
+          .a4-toc-sec-title {
+            max-width: 60% !important;
+          }
+        }
         
         /* ─── Strict Official Parliamentary Gazette Front Matter ──────────────── */
         .a4-frontmatter { text-align: center; padding-top: 6mm; color: #000000; }
