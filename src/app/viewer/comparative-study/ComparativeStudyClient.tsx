@@ -84,14 +84,14 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
     <div className="min-h-screen bg-slate-100 text-slate-800 font-sans flex flex-col md:flex-row">
       
       {/* Sidebar Navigation */}
-      <div className="w-full md:w-64 bg-white border-r border-slate-300 p-6 flex flex-col gap-6 flex-shrink-0 h-screen sticky top-0 overflow-y-auto z-10">
-        <Link href="/viewer/read" className="flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium">
+      <div className="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-slate-300 p-4 md:p-6 flex flex-col gap-3 md:gap-6 flex-shrink-0 h-auto md:h-screen md:sticky top-0 z-10">
+        <Link href="/viewer/read" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-500 transition-colors text-sm font-semibold">
           <ArrowLeft className="w-4 h-4" /> Back to Bill Viewer
         </Link>
         
         <div>
-          <h2 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Legislative Lineage</h2>
-          <div className="flex flex-col gap-2">
+          <h2 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 md:mb-4">Legislative Lineage</h2>
+          <div className="flex flex-row md:flex-col gap-2 overflow-x-auto pb-2 md:pb-0 font-medium">
             {comparisons.map((study) => (
               <button 
                 key={study.id}
@@ -99,10 +99,10 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
                   setActiveStudyId(study.id);
                   window.scrollTo(0, 0);
                 }}
-                className={`text-left px-3 py-2 rounded text-sm font-medium transition-colors ${
+                className={`text-left px-3 py-2 rounded text-xs md:text-sm font-medium transition-colors shrink-0 md:shrink ${
                   activeStudyId === study.id 
-                    ? 'bg-indigo-500/10 text-indigo-300 border border-indigo-500/20' 
-                    : 'text-slate-600 hover:bg-slate-200/50 hover:text-slate-800 border border-transparent'
+                    ? 'bg-indigo-600 text-white font-semibold shadow-xs' 
+                    : 'text-slate-600 hover:bg-slate-200/50 hover:text-slate-800 border border-slate-200 md:border-transparent'
                 }`}
               >
                 {study.sidebarTitle}
@@ -216,9 +216,14 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
             <ReactMarkdown 
               remarkPlugins={[remarkGfm]}
               components={{
+                table: ({node, ...props}) => (
+                  <div className="overflow-x-auto w-full my-6 border border-slate-300 rounded-xl bg-white shadow-sm p-1">
+                    <table className="w-full text-left text-xs md:text-sm border-collapse" {...props} />
+                  </div>
+                ),
                 h2: ({node, ...props}) => {
                   const id = props.children?.toString().toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                  return <h2 id={id} className="text-2xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6 mt-12" {...props} />;
+                  return <h2 id={id} className="text-xl md:text-2xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6 mt-12" {...props} />;
                 },
                 h3: ({node, ...props}) => <h3 className="text-xl font-semibold text-indigo-300 mt-8 mb-4" {...props} />,
                 code: ({node, inline, className, children, ...props}: any) => {

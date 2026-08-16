@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function AnalysisDashboard() {
   return (
-    <div className="min-h-screen bg-white text-slate-800 font-sans p-8 md:p-16">
+    <div className="min-h-screen bg-white text-slate-800 font-sans p-4 sm:p-8 md:p-16">
       <div className="max-w-6xl mx-auto">
         <Link href="/viewer" className="text-slate-600 hover:text-red-600 transition-colors font-medium text-sm mb-8 inline-block">
           ← Back to Viewer Hub

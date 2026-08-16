@@ -128,7 +128,7 @@ export default function Complete100PercentRegistrationPathways() {
       background: '#F8FAFC',
       color: '#0F172A',
       fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif",
-      padding: '32px 24px 96px',
+      padding: 'clamp(16px, 4vw, 32px) clamp(12px, 3vw, 24px) 64px',
     }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
