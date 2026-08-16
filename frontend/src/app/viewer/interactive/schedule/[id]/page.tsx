@@ -445,27 +445,36 @@ export default function ScheduleInteractiveViewer() {
       `}</style>
 
       <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
-        {/* Top Navigation */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '32px', flexWrap: 'wrap', gap: '12px' }}>
-          <Link
-            href="/viewer/interactive"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: '6px',
-              padding: '8px 16px', borderRadius: '10px', fontSize: '12px', fontWeight: 700,
-              background: '#FFFFFF', border: '1px solid #CBD5E1',
-              color: '#475569',
-            }}
-          >
-            ← Back to NBCK Interactive Framework
-          </Link>
-          <div style={{ display: 'flex', gap: '8px' }}>
+        {/* Navigation Breadcrumb & Back Controls */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '24px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#64748B', flexWrap: 'wrap' }}>
+            <Link href="/" style={{ color: '#64748B' }}>Home</Link>
+            <span>›</span>
+            <Link href="/viewer" style={{ color: '#64748B' }}>Viewer Hub</Link>
+            <span>›</span>
+            <Link href="/viewer/interactive" style={{ color: '#64748B' }}>Interactive Directory</Link>
+            <span>›</span>
+            <span style={{ color: '#b91c1c', fontWeight: 700 }}>Schedule {schNum}</span>
+          </div>
+
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+            <Link
+              href="/viewer/interactive"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '6px',
+                padding: '8px 16px', borderRadius: 0, fontSize: '12px', fontWeight: 800,
+                background: '#FFFFFF', border: '1px solid #CBD5E1', color: '#0F172A',
+                textTransform: 'uppercase'
+              }}
+            >
+              ← Back to Directory
+            </Link>
             {prevSchIdx !== null && (
               <Link
                 href={`/viewer/interactive/schedule/${prevSchIdx}`}
                 style={{
-                  padding: '8px 16px', borderRadius: '10px', fontSize: '12px', fontWeight: 700,
-                  background: '#FFFFFF', border: '1px solid #CBD5E1',
-                  color: '#0F172A',
+                  padding: '8px 16px', borderRadius: 0, fontSize: '12px', fontWeight: 700,
+                  background: '#FFFFFF', border: '1px solid #CBD5E1', color: '#0F172A',
                 }}
               >
                 ← Schedule {prevSchIdx}
@@ -475,9 +484,8 @@ export default function ScheduleInteractiveViewer() {
               <Link
                 href={`/viewer/interactive/schedule/${nextSchIdx}`}
                 style={{
-                  padding: '8px 16px', borderRadius: '10px', fontSize: '12px', fontWeight: 700,
-                  background: '#FFFFFF', border: '1px solid #CBD5E1',
-                  color: '#0F172A',
+                  padding: '8px 16px', borderRadius: 0, fontSize: '12px', fontWeight: 700,
+                  background: '#FFFFFF', border: '1px solid #CBD5E1', color: '#0F172A',
                 }}
               >
                 Schedule {nextSchIdx} →
