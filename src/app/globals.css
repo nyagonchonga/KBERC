@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 38 92% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 38 92% 40%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 38 92% 40%;
+    --radius: 0rem;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════════
+   OFFICIAL KENYA GAZETTE & PARLIAMENTARY CORPORATE LIGHT THEME (ZERO-RADIUS)
+   ════════════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  border-radius: 0px !important;
+}
+
+body {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Official Corporate Light Panels */
+.gazette-card, .glass-card {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 0px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Gazette Corporate Buttons */
+.gazette-btn, button {
+  border-radius: 0px !important;
+}
+
+/* Official Badges */
+.gazette-badge {
+  border-radius: 0px !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Light Mode Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border: 1px solid #94A3B8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B45309;
+}
