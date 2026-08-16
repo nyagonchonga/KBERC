@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import { 
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip as RechartsTooltip,
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend,
-  PieChart, Pie, Cell, ActiveShape
+  PieChart, Pie, Cell
 } from 'recharts';
 import MermaidDiagram from '@/components/MermaidDiagram';
 
@@ -162,7 +162,7 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
                         <XAxis type="number" tickFormatter={(value) => `Sh${value / 1000000}M`} stroke="#94a3b8" fontSize={12} />
                         <YAxis dataKey="name" type="category" stroke="#94a3b8" fontSize={12} width={100} />
                         <RechartsTooltip 
-                          formatter={(value: number) => `Ksh ${value.toLocaleString()}`}
+                          formatter={(value: any) => `Ksh ${Number(value || 0).toLocaleString()}`}
                           contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', color: '#f8fafc', borderRadius: 0, boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.5)' }}
                           cursor={{ fill: 'transparent' }}
                         />

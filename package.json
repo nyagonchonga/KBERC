@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "vercel-build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "powershell -ExecutionPolicy Bypass -File ./deploy_vercel.ps1"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.20",

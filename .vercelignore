@@ -1,0 +1,24 @@
+# Dependency & Build Caches
+node_modules
+.next
+.vercel
+*.tsbuildinfo
+
+# Python & Utility Scripts
+*.py
+backend/
+scripts/
+__pycache__/
+*.pyc
+
+# Local Data Logs & Audits
+*.log
+*.patch
+*.txt
+scratch_step219.txt
+v3_v4_diff.txt
+
+# IDE & OS Files
+.DS_Store
+.vscode
+.idea

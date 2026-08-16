@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# K-BELIR Platform
 
-## Getting Started
+Comprehensive regulatory, statutory, and architectural analysis platform built with Next.js, React, TailwindCSS, and Recharts.
 
-First, run the development server:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-org/k-belir-platform)
+
+---
+
+## 🚀 Quick Start
+
+First, install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Vercel Live Deployment
 
-## Learn More
+This platform is pre-configured with production-ready Vercel settings (`vercel.json`, `.vercelignore`, and `.env.example`).
 
-To learn more about Next.js, take a look at the following resources:
+### Option 1: Automated Pre-Flight & Deploy Script (Recommended)
+Run the automated PowerShell deployment script which validates TypeScript types, executes a production build, and deploys directly to Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```powershell
+npm run deploy
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Option 2: Vercel CLI
+Deploy directly via Vercel CLI from your terminal:
 
-## Deploy on Vercel
+```bash
+# Preview Deployment
+npx vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Production Live Deployment
+npx vercel --prod
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Option 3: Git Integration
+1. Push this repository to GitHub, GitLab, or Bitbucket.
+2. Import the repository into [Vercel Dashboard](https://vercel.com/new).
+3. Vercel will automatically detect the **Next.js** framework and deploy on every `main` push.
+
+---
+
+## ⚡ Deployment Configuration Files
+
+- [`vercel.json`](./vercel.json): Custom security headers (`X-Frame-Options`, `CORS`, `CSP`), Next.js routing, and static asset caching.
+- [`.vercelignore`](./.vercelignore): Excludes development scripts, local data logs, and non-production files to minimize deploy payload size.
+- [`.env.example`](./.env.example): Environment variable keys required for Vercel production environments.
+- [`deploy_vercel.ps1`](./deploy_vercel.ps1): Automated pre-flight validation gate and Vercel CLI runner.
+
+---
+
+## 🧪 Verification & Build Checks
+
+Before pushing to production, run pre-flight type checks locally:
+
+```bash
+npx tsc --noEmit
+npm run build
+```
