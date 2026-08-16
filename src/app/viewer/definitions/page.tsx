@@ -12,7 +12,7 @@ export default function DefinitionsView() {
     {
       category: "Licensing & Practice",
       term: "Architect",
-      definition: "A person registered under Part IV to practice architecture, spatial masterplanning, structural aesthetics, and building design, holding a valid annual Digital QR Practice Seal issued under Section 57.",
+      definition: "A professional registered under Part IV to practice architecture, spatial masterplanning, structural aesthetics, building envelope design, and environmental spatial integration, holding a valid annual Digital QR Practice Seal issued under Section 57.",
       usedIn: ["Section 2", "Section 14", "Part IV", "Schedule 3"]
     },
     {
@@ -23,14 +23,62 @@ export default function DefinitionsView() {
     },
     {
       category: "Fees & Procurement",
-      term: "Baseline Scale of Fees",
-      definition: "The statutory minimum fee tariffs gazetted under Section 70 and Schedule 12 defining percentage design fees (5.0%-6.5%) and advisory hourly rates (KES 10,000-15,000/hr).",
+      term: "Baseline Scale of Fees (Architectural)",
+      definition: "The statutory minimum fee tariffs gazetted under Section 70 and Schedule 12 defining percentage design fees (5.0%-6.5%) and advisory hourly rates (KES 10,000-15,000/hr) for architectural services.",
+      usedIn: ["Section 70", "Schedule 12", "Part VII"]
+    },
+    {
+      category: "Fees & Procurement",
+      term: "Baseline Scale of Fees (Engineering - Structural & Civil)",
+      definition: "The statutory minimum fee tariffs gazetted under Section 70 and Schedule 12 setting 3.0%-4.5% of structural construction cost for civil/structural design, load calculation, and site supervision.",
+      usedIn: ["Section 70", "Schedule 12", "Part VII"]
+    },
+    {
+      category: "Fees & Procurement",
+      term: "Baseline Scale of Fees (Engineering - MEP)",
+      definition: "The statutory minimum fee tariffs gazetted under Section 70 and Schedule 12 setting 2.5%-3.5% of MEP installations cost for mechanical, electrical, plumbing, and fire safety systems engineering.",
+      usedIn: ["Section 70", "Schedule 12", "Part VII"]
+    },
+    {
+      category: "Fees & Procurement",
+      term: "Baseline Scale of Fees (Quantity Surveying)",
+      definition: "The statutory fee tariffs gazetted under Section 70 and Schedule 12 setting 2.5%-3.5% of total project cost for Bills of Quantities (BQ) preparation, financial valuation, and contract accounting.",
+      usedIn: ["Section 70", "Schedule 12", "Part VII"]
+    },
+    {
+      category: "Fees & Procurement",
+      term: "Baseline Scale of Fees (Physical Planning)",
+      definition: "The statutory fee tariffs gazetted under Section 70 and Schedule 12 setting fixed spatial area rates and advisory hourly tariffs for urban zoning, environmental impact integration, and land use schemes.",
       usedIn: ["Section 70", "Schedule 12", "Part VII"]
     },
     {
       category: "Governance & Institutions",
       term: "Board of Registration of Architects (ARB)",
       definition: "An independent discipline board established under Part XIX following the repeal of Cap 525 to manage architectural registration exams, continuous professional development, and professional accreditation.",
+      usedIn: ["Section 201", "Part XIX", "Schedule 13"]
+    },
+    {
+      category: "Governance & Institutions",
+      term: "Engineers Board of Kenya (EBK)",
+      definition: "The statutory regulatory body established under the Engineers Act, 2011 (Cap 530), preserved under KBERC's Asymmetric Hybrid Model with 1 statutory ex-officio seat on the Apex Council to manage engineering university accreditation and technical registration while integrating into KBERC's National Project Database.",
+      usedIn: ["Section 201", "Part XIX", "Cap 530", "Schedule 13"]
+    },
+    {
+      category: "Governance & Institutions",
+      term: "Quantity Surveyors Registration Board (QSRB)",
+      definition: "An independent discipline board established under Part XIX following Cap 525 alignment to manage quantity surveying professional examinations, cost management standards, and professional licensing.",
+      usedIn: ["Section 201", "Part XIX", "Schedule 13"]
+    },
+    {
+      category: "Governance & Institutions",
+      term: "Physical Planners Registration Board (PPRB)",
+      definition: "An independent discipline board established under Part XIX to manage urban and regional physical planner registration, spatial planning ethics, and development plan certifications.",
+      usedIn: ["Section 201", "Part XIX", "Schedule 13"]
+    },
+    {
+      category: "Governance & Institutions",
+      term: "Construction Managers & Interior Designers Board (CMIDB)",
+      definition: "An independent discipline board established under Part XIX to regulate construction project managers, site safety directors, interior architects, landscape architects, and specialized project consultants.",
       usedIn: ["Section 201", "Part XIX", "Schedule 13"]
     },
     {
@@ -42,8 +90,14 @@ export default function DefinitionsView() {
     {
       category: "Governance & Institutions",
       term: "Built Environment Appeals Tribunal",
-      definition: "The specialized statutory judicial tribunal established under Section 141 and Schedule 2 to hear appeals regarding licensing, registration, disciplinary sanctions, or fee disputes.",
+      definition: "The specialized statutory judicial tribunal established under Section 141 and Schedule 2 to hear appeals regarding licensing, registration, disciplinary sanctions, or fee disputes across all disciplines.",
       usedIn: ["Section 141", "Schedule 2", "Part XIII"]
+    },
+    {
+      category: "Disciplines & Cadres",
+      term: "Building Surveyor",
+      definition: "A professional registered under Part IV specializing in building pathology forensic audits, structural compliance inspections, dilapidation reports, and maintenance engineering.",
+      usedIn: ["Section 14", "Part IV", "Schedule 3"]
     },
     {
       category: "Governance & Institutions",
@@ -54,7 +108,7 @@ export default function DefinitionsView() {
     {
       category: "Licensing & Practice",
       term: "Candidate Practitioner",
-      definition: "A university or TVET graduate registered under Part IV undergoing 2 years of mandatory supervised internship logbook training before sitting Professional Practice Examinations (PPE).",
+      definition: "A university or TVET graduate registered under Part IV undergoing 2 years of mandatory supervised internship logbook training under a Lead Professional before sitting Professional Practice Examinations (PPE).",
       usedIn: ["Section 25", "Part IV"]
     },
     {
@@ -65,14 +119,20 @@ export default function DefinitionsView() {
     },
     {
       category: "Disciplines & Cadres",
+      term: "Civil & Structural Engineer",
+      definition: "A professional engineer registered under Part IV and Cap 530 to analyze, design, and certify structural load paths, foundations, reinforced concrete framing, steel structures, seismic resilience, and civil works, holding a valid annual Digital QR Practice Seal.",
+      usedIn: ["Section 14", "Part IV", "Cap 530", "Schedule 3"]
+    },
+    {
+      category: "Disciplines & Cadres",
       term: "Construction Project Manager (CPM)",
-      definition: "A professional registered under Part IV responsible for directing site operations, quality assurance, safety coordination, project timelines, and contractual delivery.",
+      definition: "A professional registered under Part IV authorized to direct site execution, procurement logistics, quality assurance, multi-trade safety compliance, project scheduling, and final practical completion delivery.",
       usedIn: ["Section 14", "Part IV", "Schedule 3"]
     },
     {
       category: "Governance & Institutions",
       term: "County Building Control Desk",
-      definition: "The technical unit established within each of the 47 County Governments under Section 188 responsible for receiving development applications, conducting site audits, and issuing permits.",
+      definition: "The technical unit established within each of the 47 County Governments under Section 188 responsible for receiving multi-disciplinary development applications, conducting site audits, and issuing permits.",
       usedIn: ["Section 2", "Section 98", "Section 188", "Part XVII"]
     },
     {
@@ -84,7 +144,7 @@ export default function DefinitionsView() {
     {
       category: "Governance & Institutions",
       term: "Disciplinary Committee",
-      definition: "The statutory committee established under Section 117 to hear complaints of professional misconduct, conduct formal hearings, and impose statutory sanctions.",
+      definition: "The statutory committee established under Section 117 to hear complaints of professional misconduct against any registered practitioner, conduct formal hearings, and impose statutory sanctions.",
       usedIn: ["Section 117", "Part XI"]
     },
     {
@@ -96,7 +156,13 @@ export default function DefinitionsView() {
     {
       category: "Disciplines & Cadres",
       term: "Engineer",
-      definition: "A professional registered under Part IV to design, analyze, and inspect civil, structural, mechanical, or electrical systems for buildings and infrastructure works.",
+      definition: "A professional registered under Part IV and Cap 530 across civil, structural, mechanical, electrical, or geotechnical disciplines to design, analyze, and inspect building and infrastructure systems.",
+      usedIn: ["Section 14", "Part IV", "Cap 530", "Schedule 3"]
+    },
+    {
+      category: "Disciplines & Cadres",
+      term: "Environmental Assessment (EIA/EA) Expert",
+      definition: "A certified environmental professional registered under Part IV and NEMA frameworks to conduct statutory environmental audits, sustainability assessments, and climate impact mitigations for building projects.",
       usedIn: ["Section 14", "Part IV", "Schedule 3"]
     },
     {
@@ -112,6 +178,12 @@ export default function DefinitionsView() {
       usedIn: ["Section 32", "Part IV"]
     },
     {
+      category: "Disciplines & Cadres",
+      term: "Geotechnical & Foundation Specialist Engineer",
+      definition: "A specialist professional engineer accredited under Section 36 for subsoil exploration, deep basement retaining structures, piling analysis, and foundation engineering.",
+      usedIn: ["Section 14", "Section 36", "Part IV", "Part VIII"]
+    },
+    {
       category: "Risk & Safety",
       term: "High-Consequence Project (Class D & E)",
       definition: "A project classified under Section 89 and Schedule 4 whose failure would result in catastrophic loss of life, severe environmental destruction, or massive financial loss.",
@@ -125,14 +197,20 @@ export default function DefinitionsView() {
     },
     {
       category: "Disciplines & Cadres",
-      term: "Interior Designer",
-      definition: "A professional registered under Part IV specializing in interior spatial ergonomics, acoustic performance, interior specifications, and fire safety egress layouts.",
+      term: "Interior Architect & Designer",
+      definition: "A professional registered under Part IV specializing in interior spatial ergonomics, acoustic engineering, interior structural adaptations, material specifications, and life-safety egress layouts.",
+      usedIn: ["Section 14", "Part IV", "Schedule 3"]
+    },
+    {
+      category: "Disciplines & Cadres",
+      term: "Land Surveyor & Geomatics Engineer",
+      definition: "A spatial professional registered under Part IV authorized to conduct cadastral land surveys, boundary determinations, GIS mapping, and site layout alignment.",
       usedIn: ["Section 14", "Part IV", "Schedule 3"]
     },
     {
       category: "Disciplines & Cadres",
       term: "Landscape Architect",
-      definition: "A professional registered under Part IV specializing in outdoor site ecology, environmental spatial planning, urban parks, and landscape design.",
+      definition: "A professional registered under Part IV specializing in outdoor site ecology, urban green infrastructure, environmental spatial planning, urban parks, and landscape design.",
       usedIn: ["Section 14", "Part IV", "Schedule 3"]
     },
     {
@@ -142,15 +220,21 @@ export default function DefinitionsView() {
       usedIn: ["Section 2", "Section 25", "Section 57", "Part VI"]
     },
     {
+      category: "Disciplines & Cadres",
+      term: "Mechanical & Electrical (MEP) Engineer",
+      definition: "A professional engineer registered under Part IV and Cap 530 to design, analyze, and certify building HVAC, plumbing, vertical transportation (elevators/escalators), electrical power distribution, fire suppression, and renewable energy systems.",
+      usedIn: ["Section 14", "Part IV", "Cap 530", "Schedule 3"]
+    },
+    {
       category: "Licensing & Practice",
       term: "Multidisciplinary Corporate Firm",
-      definition: "A corporate consultancy licensed under Section 45 where at least 51% of voting shares are held by registered local lead practitioners across multiple disciplines.",
+      definition: "A corporate consultancy licensed under Section 45 where at least 51% of voting shares are held by registered local lead practitioners across multiple built environment disciplines.",
       usedIn: ["Section 45", "Part V"]
     },
     {
       category: "Disciplines & Cadres",
       term: "Physical & Land Use Planner",
-      definition: "A professional registered under Part IV specializing in regional spatial zoning, land use policy frameworks, urban planning, and County physical development plans.",
+      definition: "A professional registered under Part IV specializing in regional spatial zoning, land use policy frameworks, urban planning, environmental integration, and County physical development plans.",
       usedIn: ["Section 14", "Part IV", "Schedule 3"]
     },
     {
@@ -168,7 +252,7 @@ export default function DefinitionsView() {
     {
       category: "Risk & Safety",
       term: "Professional Indemnity Insurance (PII)",
-      definition: "Mandatory insurance cover required under Section 58 ranging from KES 20 Million to KES 200 Million based on project risk class to protect building owners against design negligence.",
+      definition: "Mandatory insurance cover required under Section 58 ranging from KES 20 Million to KES 200 Million based on project risk class to protect building owners against design negligence across all disciplines.",
       usedIn: ["Section 58", "Part VI"]
     },
     {
@@ -178,39 +262,39 @@ export default function DefinitionsView() {
       usedIn: ["Section 75", "Part VII"]
     },
     {
-      category: "Governance & Institutions",
-      term: "Quantity Surveyor Board (QSRB)",
-      definition: "An independent discipline board established under Part XIX to manage quantity surveying professional exams, registration, and technical standards.",
-      usedIn: ["Section 201", "Part XIX"]
-    },
-    {
       category: "Disciplines & Cadres",
       term: "Quantity Surveyor",
-      definition: "A professional registered under Part IV specializing in building measurement, cost planning, preparation of bills of quantities, financial valuation, and contract administration.",
+      definition: "A professional registered under Part IV specializing in construction cost engineering, life-cycle financial modeling, preparation of statutory Bills of Quantities (BQ), contract administration, and project dispute valuation.",
       usedIn: ["Section 14", "Part IV", "Schedule 3"]
     },
     {
       category: "Governance & Institutions",
       term: "Registrar / Chief Executive Officer",
-      definition: "The Chief Executive Officer of the Council appointed under Section 12 responsible for maintaining the National Register, issuing digital QR seals, and directing Council staff.",
+      definition: "The Chief Executive Officer of the Council appointed under Section 12 responsible for maintaining the National Register of all built environment professionals, issuing digital QR seals, and directing Council staff.",
       usedIn: ["Section 12", "Part II"]
     },
     {
       category: "Licensing & Practice",
       term: "Reserved Professional Work",
-      definition: "Categories of technical design, measurement, and site supervision work restricted under Section 43 exclusively to registered lead professionals.",
+      definition: "Categories of technical design, cost measurement, structural calculation, spatial planning, and site supervision work restricted under Section 43 exclusively to registered lead professionals.",
       usedIn: ["Section 43", "Part V"]
     },
     {
       category: "Licensing & Practice",
       term: "Specialist Professional",
-      definition: "A practitioner with advanced post-graduate accreditation under Section 36 in complex domains such as deep basement geotechnical engineering, seismic dynamics, or high-consequence towers.",
+      definition: "A practitioner with advanced post-graduate accreditation under Section 36 in complex domains such as deep basement geotechnical engineering, seismic dynamics, acoustic design, or high-consequence towers.",
       usedIn: ["Section 36", "Part IV", "Part VIII"]
     },
     {
       category: "Disciplines & Cadres",
+      term: "Technician & Craftsperson",
+      definition: "A skilled technical practitioner holding a Diploma or TVET certification registered under Part IV to execute specialized site assembly, trade supervision, and quality control.",
+      usedIn: ["Section 2", "Section 14", "Part IV"]
+    },
+    {
+      category: "Disciplines & Cadres",
       term: "Technologist",
-      definition: "A practitioner holding a Bachelor of Technology degree registered under Part IV to execute technical design support and site supervision within defined statutory scopes.",
+      definition: "A practitioner holding a Bachelor of Technology degree registered under Part IV to execute technical design support, BIM modeling, and site supervision within defined statutory scopes across all disciplines.",
       usedIn: ["Section 2", "Section 14", "Part IV"]
     },
     {
@@ -234,15 +318,15 @@ export default function DefinitionsView() {
   ];
 
   const categories = [
-    { id: "all", label: "⚡ All Statutory Terms (37)" },
+    { id: "all", label: "⚡ All Statutory Terms (51)" },
     { id: "Licensing & Practice", label: "🎓 Licensing & Practice (12)" },
-    { id: "Disciplines & Cadres", label: "📐 Disciplines & Cadres (8)" },
-    { id: "Governance & Institutions", label: "🏛️ Governance & Tribunal (9)" },
+    { id: "Disciplines & Cadres", label: "📐 Disciplines & Cadres (17)" },
+    { id: "Governance & Institutions", label: "🏛️ Governance & Tribunal (13)" },
     { id: "Risk & Safety", label: "⚠️ Risk, Safety & QR Seals (6)" },
-    { id: "Fees & Procurement", label: "💰 Scale of Fees & Procurement (2)" }
+    { id: "Fees & Procurement", label: "💰 Scale of Fees & Procurement (5)" }
   ];
 
-  const alphabet = ["ALL", "A", "B", "C", "D", "E", "F", "H", "I", "L", "M", "P", "Q", "R", "S", "T", "U", "6"];
+  const alphabet = ["ALL", "A", "B", "C", "D", "E", "F", "G", "H", "I", "L", "M", "P", "Q", "R", "S", "T", "U", "6"];
 
   const filteredDefs = useMemo(() => {
     return definitions.filter(d => {
@@ -277,7 +361,7 @@ export default function DefinitionsView() {
             Authoritative Statutory Legal Dictionary
           </h1>
           <p style={{ fontSize: '16px', color: '#475569', maxWidth: '900px', lineHeight: 1.7, margin: 0 }}>
-            Complete 100% coverage of all 37 statutory terms, legal concepts, and regulatory definitions enacted across Section 2 and all 20 Parts of the Built Environment Professions &amp; Practice Bill 2026.
+            Complete 100% coverage of all 51 statutory terms, legal concepts, discipline registration boards, and regulatory definitions enacted across Section 2 and all 20 Parts of the Built Environment Professions &amp; Practice Bill 2026.
           </p>
         </header>
 
@@ -285,7 +369,7 @@ export default function DefinitionsView() {
         <div style={{ background: '#FFFFFF', padding: '24px', borderRadius: 0, border: '1px solid #CBD5E1', marginBottom: '32px' }}>
           <input 
             type="text" 
-            placeholder="Search for any legal term, statutory concept, or section (e.g. Lead Professional, QR Seal, Peer Review, Section 57)..." 
+            placeholder="Search for any legal term, statutory concept, or section (e.g. Lead Professional, QR Seal, Peer Review, Civil Engineer, Section 57)..." 
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
             style={{ width: '100%', padding: '16px 22px', borderRadius: 0, background: '#F8FAFC', border: '1px solid #CBD5E1', color: '#0F172A', fontSize: '14px', outline: 'none', marginBottom: '20px' }}
@@ -301,8 +385,8 @@ export default function DefinitionsView() {
                 style={{
                   minWidth: '32px', height: '32px', padding: '0 8px', borderRadius: 0, fontSize: '12px', fontWeight: 800,
                   cursor: 'pointer', transition: 'all 0.2s', border: 'none',
-                  background: activeLetter === letter ? '#ef4444' : 'rgba(255,255,255,0.05)',
-                  color: activeLetter === letter ? '#FFF' : 'rgba(255,255,255,0.6)',
+                  background: activeLetter === letter ? '#ef4444' : '#F1F5F9',
+                  color: activeLetter === letter ? '#FFF' : '#334155',
                 }}
               >
                 {letter}
@@ -333,7 +417,7 @@ export default function DefinitionsView() {
         {/* Results Counter */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
           <span style={{ fontSize: '13px', color: '#64748B', fontWeight: 600 }}>
-            Showing <strong style={{ color: '#ef4444' }}>{filteredDefs.length}</strong> of 37 Enacted Statutory Definitions
+            Showing <strong style={{ color: '#ef4444' }}>{filteredDefs.length}</strong> of {definitions.length} Enacted Statutory Definitions
           </span>
         </div>
 
@@ -350,7 +434,7 @@ export default function DefinitionsView() {
               
               <p style={{ fontSize: '14px', color: '#1E293B', lineHeight: 1.7, margin: '0 0 16px 0' }}>{def.definition}</p>
               
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', paddingTop: '12px', borderTop: '1px solid #F1F5F9' }}>
                 <span style={{ fontSize: '11px', color: '#475569', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Statutory Cross-References:</span>
                 {def.usedIn.map(loc => (
                   <span key={loc} style={{ background: '#FFFFFF', color: '#ef4444', border: '1px solid rgba(16,185,129,0.25)', padding: '4px 10px', borderRadius: 0, fontSize: '11px', fontWeight: 700 }}>
@@ -362,7 +446,7 @@ export default function DefinitionsView() {
           ))}
 
           {filteredDefs.length === 0 && (
-            <div style={{ textAlign: 'center', padding: '48px 24px', background: '#FFFFFF', borderRadius: 0, border: '1px dashed rgba(255,255,255,0.15)', color: '#64748B' }}>
+            <div style={{ textAlign: 'center', padding: '48px 24px', background: '#FFFFFF', borderRadius: 0, border: '1px dashed #CBD5E1', color: '#64748B' }}>
               No statutory definitions found matching "{searchTerm}". Try clearing search filters or selecting "ALL" in the alphabet index.
             </div>
           )}
