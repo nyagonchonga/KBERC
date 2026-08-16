@@ -76,6 +76,17 @@ KBERC establishes the **6-Hour Emergency Collapse Audit Protocol (Section 168)**
 - The team possesses statutory search, seizure, and subpoena powers to impound site logbooks, test material samples, inspect NPD digital seals, and lock developer assets.
 - Financed by the statutory **5% KBERC Disaster Emergency Fund (Section 135)**, ensuring immediate forensic investigations independent of local county politics.
 
+```mermaid
+stateDiagram-v2
+    [*] --> CollapseSignal: Structural Failure / Collapse Notification
+    CollapseSignal --> DeployAudit: Dispatch Multi-Disciplinary Forensic Team (within 6 Hours - Sec 168)
+    DeployAudit --> ImpoundSite: Seize Logbooks, Core Samples & NPD Digital Seals
+    ImpoundSite --> FreezeAssets: Execute Sec 135 Developer & Firm Asset Lock
+    FreezeAssets --> BEATArbitration: Escalate Evidence to Built Environment Appeals Tribunal (Sec 141)
+    BEATArbitration --> Prosecution: Issue 60-Day Ruling & Criminal Referrals (Sec 150/151)
+    Prosecution --> [*]
+```
+
 ### Sub-Analysis 4: Digital QR Seals, National Project Database (NPD) & County Permit Automation
 Legacy building approval relied on physical rubber stamps and embossed seals, which generated a massive forgery network in downtown Nairobi. Over 80% of collapsed buildings featured forged rubber stamps.
 
@@ -110,9 +121,28 @@ KBERC Section 141 establishes the **Built Environment Appeals Tribunal (BEAT)**:
 - Possesses full powers of a Subordinate Court to hear appeals on registration denials, license revocations, fee disputes, and stop-work orders.
 - Statutorily mandated to deliver final, legally binding judgments within **60 days**, providing swift, technically competent arbitration.
 
+### Sub-Analysis 6: Evolution of Penalty Clauses & Corporate Officer Liability (Section 153 Veil Piercing)
+Historical fines under Cap 525 were capped at **KES 5,000 to KES 20,000**[^1]. KBERC introduces a multi-tiered criminal deterrence system:
+- **Financial Penalties (Section 150)**: Up to **KES 50,000,000** for illegal practice, unlicenced plan submissions, or gross structural negligence.
+- **Custodial Sentences (Section 151)**: Mandatory imprisonment up to **5 years** for seal lending, uncertified practice, or BQ fraud.
+- **Corporate Officer Forfeiture (Section 153)**: Pierces the corporate veil. If a corporate firm or developer commits an offence under KBERC, directors, partners, CEOs, and managing officers are held **personally liable** and subject to asset forfeiture unless they prove the offence occurred without their knowledge.
+
+### Sub-Analysis 7: International Harmonization, EAC MRAs & Local Equity Mandates
+Under legacy laws, foreign practitioners entered Kenya on temporary exemptions without local accountability. 
+
+KBERC modernizes international practice:
+- **EAC Mutual Recognition Agreements (MRAs - Section 62)**: Harmonizes professional qualification standards across East African Community (EAC Article 76) partner states.
+- **Temporary Practice Permits (Section 38)**: Restricts foreign practitioners to specific, high-consequence projects (Class D & E) for limited durations.
+- **Mandatory 51% Local Equity Shareholding (Section 41)**: Foreign architectural, engineering, or QS firms operating in Kenya must maintain at least **51% shareholding by Kenyan citizens** registered with KBERC, ensuring technology transfer and local economic retention.
+
+### Sub-Analysis 8: Continuous Professional Development (CPD) & Re-Licensing Mechanics
+Legacy Cap 525 granted lifetime practice rights once registered. KBERC introduces mandatory dynamic re-licensing under **Schedule 5**:
+- Practitioners must accumulate at least **30 CPD units annually** through accredited technical seminars, research publications, and peer mentorship.
+- Annual Practising Certificates (PCs) are auto-renewed on the NPD system only when CPD points, PII cover, and clean disciplinary records are verified.
+
 ---
 
-## 3. Master 15-Parameter Statutory Cross-Matrix
+## 3. Master 20-Parameter Statutory Cross-Matrix
 
 | Regulatory Parameter | Cap 525 (1934 Legacy Act) | Proposed QS Bill (2022) | Proposed Architects Bill (2022) | Proposed A&QS Practitioners Bill (2026) | Engineers Act (Cap 530 - 2011) | 2026 KBERC Draft (Unified Council Model) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -131,6 +161,11 @@ KBERC Section 141 establishes the **Built Environment Appeals Tribunal (BEAT)**:
 | **13. Accreditation Authority** | Board Power | Board Power | Board Power | Board Power | Board Power | **Apex Council Statutory Power (Section 35)** |
 | **14. Dispute & Appeals Machinery** | High Court Appeals | Internal Board Panel | Internal Board Panel | High Court Appeals | High Court Appeals | **BEAT Tribunal 60-Day Judgment (Section 141)** |
 | **15. Emergency Collapse Protocol** | None | None | None | None | None | **6-Hour Emergency Collapse Audit (Section 168)** |
+| **16. EAC MRA Alignment** | None | None | None | Restricted | Basic Recognition | **Full EAC Article 76 MRA Integration (Section 62)** |
+| **17. Local Ownership Requirement** | None | None | None | None | None | **Mandatory 51% Kenyan Shareholding (Section 41)** |
+| **18. Temporary Foreign Permits** | Unregulated | Ad-hoc Permits | Ad-hoc Permits | Ad-hoc Permits | EBK Foreign License | **Restricted High-Consequence Permits (Section 38)** |
+| **19. CPD Re-Licensing** | Lifetime Registration | Optional CPD | Optional CPD | Annual CPD | Annual Professional Points | **Mandatory 30 Units/Year + NPD Audit (Schedule 5)** |
+| **20. Risk-Based Consequence Tiers** | Uniform Treatment | Uniform Treatment | Uniform Treatment | Uniform Treatment | Uniform Treatment | **5 Risk Tiers / Eurocodes CC1-CC3 Integration** |
 
 ---
 
@@ -198,6 +233,7 @@ graph TD
 [^7]: *The Architects Bill, 2022* (Proposed Draft). National Assembly Bill No. YY of 2022. Government Printer, Nairobi.
 [^8]: *The Architectural and Quantity Surveying Practitioners Bill, 2026* (Proposed Draft). National Assembly Bill No. ZZ of 2026 (`parliament.go.ke`).
 [^9]: *The Engineers Act, 2011 (Cap. 530)*, Laws of Kenya. Assented Jan 27, 2012. Preserved under KBERC Asymmetric Hybrid Model.
-[^10]: Republic of Kenya High Court Judicial Review Precedents: *BORAQS v. Republic ex-parte Architectural Association of Kenya (AAK)* (eKLR).
-[^11]: Office of the Auditor-General (Kenya): *Performance Audit Report on Public Infrastructure Cost Overruns and Variation Orders*.
-[^12]: KBERC Bill 2026: *Sections 6, 26, 35, 57, 58, 70, 75, 78, 85, 135, 141, 150, 151, 153, 168, 188 & Part XIX*.
+[^10]: *Treaty for the Establishment of the East African Community (EAC)*, Article 76 (Free Movement of Persons, Workers and Services & MRAs).
+[^11]: Republic of Kenya High Court Judicial Review Precedents: *BORAQS v. Republic ex-parte Architectural Association of Kenya (AAK)* (eKLR).
+[^12]: Office of the Auditor-General (Kenya): *Performance Audit Report on Public Infrastructure Cost Overruns and Variation Orders*.
+[^13]: KBERC Bill 2026: *Sections 6, 26, 35, 38, 41, 57, 58, 62, 70, 75, 78, 85, 135, 141, 150, 151, 153, 168, 188 & Schedule 5*.
