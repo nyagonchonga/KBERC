@@ -12,7 +12,7 @@ export default function SlidesPage() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
-        setCurrentSlide(prev => Math.min(prev + 1, 43));
+        setCurrentSlide(prev => Math.min(prev + 1, 59));
       } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
         setCurrentSlide(prev => Math.max(prev - 1, 0));
       }
@@ -71,7 +71,7 @@ export default function SlidesPage() {
   };
 
   // =========================================================================
-  // 44 UNABRIDGED SLIDES DATA (PROPOSED LEGISLATIVE DRAFT 2026)
+  // 60 UNABRIDGED MASTER SLIDES DATA (PROPOSED LEGISLATIVE DRAFT 2026)
   // =========================================================================
   const slidesData = [
     {
@@ -148,9 +148,37 @@ export default function SlidesPage() {
     },
     {
       id: 4,
-      badge: "SLIDE 04 • PART I (SECTIONS 1–3)",
-      title: "PRELIMINARY PROVISIONS, COMMENCEMENT & STATUTORY SCOPE",
-      subtitle: "Foundational legal definitions, commencement mechanisms, and core public safety objectives",
+      badge: "SLIDE 04 • MASTER ARRANGEMENT OF PARTS",
+      title: "MASTER LEGISLATIVE ROADMAP: PARTS I TO XVIII",
+      subtitle: "Consolidated statutory structure spanning 208 Sections and 14 Statutory Schedules",
+      type: "CARD_GRID_4",
+      color: "#0284c7",
+      partRef: "PARTS I–XVIII ROADMAP",
+      diagramType: "roadmap_grid",
+      bullets: [
+        "Parts I–V (Sec 1–58): Preliminary, KBERC Apex Council (Sec 4), 8 Colleges (Sec 16–25), Registration (Form A/B/C) & Digital QR Seals (Sec 51).",
+        "Parts VI–IX (Sec 59–120): CPD 50 Units (Sec 59), PII Cover Tiers (Sec 65), Scopes of Practice, Ethics & Schedule 12 Fee Scale (5.0%–6.5%).",
+        "Parts X–XIII (Sec 121–180): Emergency Collapse Audit (Sec 121), Appeals Tribunal (Sec 131), 10 Stage Inspections & Digital Seal Forgery (Sec 179).",
+        "Parts XIV–XVIII (Sec 181–212): NBC 2024 Eurocodes, 0.1% Levy, BORAQS Disbanding (Sec 211), Cap 525 Repeal (Sec 212) & EBK Cap 530 Saved."
+      ],
+      cardTags: [
+        "🏛️ Parts I–V (Governance & Register)",
+        "📜 Parts VI–IX (Practice & Fee Scales)",
+        "🚨 Parts X–XIII (Collapse & Enforcement)",
+        "⚖️ Parts XIV–XVIII (Code & Repeals)"
+      ],
+      metrics: [
+        { label: "TOTAL PARTS", val: "18 PARTS" },
+        { label: "TOTAL SECTIONS", val: "208 SECTIONS" },
+        { label: "SCHEDULES", val: "14 SCHEDULES" },
+        { label: "FORMS", val: "10 KBERC FORMS" }
+      ]
+    },
+    {
+      id: 5,
+      badge: "SLIDE 05 • PART I (SECTIONS 1–3)",
+      title: "PART I: PRELIMINARY, COMMENCEMENT & CONSTITUTIONAL PRECEDENCE",
+      subtitle: "Short title, binding legal definitions, 12-month commencement, and Article 185 precedence",
       type: "CARD_GRID_4",
       color: "#0284c7",
       partRef: "PART I: SEC 1–3",
@@ -158,14 +186,14 @@ export default function SlidesPage() {
       bullets: [
         "Section 1 (Short Title & Commencement): Proposed commencement mechanism allowing Cabinet Secretary 12 months for digital deployment upon enactment.",
         "Section 2 (Interpretation): Binding legal definitions for Lead Practitioner, Cryptographic QR Seal, Eurocode Class, and Stamp Renting.",
-        "Section 3 (Objects & Purpose): Proposes mandatory public safety, eliminates double-taxation of firms, and protects consumer rights.",
-        "Statutory Precedence: Establishes KBERC public safety inspection rules as supreme over local county building by-laws under Article 185."
+        "Section 3 (Objects & Purpose): Proposes mandatory public safety, eliminates double-taxation of consultancies, and protects consumer rights.",
+        "Article 185 Constitutional Precedence: Establishes KBERC public safety inspection rules as supreme over local county building by-laws."
       ],
       cardTags: [
         "📅 12-Month Transition Window",
         "🔑 Legal Definitions Enacted",
-        "🛡️ Public Safety Protection Mandate",
-        "⚖️ Article 185 Constitutional Precedence"
+        "🛡️ Public Safety Mandate",
+        "⚖️ Article 185 Precedence"
       ],
       metrics: [
         { label: "SECTIONS COVERED", val: "Sec 1–3" },
@@ -175,17 +203,17 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 5,
-      badge: "SLIDE 05 • PART II (SECTIONS 4–8)",
-      title: "KBERC APEX REGULATORY COUNCIL ESTABLISHMENT & LEGAL STATUS",
-      subtitle: "Proposed Supreme Apex Body corporate, perpetual succession, common seal, and statutory powers",
+      id: 6,
+      badge: "SLIDE 06 • PART II (SECTIONS 4–8)",
+      title: "PART II: KBERC APEX REGULATORY COUNCIL ESTABLISHMENT & POWERS",
+      subtitle: "Body Corporate establishment, perpetual succession, common seal, and statutory powers",
       type: "DEEP_DIVE",
       color: "#7c3aed",
       partRef: "PART II: SEC 4–8",
       diagramType: "apex_legal_status",
       bullets: [
-        "Section 4 (Establishment of KBERC): Proposed body corporate with perpetual succession, common seal, and capacity to sue and be sued.",
-        "Subsuming BORAQS (Sec 211): KBERC Apex Council subsumes all physical assets, digital registers, and staff of the disbanded BORAQS.",
+        "Section 4 (Establishment of KBERC): Proposed supreme body corporate with perpetual succession, common seal, and capacity to sue and be sued.",
+        "Subsuming BORAQS Assets (Sec 211): KBERC Apex Council subsumes all physical assets, digital registers, and staff of the disbanded BORAQS.",
         "EBK Autonomy Alignment (Cap 530): KBERC acts as Apex built environment policy council while EBK maintains statutory engineering autonomy under Cap 530.",
         "Section 6 (Powers of Council): Entering contracts, acquiring real property, levying statutory fees, and issuing binding stop-work orders."
       ],
@@ -193,23 +221,23 @@ export default function SlidesPage() {
         { label: "APEX STATUS", val: "BODY CORPORATE" },
         { label: "BORAQS SUBSUMED", val: "SEC 211" },
         { label: "EBK AUTONOMY", val: "CAP 530 SAVED" },
-        { label: "COUNTY LIAISON", val: "47 COUNTIES" }
+        { label: "STOP-WORK POWERS", val: "STATUTORY" }
       ]
     },
     {
-      id: 6,
-      badge: "SLIDE 06 • PART II (SECTIONS 9–13)",
-      title: "19-MEMBER APEX COUNCIL REPRESENTATIVE COMPOSITION & TERMS",
-      subtitle: "Representative governance across 8 Colleges, Council of Governors, AG, and CS nominees",
+      id: 7,
+      badge: "SLIDE 07 • PART II (SECTIONS 9–13)",
+      title: "PART II: 19-MEMBER APEX COUNCIL COMPOSITION & GOVERNANCE TERMS",
+      subtitle: "Representative governance across 8 Professional Colleges, COG, AG, and CS nominees",
       type: "CARD_GRID_4",
       color: "#7c3aed",
       partRef: "PART II: SEC 9–13",
       diagramType: "council_members",
       bullets: [
-        "8 Professional College Representatives: Elected Lead Professionals representing Architecture, Engineering, QS, Planning, Landscape, Interior, CPM, and TVET.",
-        "Institutional Nominees: 1 representative nominated by the Council of Governors (COG), 1 by Attorney-General, 1 by Cabinet Secretary.",
+        "8 Professional College Seats: Elected Lead Professionals representing Architecture, Engineering, QS, Planning, Landscape, Interior, CPM, and TVET.",
+        "Institutional Nominees: 1 representative nominated by Council of Governors (COG), 1 by Attorney-General, 1 by Cabinet Secretary.",
         "Section 11 (Term of Office): 3-year term, renewable once for a maximum of 6 years of public service.",
-        "Section 12–13 (Vacation of Office & Quorum): Strict quorum rules (10 members) and removal procedures for gross misconduct or incapacity."
+        "Section 12–13 (Quorum & Removal): Strict meeting quorum rules (10 members) and removal procedures for gross misconduct or incapacity."
       ],
       cardTags: [
         "🏛️ 8 Professional Seats",
@@ -225,19 +253,19 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 7,
-      badge: "SLIDE 07 • PART II (SECTIONS 14–15)",
-      title: "KBERC CHIEF REGISTRAR, SECRETARIAT & EXECUTIVE COMMITTEES",
-      subtitle: "Executive CEO appointment, central registry administration, and Section 15 Inter-Board Forum",
+      id: 8,
+      badge: "SLIDE 08 • PART II (SECTIONS 14–15)",
+      title: "PART II: KBERC CHIEF REGISTRAR & SECTION 15 JOINT FORUM",
+      subtitle: "Executive CEO appointment, central registry administration, and inter-board tribunal",
       type: "DEEP_DIVE",
       color: "#7c3aed",
       partRef: "PART II: SEC 14–15",
       diagramType: "apex_org_chart",
       bullets: [
         "Section 14 (Appointment of Registrar): Chief Executive Officer appointed competitively for a 5-year renewable term.",
-        "Registrar Duties: Custody of central registers, issuing cryptographic digital QR seals, and enforcing statutory fee tariffs.",
+        "Registrar Custody: Custody of central registers, issuing cryptographic digital QR seals, and enforcing statutory fee tariffs.",
         "Section 15 (Joint Co-ordination Forum): Inter-board dispute resolution tribunal resolving scope friction between EBK (Cap 530), KBERC Colleges, and PPRB.",
-        "Executive Standing Committees: Audit, Registration & Licensing, Disciplinary, Standards & Education accreditation committees."
+        "Standing Committees: Audit, Registration & Licensing, Disciplinary, Standards & Education accreditation committees."
       ],
       metrics: [
         { label: "CHIEF REGISTRAR", val: "5-YR TERM" },
@@ -247,85 +275,129 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 8,
-      badge: "SLIDE 08 • PART III (SECTIONS 16–17)",
-      title: "REGULATED COLLEGES 1 & 2: ARCHITECTURE & STRUCTURAL ENGINEERING",
-      subtitle: "College of Architecture (subsuming BORAQS Arch functions) & College of Structural Engineering (EBK Liaison)",
-      type: "DEEP_DIVE",
-      color: "#059669",
-      partRef: "PART III: SEC 16–17",
-      diagramType: "colleges_arch_eng",
-      bullets: [
-        "College of Architecture (Sec 16): Regulates architectural design, spatial planning, and building envelope (subsuming former BORAQS architectural roles).",
-        "College of Structural & Civil Engineering (Sec 17): Statutory liaison bridge coordinating with EBK (Cap 530) for structural design, foundation engineering, and seismic safety.",
-        "BORAQS Architecture Subsuming: BORAQS architectural registration registers and committee roles transition directly into the KBERC College of Architecture.",
-        "EBK Engineering Autonomy: Professional registration of engineers remains under EBK (Cap 530), while structural peer review standards coordinate via College 2."
-      ],
-      metrics: [
-        { label: "COLLEGE 1 (ARCH)", val: "BORAQS SUBSUMED" },
-        { label: "COLLEGE 2 (ENG)", val: "EBK LIAISON" },
-        { label: "EBK REGISTRATION", val: "CAP 530 SAVED" },
-        { label: "DUAL SEALING", val: "MANDATORY" }
-      ]
-    },
-    {
       id: 9,
-      badge: "SLIDE 09 • PART III (SECTIONS 18–19)",
-      title: "REGULATED COLLEGES 3 & 4: QUANTITY SURVEYING & PHYSICAL PLANNING",
-      subtitle: "College of Quantity Surveying (subsuming BORAQS QS functions) & College of Physical Planning",
+      badge: "SLIDE 09 • PART III (SECTION 16)",
+      title: "PART III • COLLEGE 1: COLLEGE OF ARCHITECTURE",
+      subtitle: "Regulating architectural design, spatial planning, envelope design, and BORAQS transition",
       type: "DEEP_DIVE",
       color: "#059669",
-      partRef: "PART III: SEC 18–19",
-      diagramType: "colleges_qs_plan",
+      partRef: "COLLEGE 1: SEC 16",
+      diagramType: "college_arch",
       bullets: [
-        "College of Quantity Surveying (Sec 18): Regulates cost planning, BOQs, financial audits, and contract valuation (subsuming former BORAQS QS roles).",
-        "College of Physical & Land Use Planning (Sec 19): Regulates county spatial plans, regional zoning frameworks, and land development control.",
-        "BORAQS QS Subsuming: Former BORAQS quantity surveying registers and accreditation committees transition directly into KBERC College 3.",
-        "Financial Protection: QS sign-off required for bank disbursements, public infrastructure tender valuations, and final account certificates."
+        "Subsuming BORAQS Architecture: All architectural registration registers and committee roles transition directly into KBERC College 1.",
+        "Statutory Scope: Lead architectural design coordination, building spatial layout, envelope specification, and occupancy certification.",
+        "Professional Board: Independent 5-member Professional Board for Architecture elected democratically under Schedule 3.",
+        "Stage Inspection Sign-Offs: Form KBERC-1 (Geotechnical review) and Form KBERC-6 (Final Occupancy Certificate) architectural sign-offs."
       ],
       metrics: [
-        { label: "COLLEGE 3 (QS)", val: "BORAQS SUBSUMED" },
-        { label: "COLLEGE 4 (PLAN)", val: "PHYSICAL PLANNING" },
-        { label: "BANK DISBURSE", val: "QS AUDITED" },
-        { label: "ZONING GATE", val: "PLANNER SEAL" }
+        { label: "COLLEGE TIER", val: "COLLEGE 1" },
+        { label: "BORAQS ARCH", val: "SUBSUMED" },
+        { label: "BOARD SEATS", val: "5 MEMBERS" },
+        { label: "OCCUPANCY GATE", val: "FORM KBERC-6" }
       ]
     },
     {
       id: 10,
-      badge: "SLIDE 10 • PART III (SECTIONS 20–22)",
-      title: "REGULATED COLLEGES 5 & 6: LANDSCAPE ARCHITECTURE & INTERIOR DESIGN",
-      subtitle: "Autonomous statutory registration boards for Landscape Architects and Interior Designers",
+      badge: "SLIDE 10 • PART III (SECTION 17)",
+      title: "PART III • COLLEGE 2: CIVIL & STRUCTURAL ENGINEERING LIAISON",
+      subtitle: "Statutory structural engineering liaison bridge coordinating with EBK under Cap 530",
       type: "DEEP_DIVE",
       color: "#059669",
-      partRef: "PART III: SEC 20–22",
+      partRef: "COLLEGE 2: SEC 17",
+      diagramType: "college_eng",
+      bullets: [
+        "EBK Autonomy Alignment (Cap 530 Saved): Professional registration of engineers remains under EBK; College 2 coordinates structural peer reviews.",
+        "Statutory Scope: Structural load design, foundation engineering, MEP installation design, and structural stability certification.",
+        "Eurocode Consequence Matrix: Mandatory peer review by independent Consulting Engineer (EBK) for High-Risk Class D & E towers.",
+        "Stage Inspection Sign-Offs: Form KBERC-2 (Substructure foundation pour) and Form KBERC-3 (Superstructure frame) structural sign-offs."
+      ],
+      metrics: [
+        { label: "COLLEGE TIER", val: "COLLEGE 2" },
+        { label: "EBK AUTONOMY", val: "CAP 530 SAVED" },
+        { label: "PEER REVIEW", val: "CLASS D & E" },
+        { label: "FOUNDATION GATE", val: "FORM KBERC-2" }
+      ]
+    },
+    {
+      id: 11,
+      badge: "SLIDE 11 • PART III (SECTION 18)",
+      title: "PART III • COLLEGE 3: COLLEGE OF QUANTITY SURVEYING",
+      subtitle: "Regulating cost planning, BOQ preparation, tender audit, and contract valuation",
+      type: "DEEP_DIVE",
+      color: "#059669",
+      partRef: "COLLEGE 3: SEC 18",
+      diagramType: "college_qs",
+      bullets: [
+        "Subsuming BORAQS QS: All quantity surveying registers and accreditation committees transition directly into KBERC College 3.",
+        "Statutory Scope: Financial cost planning, BOQ preparation, tender audit, contract administration, and final account valuation.",
+        "Financial Gatekeeping: Mandatory QS sign-off for bank loan disbursements, public infrastructure tender valuations, and payment certificates.",
+        "Schedule 12 Fee Scale: Enforcement of gazetted 5.0%–6.5% baseline design fee tariffs and KES 15,000/hr advisory rates."
+      ],
+      metrics: [
+        { label: "COLLEGE TIER", val: "COLLEGE 3" },
+        { label: "BORAQS QS", val: "SUBSUMED" },
+        { label: "BANK DISBURSE", val: "QS AUDITED" },
+        { label: "FEE SCALE", val: "SCHEDULE 12" }
+      ]
+    },
+    {
+      id: 12,
+      badge: "SLIDE 12 • PART III (SECTION 19)",
+      title: "PART III • COLLEGE 4: PHYSICAL & LAND USE PLANNING",
+      subtitle: "Regulating county spatial plans, regional zoning frameworks, and land development control",
+      type: "DEEP_DIVE",
+      color: "#059669",
+      partRef: "COLLEGE 4: SEC 19",
+      diagramType: "college_plan",
+      bullets: [
+        "Statutory Scope: Preparation of 47 County Spatial Plans, local physical development plans, regional zoning frameworks, and EIA liaison.",
+        "Zoning Compliance Gate: Mandatory Registered Planner seal on all land sub-division, change of user, and master planning applications.",
+        "Urban Growth Alignment: Integration with National Spatial Plan and County Integrated Development Plans (CIDP).",
+        "Environmental Protection: Coordination with NEMA and water resource management authorities for sustainable land development."
+      ],
+      metrics: [
+        { label: "COLLEGE TIER", val: "COLLEGE 4" },
+        { label: "SPATIAL PLANS", val: "47 COUNTIES" },
+        { label: "ZONING GATE", val: "PLANNER SEAL" },
+        { label: "NEMA LIAISON", val: "MANDATORY" }
+      ]
+    },
+    {
+      id: 13,
+      badge: "SLIDE 13 • PART III (SECTIONS 20–22)",
+      title: "PART III • COLLEGES 5 & 6: LANDSCAPE ARCHITECTURE & INTERIOR DESIGN",
+      subtitle: "Autonomous registration boards for Landscape Architects and Interior Designers",
+      type: "DEEP_DIVE",
+      color: "#059669",
+      partRef: "COLLEGES 5 & 6: SEC 20–22",
       diagramType: "colleges_land_int",
       bullets: [
-        "College of Landscape Architecture (Sec 20–21): Regulates site ecology, urban green infrastructure, and environmental landscape design.",
-        "College of Interior Architecture & Design (Sec 22): Regulates interior spatial ergonomics, fire safety, and material specification.",
-        "Ecological Standards: Landscape sign-off mandatory for public parks, commercial plazas, and environmental EIA compliance.",
-        "Fire Safety Ergonomics: Interior design certification mandatory for public assembly halls, hotels, and high-occupancy commercial towers."
+        "College 5 (Landscape Architecture): Regulates site ecology, urban green infrastructure, EIA landscape compliance, and public parks.",
+        "College 6 (Interior Architecture & Design): Regulates interior spatial ergonomics, fire egress safety, material toxicity, and acoustic control.",
+        "Ecological Certification: Mandatory Landscape Architect sign-off for public commercial plazas, EIA projects, and urban parks.",
+        "Fire Safety Ergonomics: Mandatory Interior Designer sign-off for public assembly halls, hotels, and high-occupancy commercial towers."
       ],
       metrics: [
         { label: "COLLEGE 5", val: "LANDSCAPE ARCH" },
         { label: "COLLEGE 6", val: "INTERIOR DESIGN" },
         { label: "ECOLOGY GATE", val: "EIA LIAISON" },
-        { label: "FIRE SAFETY", val: "INTERIOR SIGN-OFF" }
+        { label: "FIRE SAFETY", val: "INTERIOR SEAL" }
       ]
     },
     {
-      id: 11,
-      badge: "SLIDE 11 • PART III (SECTIONS 23–25)",
-      title: "REGULATED COLLEGES 7 & 8: CPM & TVET TECHNOLOGISTS",
-      subtitle: "Autonomous statutory registration boards for Construction Project Managers and TVET Technologists",
+      id: 14,
+      badge: "SLIDE 14 • PART III (SECTIONS 23–25)",
+      title: "PART III • COLLEGES 7 & 8: CPM & TVET TECHNOLOGISTS",
+      subtitle: "Autonomous registration boards for Construction Project Managers and TVET Technologists",
       type: "DEEP_DIVE",
       color: "#059669",
-      partRef: "PART III: SEC 23–25",
+      partRef: "COLLEGES 7 & 8: SEC 23–25",
       diagramType: "colleges_cpm_tvet",
       bullets: [
-        "College of Construction Project Management (Sec 23): Regulates CPM site project managers, construction planning, and safety.",
-        "College of Built Environment Technologists (Sec 24–25): Regulates TVET Higher Diploma and B.Tech graduates within indexed cadres.",
-        "Site Management Oversight: CPM project managers ensure site safety protocols, quality assurance, and schedule adherence.",
-        "TVET Inclusion: First statutory framework in East Africa granting formal registration and independent practice to TVET technologists."
+        "College 7 (Construction Project Management): Regulates CPM site project managers, construction planning, quality assurance, and site safety.",
+        "College 8 (Built Environment Technologists): First statutory framework in East Africa granting formal registration to TVET Higher Diploma & B.Tech cadres.",
+        "Site Management Oversight: CPM project managers ensure mandatory site safety protocols and clerk-of-works logbook maintenance.",
+        "TVET Inclusion: Independent statutory scopes of practice for technical detailing, site supervision, and maintenance management."
       ],
       metrics: [
         { label: "COLLEGE 7", val: "CPM MANAGERS" },
@@ -335,24 +407,24 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 12,
-      badge: "SLIDE 12 • PART IV (SECTIONS 26–28)",
-      title: "INDIVIDUAL PRACTITIONER REGISTRATION & FORM A QUALIFICATIONS",
+      id: 15,
+      badge: "SLIDE 15 • PART IV (SECTIONS 26–28)",
+      title: "PART IV: INDIVIDUAL REGISTRATION & FORM A QUALIFICATIONS GATE",
       subtitle: "Statutory Form A registration, accredited degree requirements, and qualifications evaluation",
       type: "CARD_GRID_4",
       color: "#d97706",
       partRef: "PART IV: SEC 26–28",
       diagramType: "registration_qualifications",
       bullets: [
-        "Section 26 (Application for Registration): Submission of statutory Form A to the respective Professional Board.",
+        "Section 26 (Form A Application): Submission of statutory Form A application to the respective Professional Board.",
         "Section 27 (Qualifications Gate): Accredited university degree in architecture, engineering, QS, planning, or technical degree.",
-        "Section 27A (Foreign Degree Recognition): Evaluation and peer verification of foreign university qualifications by KBERC.",
-        "Section 28 (Entry into College Register): Approval by College Registration Committee and issuance of Registration Number."
+        "Section 27A (Foreign Degree Evaluation): Peer evaluation and verification of foreign university qualifications by KBERC.",
+        "Section 28 (Entry into College Register): Approval by College Registration Committee and issuance of lifetime Registration Number."
       ],
       cardTags: [
-        "📋 Form A Statutory Application",
-        "🎓 Accredited University Degree",
-        "🌍 Foreign Degree Peer Verification",
+        "📋 Form A Application",
+        "🎓 Accredited Degree Gate",
+        "🌍 Foreign Degree Verification",
         " Lifetime Register Entry"
       ],
       metrics: [
@@ -363,10 +435,10 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 13,
-      badge: "SLIDE 13 • PART IV (SECTIONS 29–34)",
-      title: "INTERNSHIP LOGBOOKS, MENTORSHIP & PPE LICENSING EXAMS",
-      subtitle: "Mandatory 2-year internship, logbook sign-offs, and Professional Practice Exams (PPE)",
+      id: 16,
+      badge: "SLIDE 16 • PART IV (SECTIONS 29–34)",
+      title: "PART IV: 2-YEAR INTERNSHIP, LOGBOOKS & PPE LICENSING EXAMS",
+      subtitle: "Mandatory 2-year graduate internship, weekly logbooks, and Professional Practice Exams (PPE)",
       type: "CARD_GRID_4",
       color: "#d97706",
       partRef: "PART IV: SEC 29–34",
@@ -375,11 +447,11 @@ export default function SlidesPage() {
         "Section 29 (Structured Internship): Mandatory 2-year graduate internship under a licensed Lead Practitioner.",
         "Section 30 (Digital Logbook Maintenance): Weekly sign-off of site inspection and design logbooks by supervising mentors.",
         "Section 31 (Professional Practice Exam - PPE): Mandatory pass in KBERC statutory law, professional ethics, and contract administration.",
-        "Section 32–34 (Issuance of Certificate): Proposed gazettement of newly licensed Lead Practitioners in the Kenya Gazette upon enactment."
+        "Section 32–34 (Certificate & Gazette Listing): Mandatory publication of newly licensed Lead Practitioners in the Kenya Gazette."
       ],
       cardTags: [
         "⏱️ Mandatory 2-Year Internship",
-        "📓 Weekly Digital Logbook Audit",
+        "📓 Weekly Digital Logbooks",
         "✍️ PPE Statutory Licensing Exam",
         "📜 Kenya Gazette Official Listing"
       ],
@@ -391,24 +463,24 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 14,
-      badge: "SLIDE 14 • PART IV (SECTIONS 35–40)",
-      title: "CORPORATE CONSULTANCIES, JOINT VENTURES & 51% LOCAL EQUITY",
-      subtitle: "Form C corporate firm licensing, local practitioner equity mandate, and joint venture rules",
+      id: 17,
+      badge: "SLIDE 17 • PART IV (SECTIONS 35–40)",
+      title: "PART IV: CORPORATE LICENSING, 51% LOCAL EQUITY & DIRECTOR LIABILITY",
+      subtitle: "Form B annual licenses, Form C corporate consultancies, 51% local equity, and director liability",
       type: "CARD_GRID_4",
       color: "#b45309",
       partRef: "PART IV: SEC 35–40",
       diagramType: "corporate_equity",
       bullets: [
-        "Section 35 (Form B Annual Practicing License): Mandatory annual license renewal linked to 50 CPD units and valid PII insurance.",
-        "Section 36–38 (Form C Corporate Firm Licensing): Licensing of sole proprietorships, partnerships, and limited liability consultancies.",
-        "Section 39 (51% Local Equity Rule): Proposes that at least 51% of voting shares in corporate firms must be owned by registered local Lead Professionals.",
-        "Section 40 (Corporate Board Liability): Directors of corporate consultancies are held jointly and severally liable for design defects."
+        "Section 35 (Form B Annual License): Mandatory annual license renewal linked to 50 CPD units and valid PII insurance.",
+        "Section 36–38 (Form C Corporate Licensing): Licensing of sole proprietorships, partnerships, and limited liability consultancies.",
+        "Section 39 (51% Local Equity Mandate): Proposes that at least 51% of voting shares in corporate firms must be owned by local Lead Professionals.",
+        "Section 40 (Director Liability): Directors of corporate consultancies are held jointly and severally liable for gross design defects."
       ],
       cardTags: [
         "📜 Form B Annual Renewal",
         "🏢 Form C Corporate License",
-        "🇰🇪 51% Minimum Local Shareholding",
+        "🇰🇪 51% Minimum Local Equity",
         "⚖️ Joint & Several Director Liability"
       ],
       metrics: [
@@ -419,10 +491,10 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 15,
-      badge: "SLIDE 15 • PART IV (SECTIONS 41–45)",
-      title: "FOREIGN CONSULTANCY REGULATIONS, TECH TRANSFER & STUDENT RIGHTS",
-      subtitle: "Temporary foreign practitioner registration, local JV mandates, and Section 27A student intern rights",
+      id: 18,
+      badge: "SLIDE 18 • PART IV (SECTIONS 41–45)",
+      title: "PART IV: FOREIGN REGULATIONS, TECH TRANSFER & STUDENT RIGHTS",
+      subtitle: "Temporary foreign licenses, mandatory Joint Ventures, local content, and Section 27A student rights",
       type: "CARD_GRID_4",
       color: "#b45309",
       partRef: "PART IV: SEC 41–45",
@@ -431,7 +503,7 @@ export default function SlidesPage() {
         "Section 41–43 (Temporary Foreign Registration): Foreign professionals granted temporary licenses for specific mega-projects only.",
         "Section 44 (Mandatory Technology Transfer): Foreign firms must pair with local consultancies in a Joint Venture transferring technology.",
         "Section 45 (Local Content Mandate): Minimum 60% of technical design hours on public projects reserved for local Kenyan professionals.",
-        "Section 27A (Student Trainee Protections): Mandatory paid 12-month industrial attachment for university and TVET trainees."
+        "Section 27A (Student Trainee Rights): Mandatory paid 12-month industrial attachment for university and TVET trainees."
       ],
       cardTags: [
         "🌐 Project-Specific Temp License",
@@ -447,9 +519,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 16,
-      badge: "SLIDE 16 • PART V (SECTIONS 46–50)",
-      title: "CENTRAL DIGITAL REGISTER & PUBLIC CREDENTIAL VERIFICATION PORTAL",
+      id: 19,
+      badge: "SLIDE 19 • PART V (SECTIONS 46–50)",
+      title: "PART V: CENTRAL MASTER DIGITAL REGISTER & PUBLIC API PORTAL",
       subtitle: "Real-time master database of all licensed practitioners, firms, and quack tracking",
       type: "DEEP_DIVE",
       color: "#0284c7",
@@ -469,9 +541,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 17,
-      badge: "SLIDE 17 • PART V (SECTIONS 51–55)",
-      title: "CRYPTOGRAPHIC DIGITAL QR SEALS & REAL-TIME PLAN AUTHENTICATION",
+      id: 20,
+      badge: "SLIDE 20 • PART V (SECTIONS 51–55)",
+      title: "PART V: CRYPTOGRAPHIC DIGITAL QR SEALS & PLAN AUTHENTICATION",
       subtitle: "Mandatory cryptographic digital QR seals embedding GPS, license status, and PII cover",
       type: "FLOWCHART_PROCESS",
       color: "#0284c7",
@@ -491,9 +563,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 18,
-      badge: "SLIDE 18 • PART V (SECTIONS 56–58)",
-      title: "47 COUNTY E-PERMIT DESKS API INTEGRATION & SECTION 58 VOIDING",
+      id: 21,
+      badge: "SLIDE 21 • PART V (SECTIONS 56–58)",
+      title: "PART V: 47 COUNTY E-PERMIT DESKS API & SECTION 58 PLAN VOIDING",
       subtitle: "Real-time county building control liaison and statutory voiding of un-sealed building plans",
       type: "FLOWCHART_PROCESS",
       color: "#2563eb",
@@ -513,9 +585,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 19,
-      badge: "SLIDE 19 • PART VI (SECTIONS 59–64)",
-      title: "CONTINUING PROFESSIONAL DEVELOPMENT (CPD) 50-UNIT MATRIX",
+      id: 22,
+      badge: "SLIDE 22 • PART VI (SECTIONS 59–64)",
+      title: "PART VI: CONTINUING PROFESSIONAL DEVELOPMENT (CPD) 50-UNIT MATRIX",
       subtitle: "Mandatory annual 50 CPD units requirement, provider accreditation, and renewal gates",
       type: "CARD_GRID_4",
       color: "#059669",
@@ -541,9 +613,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 20,
-      badge: "SLIDE 20 • PART VI (SECTIONS 65–68)",
-      title: "PROFESSIONAL INDEMNITY INSURANCE (PII) TIERS",
+      id: 23,
+      badge: "SLIDE 23 • PART VI (SECTIONS 65–68)",
+      title: "PART VI: PROFESSIONAL INDEMNITY INSURANCE (PII) COVER TIERS",
       subtitle: "Statutory Professional Indemnity Cover tiers for individual practitioners and corporate consultancies",
       type: "METRIC_STACK",
       color: "#991b1b",
@@ -563,9 +635,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 21,
-      badge: "SLIDE 21 • PART VI (SECTIONS 69–72)",
-      title: "10-YEAR STATUTORY DEFECT LIABILITY ALLOCATION BREAKDOWN",
+      id: 24,
+      badge: "SLIDE 24 • PART VI (SECTIONS 69–72)",
+      title: "PART VI: 10-YEAR STATUTORY DEFECT LIABILITY ALLOCATION BREAKDOWN",
       subtitle: "Statutory 10-year defect liability allocation between architects, structural engineers, QSs, and main contractors",
       type: "METRIC_STACK",
       color: "#991b1b",
@@ -585,9 +657,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 22,
-      badge: "SLIDE 22 • PART VII (SECTIONS 73–80)",
-      title: "PROTECTED PROFESSIONAL TITLES & ANTI-QUACKERY PROVISIONS",
+      id: 25,
+      badge: "SLIDE 25 • PART VII (SECTIONS 73–80)",
+      title: "PART VII: PROTECTED PROFESSIONAL TITLES & ANTI-QUACKERY PROVISIONS",
       subtitle: "Reserved statutory professional designations and criminalization of un-licensed title usage",
       type: "CARD_GRID_4",
       color: "#059669",
@@ -613,9 +685,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 23,
-      badge: "SLIDE 23 • PART VII (SECTIONS 81–85)",
-      title: "STATUTORY SCOPES OF PRACTICE & BOUNDARY MATRIX",
+      id: 26,
+      badge: "SLIDE 26 • PART VII (SECTIONS 81–85)",
+      title: "PART VII: STATUTORY SCOPES OF PRACTICE & BOUNDARIES MATRIX",
       subtitle: "Explicit boundary matrices defining design, cost, structural, and site supervision responsibilities",
       type: "DEEP_DIVE",
       color: "#059669",
@@ -635,9 +707,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 24,
-      badge: "SLIDE 24 • PART VII (SECTIONS 86–90)",
-      title: "TVET TECHNOLOGIST INDEXING, HIGHER DIPLOMA & B.TECH PROGRESSION",
+      id: 27,
+      badge: "SLIDE 27 • PART VII (SECTIONS 86–90)",
+      title: "PART VII: TVET TECHNOLOGIST INDEXING & CAREER PROGRESSION",
       subtitle: "Statutory recognition, career progression, and independent scopes of practice for TVET cadres",
       type: "CARD_GRID_4",
       color: "#059669",
@@ -663,9 +735,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 25,
-      badge: "SLIDE 25 • PART VIII (SECTIONS 91–95)",
-      title: "CODE OF ETHICS, CONFLICT OF INTEREST & FINANCIAL PROBITY",
+      id: 28,
+      badge: "SLIDE 28 • PART VIII (SECTIONS 91–95)",
+      title: "PART VIII: CODE OF ETHICS, CONFLICT DISCLOSURES & PROBITY",
       subtitle: "Schedule 1 Code of Conduct, mandatory conflict disclosures, and anti-corruption rules",
       type: "CARD_GRID_4",
       color: "#991b1b",
@@ -691,9 +763,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 26,
-      badge: "SLIDE 26 • PART VIII (SECTIONS 96–105)",
-      title: "DISCIPLINARY COMMITTEE INQUIRIES, STAMP RENTING & SANCTIONS TARIFF",
+      id: 29,
+      badge: "SLIDE 29 • PART VIII (SECTIONS 96–105)",
+      title: "PART VIII: DISCIPLINARY TRIBUNAL, STAMP RENTING & SANCTIONS TARIFF",
       subtitle: "Disciplinary Tribunal hearings, roll striking, KES 5,000,000 fines, and stamp renting prosecution",
       type: "CARD_GRID_4",
       color: "#991b1b",
@@ -719,9 +791,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 27,
-      badge: "SLIDE 27 • PART IX (SECTIONS 106–112)",
-      title: "CONSUMER PROTECTION & SCHEDULE 12 MINIMUM SCALE OF FEES",
+      id: 30,
+      badge: "SLIDE 30 • PART IX (SECTIONS 106–112)",
+      title: "PART IX: CONSUMER PROTECTION & SCHEDULE 12 SCALE OF FEES",
       subtitle: "Schedule 12 Gazetted Minimum Scale of Fees (5.0%–6.5%), hourly advisory rates, and tariffs",
       type: "METRIC_STACK",
       color: "#b45309",
@@ -730,7 +802,7 @@ export default function SlidesPage() {
       bullets: [
         "Section 106–108 (Schedule 12 Fee Scale): Statutory minimum percentage design fee tariffs (5.0%–6.5%) and hourly advisory rates (KES 10k–15k/hr).",
         "Section 109 (Comprehensive Fee Breakdown): Fee allocation across Concept Design (15%), Scheme Design (20%), Working Drawings (35%), Site Supervision (30%).",
-        "Section 110–112 (Client-Practitioner Service Agreements): Mandatory written statutory contracts prior to commencing any professional design services.",
+        "Section 110–112 (Client-Practitioner Agreements): Mandatory written statutory contracts prior to commencing any professional design services.",
         "Consumer Protection: Protects building developers against exorbitant fees while ensuring practitioners receive fair remuneration."
       ],
       metrics: [
@@ -741,8 +813,8 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 28,
-      badge: "SLIDE 28 • STATUTORY REMUNERATION PROVISIONS",
+      id: 31,
+      badge: "SLIDE 31 • STATUTORY REMUNERATION PROVISIONS",
       title: "STATUTORY REMUNERATION MANDATES & GAZETTE REGULATION POWERS",
       subtitle: "Mandatory paid attachments (Sec 27A), paid internships (Sec 29), and gazette tariffs (Sec 208)",
       type: "CARD_GRID_4",
@@ -769,9 +841,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 29,
-      badge: "SLIDE 29 • PART IX (SECTIONS 113–120)",
-      title: "ANTI-UNDERCUTTING MANDATES, PREDATORY PRICING & FEE ARBITRATION",
+      id: 32,
+      badge: "SLIDE 32 • PART IX (SECTIONS 113–120)",
+      title: "PART IX: ANTI-UNDERCUTTING MANDATES & FEE ARBITRATION",
       subtitle: "Criminalization of fee undercutting, un-accredited brokerage, and KBERC fee arbitration",
       type: "CARD_GRID_4",
       color: "#b45309",
@@ -797,9 +869,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 30,
-      badge: "SLIDE 30 • PART X (SECTIONS 121–125)",
-      title: "6-HOUR EMERGENCY COLLAPSE PROTOCOL & FORENSIC SITE AUDITS",
+      id: 33,
+      badge: "SLIDE 33 • PART X (SECTIONS 121–125)",
+      title: "PART X: 6-HOUR EMERGENCY COLLAPSE PROTOCOL & SITE AUDITS",
       subtitle: "Mandatory 6-hour forensic collapse response and structural failure site evidence sampling",
       type: "FLOWCHART_PROCESS",
       color: "#7c3aed",
@@ -819,9 +891,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 31,
-      badge: "SLIDE 31 • PART X (SECTIONS 126–130)",
-      title: "DISASTER RELIEF & EMERGENCY COLLAPSE INQUIRY FUND ADMINISTRATION",
+      id: 34,
+      badge: "SLIDE 34 • PART X (SECTIONS 126–130)",
+      title: "PART X: DISASTER RELIEF FUND & VICTIM COMPENSATION",
       subtitle: "Schedule 13 Fund financing forensic collapse audits and victim compensation",
       type: "CARD_GRID_4",
       color: "#7c3aed",
@@ -847,9 +919,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 32,
-      badge: "SLIDE 32 • PART XI (SECTIONS 131–140)",
-      title: "BUILT ENVIRONMENT APPEALS TRIBUNAL JURISDICTION & 60-DAY LIMITS",
+      id: 35,
+      badge: "SLIDE 35 • PART XI (SECTIONS 131–140)",
+      title: "PART XI: APPEALS TRIBUNAL JURISDICTION & 60-DAY HEARING LIMITS",
       subtitle: "Independent 5-member judicial tribunal and 60-day appellate hearing timelines",
       type: "FLOWCHART_PROCESS",
       color: "#2563eb",
@@ -869,9 +941,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 33,
-      badge: "SLIDE 33 • PART XI (SECTIONS 141–150)",
-      title: "HIGH COURT REFERRAL GATES & JUDICIAL APPEAL WORKFLOW",
+      id: 36,
+      badge: "SLIDE 36 • PART XI (SECTIONS 141–150)",
+      title: "PART XI: HIGH COURT REFERRAL GATES & JUDICIAL APPEALS",
       subtitle: "Statutory High Court of Kenya referral gates on points of law and execution of tribunal orders",
       type: "FLOWCHART_PROCESS",
       color: "#2563eb",
@@ -891,9 +963,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 34,
-      badge: "SLIDE 34 • PART XII (SECTIONS 151–155)",
-      title: "STAGE GATE INSPECTIONS 1: GEOTECHNICAL, FOUNDATION & SUBSTRUCTURE",
+      id: 37,
+      badge: "SLIDE 37 • PART XII (SECTIONS 151–155)",
+      title: "PART XII • STAGE GATE 1: GEOTECHNICAL & SUBSTRUCTURE SIGN-OFFS",
       subtitle: "Mandatory Form KBERC-1 soil sign-offs and Form KBERC-2 foundation concrete pour validation",
       type: "FLOWCHART_PROCESS",
       color: "#059669",
@@ -913,9 +985,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 35,
-      badge: "SLIDE 35 • PART XII (SECTIONS 156–165)",
-      title: "STAGE GATE INSPECTIONS 2: SUPERSTRUCTURE, ENVELOPE & OCCUPANCY",
+      id: 38,
+      badge: "SLIDE 38 • PART XII (SECTIONS 156–165)",
+      title: "PART XII • STAGE GATE 2: SUPERSTRUCTURE & FINAL OCCUPANCY",
       subtitle: "Forms KBERC-3 to KBERC-6 stage gate sign-offs and final statutory occupancy certification",
       type: "FLOWCHART_PROCESS",
       color: "#059669",
@@ -935,9 +1007,9 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 36,
-      badge: "SLIDE 36 • PART XIII (SECTIONS 166–180)",
-      title: "STATUTORY OFFENCES, PENALTIES & DIGITAL SEAL FORGERY TERMS",
+      id: 39,
+      badge: "SLIDE 39 • PART XIII (SECTIONS 166–180)",
+      title: "PART XIII: STATUTORY OFFENCES & DIGITAL SEAL FORGERY TERMS",
       subtitle: "Criminal offences, KES 5,000,000 fines, 10-year prison terms, and Section 179 Digital Seal forgery enforcement",
       type: "CARD_GRID_4",
       color: "#991b1b",
@@ -963,32 +1035,416 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 37,
-      badge: "SLIDE 37 • PART XIV & XV (SECTIONS 181–200)",
-      title: "DEGREE ACCREDITATION, NBC 2024 & EUROCODES BS EN 1990 MATRIX",
-      subtitle: "Accreditation of university degrees, TVET curricula, and statutory alignment with Eurocodes",
-      type: "EUROCODE_PYRAMID",
+      id: 40,
+      badge: "SLIDE 40 • PART XIV (SECTIONS 181–187)",
+      title: "PART XIV: DEGREE ACCREDITATION & TVET CURRICULA STANDARDIZATION",
+      subtitle: "Mandatory KBERC university degree accreditation and TVETA technical curricula alignment",
+      type: "CARD_GRID_4",
       color: "#0284c7",
-      partRef: "PARTS XIV & XV: SEC 181–200",
-      diagramType: "eurocode_risk_pyramid",
+      partRef: "PART XIV: SEC 181–187",
+      diagramType: "degree_accreditation",
       bullets: [
-        "Section 181–185 (Degree Accreditation): Mandatory KBERC accreditation for university architectural, engineering, and QS degrees.",
-        "Section 186–187 (TVET Technical Curricula): Standardization of TVET technical diploma modules for Built Environment Technologists.",
-        "Section 188–192 (NBC 2024 Integration): Binding legal integration with National Building Code 2024 standards.",
-        "Section 193–200 (Schedule 4 Eurocodes BS EN 1990): Classification of buildings into Risk Classes A to E with mandatory peer review by EBK engineers for high-risk towers."
+        "Section 181–183 (University Degree Accreditation): Mandatory accreditation of university architectural, engineering, QS, and planning programs.",
+        "Section 184–185 (Accreditation Audits): 5-Year cyclical university faculty audits by KBERC Education & Standards Committee.",
+        "Section 186 (TVET Curricula Standardization): Standardizing Higher Diploma and B.Tech modules with TVET Authority (TVETA).",
+        "Section 187 (Continuing Academic Assessment): Mandatory alignment of university exams with industry PPE licensing standards."
+      ],
+      cardTags: [
+        "🎓 5-Year University Audits",
+        "🏛️ Mandatory Degree Accreditation",
+        "🛠️ TVETA Curricula Alignment",
+        "✍️ PPE Alignment Standards"
       ],
       metrics: [
         { label: "DEGREE ACCREDITATION", val: "MANDATORY" },
+        { label: "AUDIT CYCLE", val: "5 YEARS" },
+        { label: "TVETA LIAISON", val: "SEC 186" },
+        { label: "PPE ALIGNMENT", val: "SEC 187" }
+      ]
+    },
+    {
+      id: 41,
+      badge: "SLIDE 41 • PART XV (SECTIONS 188–200)",
+      title: "PART XV: NBC 2024 INTEGRATION & EUROCODES BS EN 1990 MATRIX",
+      subtitle: "Binding statutory integration with National Building Code 2024 and Eurocode Risk Classes A to E",
+      type: "EUROCODE_PYRAMID",
+      color: "#0284c7",
+      partRef: "PART XV: SEC 188–200",
+      diagramType: "eurocode_risk_pyramid",
+      bullets: [
+        "Section 188–192 (NBC 2024 Legal Integration): Binding legal integration with National Building Code 2024 structural standards.",
+        "Section 193–196 (Schedule 4 Eurocodes BS EN 1990): Classification of buildings into Risk Classes A to E based on occupant consequence.",
+        "Section 197–198 (High-Risk Peer Review): Mandatory independent peer review by Consulting Engineers (EBK) for Class D & E towers.",
+        "Section 199–200 (Seismic & Wind Code Rules): Mandatory compliance with Eurocode 8 (Seismic Design) and Eurocode 1 (Wind Loads)."
+      ],
+      metrics: [
         { label: "BUILDING CODE", val: "NBC 2024" },
         { label: "EUROCODE STANDARD", val: "BS EN 1990" },
+        { label: "PEER REVIEW", val: "CLASS D & E" },
+        { label: "SEISMIC CODE", val: "EUROCODE 8" }
+      ]
+    },
+    {
+      id: 42,
+      badge: "SLIDE 42 • PART XVI (SECTIONS 201–205)",
+      title: "PART XVI: KBERC FINANCIAL MANAGEMENT & 0.1% APPROVAL LEVY",
+      subtitle: "KBERC revenue sources, annual Form B/C licensing fees, and 0.1% approval levies",
+      type: "DEEP_DIVE",
+      color: "#059669",
+      partRef: "PART XVI: SEC 201–205",
+      diagramType: "financial_management",
+      bullets: [
+        "Section 201–202 (KBERC Revenue Sources): Registration fees, annual Form B/C license renewals, parliamentary grants, and investments.",
+        "0.1% Developer Approval Levy: Developers pay a statutory 0.1% levy on approval fees to fund site stage inspections and enforcement.",
+        "Section 203–204 (KBERC Reserve Fund): Maintenance of a statutory reserve fund for emergency collapse investigations and IT portal upgrades.",
+        "Section 205 (Annual Budget Estimates): Budget estimates submitted to Cabinet Secretary 3 months prior to financial year start."
+      ],
+      metrics: [
+        { label: "DEVELOPER LEVY", val: "0.1% ON PERMITS" },
+        { label: "RESERVE FUND", val: "STATUTORY" },
+        { label: "BUDGET CYCLE", val: "3 MONTHS PRIOR" },
+        { label: "ANNUAL LICENSING", val: "FORM B & C" }
+      ]
+    },
+    {
+      id: 43,
+      badge: "SLIDE 43 • PART XVII (SECTIONS 206–208)",
+      title: "PART XVII: AUDITOR-GENERAL AUDITS & ANNUAL PARLIAMENTARY REPORT",
+      subtitle: "Constitutional Auditor-General oversight under Article 229 and annual Parliamentary reporting",
+      type: "DEEP_DIVE",
+      color: "#059669",
+      partRef: "PART XVII: SEC 206–208",
+      diagramType: "auditor_general",
+      bullets: [
+        "Section 206 (Accounts & Records): Mandatory maintenance of proper books of accounts and financial records by Chief Registrar.",
+        "Section 207 (Auditor-General Audit): Mandatory annual audit of KBERC accounts by Auditor-General under Article 229 of the Constitution.",
+        "Section 208 (Annual Report to Parliament): Submission of annual performance, disciplinary, and financial report to the National Assembly.",
+        "Section 208(2)(h) Remuneration Gazette Power: Statutory power empowering Council to gazette practitioner stipend and fee tariffs."
+      ],
+      metrics: [
+        { label: "AUDITOR-GENERAL", val: "ANNUAL (ART 229)" },
+        { label: "PARLIAMENT REPORT", val: "ANNUAL" },
+        { label: "GAZETTE POWER", val: "SEC 208(2)(H)" },
+        { label: "BOOKS OF ACCOUNT", val: "AUDITED" }
+      ]
+    },
+    {
+      id: 44,
+      badge: "SLIDE 44 • PART XVIII (SECTIONS 209–210)",
+      title: "PART XVIII: 12-MONTH PRACTITIONER LICENSE MIGRATION SAVINGS",
+      subtitle: "Automatic 12-month transition savings for existing active registered practitioners",
+      type: "DEEP_DIVE",
+      color: "#475569",
+      partRef: "PART XVIII: SEC 209–210",
+      diagramType: "migration_savings",
+      bullets: [
+        "Section 209 (Existing Practitioner Savings): Active BORAQS registered architects and quantity surveyors granted automatic 12-month license migration.",
+        "Section 210 (Pending Applications Transition): Pending registration applications processed seamlessly under KBERC Board committees.",
+        "No Service Disruption: Guaranteeing zero disruption to ongoing construction projects during the 12-month digital register migration.",
+        "Form B Migration Gate: Practitioners issued new KBERC Form B practicing licenses upon verification of 50 CPD units."
+      ],
+      metrics: [
+        { label: "MIGRATION WINDOW", val: "12 MONTHS" },
+        { label: "BORAQS TRANSITION", val: "AUTOMATIC" },
+        { label: "PENDING APPS", val: "SEC 210" },
+        { label: "SERVICE DISRUPTION", val: "ZERO" }
+      ]
+    },
+    {
+      id: 45,
+      badge: "SLIDE 45 • PART XVIII (SECTION 211)",
+      title: "PART XVIII • SECTION 211: DISBANDING OF BORAQS & ASSET SUBSUMING",
+      subtitle: "Disbanding of BORAQS established under Cap 525 and subsuming assets into KBERC",
+      type: "DEEP_DIVE",
+      color: "#991b1b",
+      partRef: "SEC 211 BORAQS DISBANDING",
+      diagramType: "boraqs_disbanding",
+      bullets: [
+        "Section 211 (Official Disbanding of BORAQS): Board of Registration of Architects and Quantity Surveyors (BORAQS) is officially disbanded.",
+        "Asset Subsuming: All physical property, financial reserves, digital registers, and staff of BORAQS transfer directly to KBERC.",
+        "Colleges 1 & 3 Integration: Architectural registers move to College 1 (Sec 16); Quantity Surveying registers move to College 3 (Sec 18).",
+        "Single Apex Regulatory Council: Consolidates regulatory oversight into KBERC while preserving EBK autonomy under Cap 530."
+      ],
+      metrics: [
+        { label: "BORAQS STATUS", val: "DISBANDED (SEC 211)" },
+        { label: "ASSET TRANSFER", val: "100% KBERC" },
+        { label: "ARCH REGISTERS", val: "COLLEGE 1" },
+        { label: "QS REGISTERS", val: "COLLEGE 3" }
+      ]
+    },
+    {
+      id: 46,
+      badge: "SLIDE 46 • PART XVIII (SECTION 212)",
+      title: "PART XVIII • SECTION 212: REPEAL OF COLONIAL CAP 525 (1934 ACT)",
+      subtitle: "Official statutory repeal of the 1934 Architects and Quantity Surveyors Act (Cap 525)",
+      type: "DEEP_DIVE",
+      color: "#991b1b",
+      partRef: "SEC 212 CAP 525 REPEAL",
+      diagramType: "cap525_repeal",
+      bullets: [
+        "Section 212 (Official Repeal of Cap 525): 1934 colonial Architects and Quantity Surveyors Act (Cap 525) is officially repealed.",
+        "Eliminating 92-Year Colonial Silo: Replaces the binary 2-profession silo with the 8-discipline KBERC Apex Governance Framework.",
+        "Modern Legal Architecture: Enforces mandatory public safety inspection forms, cryptographic QR seals, and Eurocode risk tiers.",
+        "Comprehensive Practice Protection: Outlaws quackery, stamp renting, and un-inspected building construction nationwide."
+      ],
+      metrics: [
+        { label: "CAP 525 STATUS", val: "REPEALED (SEC 212)" },
+        { label: "COLONIAL LAW AGE", val: "92 YRS" },
+        { label: "REPLACEMENT LAW", val: "KBERC ACT 2026" },
+        { label: "REGULATED CADRES", val: "8 COLLEGES" }
+      ]
+    },
+    {
+      id: 47,
+      badge: "SLIDE 47 • PART XVIII (CAP 530 ALIGNMENT)",
+      title: "PRESERVATION OF EBK STATUTORY ENGINEERING AUTONOMY (CAP 530)",
+      subtitle: "Engineers Board of Kenya (EBK) statutory engineering registration preserved under Cap 530",
+      type: "DEEP_DIVE",
+      color: "#0284c7",
+      partRef: "CAP 530 EBK AUTONOMY",
+      diagramType: "ebk_autonomy",
+      bullets: [
+        "Cap 530 Fully Preserved: Engineers Board of Kenya (EBK) is NOT disbanded. Cap 530 remains in full statutory force.",
+        "Professional Registration: Engineering professional registration and accreditation remain under EBK under Cap 530.",
+        "KBERC College 2 Liaison Bridge: College 2 acts as a statutory bridge coordinating structural peer review standards under KBERC.",
+        "Dual Sealing Mandate: Architectural plans bear KBERC College 1 seal; structural plans bear EBK & KBERC College 2 seals."
+      ],
+      metrics: [
+        { label: "EBK STATUS", val: "CAP 530 SAVED" },
+        { label: "ENGINEER REG", val: "EBK AUTONOMY" },
+        { label: "KBERC BRIDGE", val: "COLLEGE 2" },
+        { label: "DUAL SEALING", val: "MANDATORY" }
+      ]
+    },
+    {
+      id: 48,
+      badge: "SLIDE 48 • STATUTORY SCHEDULES 1 & 2",
+      title: "SCHEDULES 1 & 2: CODE OF ETHICS & APPEALS TRIBUNAL RULES",
+      subtitle: "Binding professional ethics, conflict declarations, and 60-day appellate hearing rules",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULES 1 & 2",
+      diagramType: "sch1_2",
+      bullets: [
+        "Schedule 1 (Code of Ethics): Binding code of conduct prohibiting secret supplier commissions, kickbacks, and un-declared conflicts.",
+        "Financial Probity Rules: Enforces audited client trust accounts and transparent cost estimation.",
+        "Schedule 2 (Appeals Tribunal Rules): Procedure for filing appeals against KBERC decisions within 30 days.",
+        "60-Day Hearing Mandate: Tribunal must hear and determine all appeals within 60 days of filing."
+      ],
+      cardTags: [
+        "📜 Schedule 1 Ethics Code",
+        "💼 Audited Client Accounts",
+        "⚖️ Schedule 2 Tribunal Rules",
+        "⏱️ 60-Day Appellate Limit"
+      ],
+      metrics: [
+        { label: "ETHICS CODE", val: "SCHEDULE 1" },
+        { label: "TRIBUNAL RULES", val: "SCHEDULE 2" },
+        { label: "HEARING TIMELINE", val: "60 DAYS" },
+        { label: "APPEAL WINDOW", val: "30 DAYS" }
+      ]
+    },
+    {
+      id: 49,
+      badge: "SLIDE 49 • STATUTORY SCHEDULES 3 & 4",
+      title: "SCHEDULES 3 & 4: BOARD ELECTIONS & EUROCODES BS EN 1990",
+      subtitle: "Democratic election protocols for 8 Boards and Eurocode Consequence Classes A to E",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULES 3 & 4",
+      diagramType: "sch3_4",
+      bullets: [
+        "Schedule 3 (Board Election Protocols): Democratic voting rules for electing 8 Professional Board representatives.",
+        "Registrar Nomination Gate: Competitive selection criteria for Chief Registrar CEO candidates.",
+        "Schedule 4 (Eurocodes BS EN 1990 Matrix): Classification of buildings into Risk Classes A to E based on occupant consequence.",
+        "Mandatory Peer Review: Independent peer review by Consulting Engineer (EBK) for High-Risk Class D & E towers."
+      ],
+      cardTags: [
+        "🗳️ Schedule 3 Board Elections",
+        "👔 Registrar CEO Criteria",
+        "📜 Schedule 4 Eurocode Matrix",
+        "🏗️ Peer Review for Class D & E"
+      ],
+      metrics: [
+        { label: "BOARD ELECTIONS", val: "SCHEDULE 3" },
+        { label: "EUROCODE MATRIX", val: "SCHEDULE 4" },
+        { label: "RISK CLASSES", val: "CLASSES A–E" },
         { label: "PEER REVIEW", val: "CLASS D & E" }
       ]
     },
     {
-      id: 38,
-      badge: "SLIDE 38 • SCHEDULE 4 BUILDING TIER MATRIX",
-      title: "MANDATORY PROFESSIONAL ROLES PER BUILDING RISK TIER",
-      subtitle: "Statutory professional team composition required for Building Risk Classes A to E under NBC 2024",
+      id: 50,
+      badge: "SLIDE 50 • STATUTORY SCHEDULES 5 & 6",
+      title: "SCHEDULES 5 & 6: 50 CPD UNIT MATRIX & SITE LOGBOOK RULES",
+      subtitle: "Categorization of 50 annual CPD units and mandatory site inspection logbook protocols",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULES 5 & 6",
+      diagramType: "sch5_6",
+      bullets: [
+        "Schedule 5 (50 CPD Unit Matrix): Technical seminars (20 units), ethics (10 units), research (10 units), site mentorship (10 units).",
+        "Accreditation of Providers: KBERC accredits AAK, IEK, IQSK, KIP to issue verified CPD certificates.",
+        "Schedule 6 (Site Inspection Logbook Rules): Mandatory digital logbook maintenance for graduate interns and site project managers.",
+        "Weekly Mentor Sign-Off: Supervising Lead Professionals must sign off intern logbooks weekly."
+      ],
+      cardTags: [
+        "📊 Schedule 5 CPD Matrix",
+        "🏛️ Accredited Providers",
+        "📓 Schedule 6 Logbook Rules",
+        "✍️ Weekly Mentor Sign-Off"
+      ],
+      metrics: [
+        { label: "CPD MATRIX", val: "SCHEDULE 5" },
+        { label: "ANNUAL UNITS", val: "50 UNITS" },
+        { label: "LOGBOOK RULES", val: "SCHEDULE 6" },
+        { label: "MENTOR SIGN-OFF", val: "WEEKLY" }
+      ]
+    },
+    {
+      id: 51,
+      badge: "SLIDE 51 • STATUTORY SCHEDULES 7 & 8",
+      title: "SCHEDULES 7 & 8: INTER-AGENCY PROTOCOLS & REPEAL SAVINGS",
+      subtitle: "Inter-board liaison with EBK/NCA/NEMA and 12-month practitioner migration savings",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULES 7 & 8",
+      diagramType: "sch7_8",
+      bullets: [
+        "Schedule 7 (Inter-Agency Coordination Protocols): Data-sharing protocols between KBERC, EBK (Cap 530), NCA, NEMA, and 47 Counties.",
+        "Joint Building Control Inspections: Multi-agency site audits for high-risk Category D & E developments.",
+        "Schedule 8 (Cap 525 Repeal Savings): 12-Month transitional saving provisions for existing BORAQS license holders.",
+        "Automatic Register Transfer: Seamless migration of valid licenses into the KBERC Central Master Digital Register."
+      ],
+      cardTags: [
+        "🌐 Schedule 7 Inter-Agency Data",
+        "🔍 Joint Multi-Agency Audits",
+        "📜 Schedule 8 Repeal Savings",
+        "🔄 Automatic Register Transfer"
+      ],
+      metrics: [
+        { label: "INTER-AGENCY", val: "SCHEDULE 7" },
+        { label: "COUNTY DESKS", val: "47 COUNTIES" },
+        { label: "REPEAL SAVINGS", val: "SCHEDULE 8" },
+        { label: "MIGRATION WINDOW", val: "12 MONTHS" }
+      ]
+    },
+    {
+      id: 52,
+      badge: "SLIDE 52 • STATUTORY SCHEDULES 9 & 10",
+      title: "SCHEDULES 9 & 10: DISCIPLINARY SANCTIONS & FORM FEE TARIFFS",
+      subtitle: "Disciplinary fines up to KES 5,000,000 and statutory fees for Forms A, B, and C",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULES 9 & 10",
+      diagramType: "sch9_10",
+      bullets: [
+        "Schedule 9 (Disciplinary Sanctions Tariff): Fines up to KES 5,000,000, practicing license suspensions, and Gazette roll striking.",
+        "Stamp Renting Prosecution: Explicit statutory fine and suspension tariff for renting credentials to quacks.",
+        "Schedule 10 (Statutory Form Fee Tariffs): Application fees for Form A (Individual), Form B (Annual License), Form C (Firm).",
+        "Transparent Fee Gazettement: All KBERC registration and licensing fees published transparently in the Kenya Gazette."
+      ],
+      cardTags: [
+        "💸 Schedule 9 Fines (Up To 5M)",
+        "🚨 Stamp Renting Sanctions",
+        "💵 Schedule 10 Form Fees",
+        "📜 Gazette Fee Publication"
+      ],
+      metrics: [
+        { label: "SANCTIONS TARIFF", val: "SCHEDULE 9" },
+        { label: "MAXIMUM FINE", val: "KES 5.0M" },
+        { label: "FORM FEES", val: "SCHEDULE 10" },
+        { label: "GAZETTE LISTING", val: "MANDATORY" }
+      ]
+    },
+    {
+      id: 53,
+      badge: "SLIDE 53 • STATUTORY SCHEDULES 11 & 12",
+      title: "SCHEDULES 11 & 12: DEFECT LIABILITY & MINIMUM SCALE OF FEES",
+      subtitle: "10-year defect liability risk breakdown and Schedule 12 gazetted fee scale (5.0%–6.5%)",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULES 11 & 12",
+      diagramType: "sch11_12",
+      bullets: [
+        "Schedule 11 (Defect Liability Allocation): 10-Year risk allocation (Arch 30%, Structural Eng 30%, Contractor 25%, QS 15%).",
+        "Insurance Subrogation: PII insurance claims settled strictly in accordance with Schedule 11 liability percentages.",
+        "Schedule 12 (Minimum Scale of Fees): Gazetted baseline design fee tariffs (5.0%–6.5%) and advisory rates (KES 10k–15k/hr).",
+        "Section 113 Anti-Undercutting: Fee undercutting below Schedule 12 statutory minimums enforced as a criminal offence."
+      ],
+      cardTags: [
+        "⚖️ Schedule 11 Defect Liability",
+        "🛡️ PII Subrogation Breakdown",
+        "📊 Schedule 12 Fee Scale (5–6.5%)",
+        "🚨 Sec 113 Anti-Undercut Offence"
+      ],
+      metrics: [
+        { label: "DEFECT LIABILITY", val: "SCHEDULE 11" },
+        { label: "DEFECT PERIOD", val: "10 YEARS" },
+        { label: "FEE SCALE", val: "SCHEDULE 12" },
+        { label: "ADVISORY RATE", val: "KES 15K/HR" }
+      ]
+    },
+    {
+      id: 54,
+      badge: "SLIDE 54 • STATUTORY SCHEDULES 13 & 14",
+      title: "SCHEDULES 13 & 14: DISASTER FUND & 10 STAGE INSPECTION FORMS",
+      subtitle: "Disaster Relief Fund administration and 10 mandatory site stage inspection certificates",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULES 13 & 14",
+      diagramType: "sch13_14",
+      bullets: [
+        "Schedule 13 (Disaster Relief Fund Rules): Financing emergency collapse audits and direct victim compensation.",
+        "0.1% Developer Approval Levy: Funded by 0.1% developer approval levy, parliamentary grants, and statutory fines.",
+        "Schedule 14 (10 Stage Inspection Certificates): Mandatory statutory forms (Forms KBERC-1 to 6) for site inspections.",
+        "Digital Certificate Upload: All stage inspection certificates uploaded in real-time to County E-Permit portals."
+      ],
+      cardTags: [
+        "🏥 Schedule 13 Relief Fund",
+        "💵 0.1% Developer Approval Levy",
+        "📋 Schedule 14 Inspection Forms",
+        "🌐 Live County E-Portal Upload"
+      ],
+      metrics: [
+        { label: "RELIEF FUND", val: "SCHEDULE 13" },
+        { label: "DEVELOPER LEVY", val: "0.1% ON PERMITS" },
+        { label: "INSPECTION FORMS", val: "SCHEDULE 14" },
+        { label: "FORM TEMPLATES", val: "10 FORMS" }
+      ]
+    },
+    {
+      id: 55,
+      badge: "SLIDE 55 • 10 MANDATORY KBERC INSPECTION FORMS",
+      title: "10 MANDATORY KBERC SITE STAGE INSPECTION CERTIFICATES",
+      subtitle: "Statutory inspection forms KBERC-1 to KBERC-6 enforcing building safety at every stage",
+      type: "CARD_GRID_4",
+      color: "#059669",
+      partRef: "SCHEDULE 14 FORMS",
+      diagramType: "kberc_forms_grid",
+      bullets: [
+        "Form KBERC-1: Geotechnical excavation & soil bearing capacity sign-off by Geotechnical Specialist.",
+        "Form KBERC-2: Substructure foundation rebar & concrete slump test validation by Structural Engineer.",
+        "Form KBERC-3: Superstructure framing, column integrity & slab concrete strength test sign-off.",
+        "Forms KBERC-4 to 6: Building envelope, MEP pressure tests, and Final Occupancy Certificate sign-off."
+      ],
+      cardTags: [
+        "🔍 Form KBERC-1 (Geotech Soil)",
+        "🏗️ Form KBERC-2 (Foundation)",
+        "🏢 Form KBERC-3 (Superstructure)",
+        "🔑 Form KBERC-6 (Occupancy)"
+      ],
+      metrics: [
+        { label: "SOIL SIGN-OFF", val: "FORM KBERC-1" },
+        { label: "FOUNDATION POUR", val: "FORM KBERC-2" },
+        { label: "FRAME SIGN-OFF", val: "FORM KBERC-3" },
+        { label: "OCCUPANCY PERMIT", val: "FORM KBERC-6" }
+      ]
+    },
+    {
+      id: 56,
+      badge: "SLIDE 56 • BUILDING RISK TIER COMPOSITION",
+      title: "MANDATORY PROFESSIONAL TEAM PER BUILDING RISK TIER",
+      subtitle: "Statutory professional team composition required for Building Risk Classes A to E",
       type: "CARD_GRID_4",
       color: "#0284c7",
       partRef: "SCHEDULE 4 & NBC 2024",
@@ -1013,108 +1469,8 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 39,
-      badge: "SLIDE 39 • PART XVI–XVIII (SECTIONS 201–208)",
-      title: "FINANCIAL MANAGEMENT, AUDITOR-GENERAL AUDITS & KBERC REVENUE",
-      subtitle: "KBERC financial management, parliamentary reporting, statutory levies, and Auditor-General oversight",
-      type: "DEEP_DIVE",
-      color: "#059669",
-      partRef: "PARTS XVI–XVIII: SEC 201–208",
-      diagramType: "financial_oversight",
-      bullets: [
-        "Section 201–203 (KBERC Revenue Sources): Registration fees, annual Form B/C license fees, 0.1% approval levies, and parliamentary grants.",
-        "Section 204–205 (Financial Year & Estimates): Annual budget estimates submitted to Cabinet Secretary 3 months prior to financial year start.",
-        "Section 206–207 (Auditor-General Audit): Mandatory annual audit of KBERC accounts by the Auditor-General under Article 229 of the Constitution.",
-        "Section 208 (Annual Report to Parliament): Submission of comprehensive annual performance and financial report to the National Assembly."
-      ],
-      metrics: [
-        { label: "REVENUE LEVY", val: "0.1% APPROVAL" },
-        { label: "AUDITOR-GENERAL", val: "ANNUAL (ART 229)" },
-        { label: "BUDGET CYCLE", val: "3 MONTHS PRIOR" },
-        { label: "PARLIAMENT REPORT", val: "ANNUAL" }
-      ]
-    },
-    {
-      id: 40,
-      badge: "SLIDE 40 • PART XVI–XVIII (SECTIONS 209–212)",
-      title: "REPEAL OF CAP 525, BORAQS DISBANDING & 12-MONTH MIGRATION",
-      subtitle: "Disbanding of BORAQS (Sec 211), repeal of Cap 525 (Sec 212), asset transfer, and EBK Cap 530 autonomy",
-      type: "DEEP_DIVE",
-      color: "#991b1b",
-      partRef: "PARTS XVI–XVIII: SEC 209–212",
-      diagramType: "repeal_savings_flow",
-      bullets: [
-        "Section 211 (Disbanding of BORAQS & Asset Transfer): BORAQS established under Cap 525 is officially disbanded; all assets, digital registers, and staff transfer to KBERC.",
-        "Section 212 (Repeal of Cap 525): Official repeal of the 1934 Architects and Quantity Surveyors Act (Cap 525). Architectural and QS roles move to KBERC Colleges 1 & 3.",
-        "Section 209–210 (12-Month Practitioner Migration Savings): All active BORAQS practitioners granted automatic 12-month license migration into the KBERC Central Digital Register.",
-        "EBK Statutory Autonomy (Cap 530 Saved): Engineers Board of Kenya (EBK) is NOT disbanded. Cap 530 remains in full force for engineering registration."
-      ],
-      metrics: [
-        { label: "BORAQS DISBANDED", val: "SEC 211" },
-        { label: "CAP 525 REPEALED", val: "SEC 212" },
-        { label: "MIGRATION SAVINGS", val: "12 MONTHS" },
-        { label: "EBK AUTONOMY", val: "CAP 530 SAVED" }
-      ]
-    },
-    {
-      id: 41,
-      badge: "SLIDE 41 • STATUTORY SCHEDULES (PART 1: SCH 1–7)",
-      title: "STATUTORY SCHEDULES 1 TO 7 — COMPREHENSIVE IMPACT MATRIX",
-      subtitle: "Code of Ethics, Tribunal Rules, Board Elections, Eurocodes, CPD, Logbooks & Inter-Agency Protocols",
-      type: "CARD_GRID_4",
-      color: "#059669",
-      partRef: "SCHEDULES 1–7",
-      diagramType: "schedules_part1",
-      bullets: [
-        "Schedule 1 (Ethics Code): Mandatory anti-corruption, conflict of interest, and professional integrity rules.",
-        "Schedule 2 (Appeals Tribunal): 60-day appellate hearing procedure, filing fees, and High Court referral rules.",
-        "Schedule 3 (Board Elections): Democratic election protocols for 8 Professional Boards and Registrar appointments.",
-        "Schedules 4–7: Eurocode Consequence Matrix (Classes A–E), 50 CPD Unit Matrix, Site Logbook rules, Inter-Agency Protocols."
-      ],
-      cardTags: [
-        "📜 Schedule 1 Ethics Code",
-        "⚖️ Schedule 2 Tribunal Rules",
-        "🏛️ Schedule 3 Board Elections",
-        "📊 Schedules 4–7 Standards"
-      ],
-      metrics: [
-        { label: "ETHICS CODE", val: "SCHEDULE 1" },
-        { label: "APPEALS RULES", val: "SCHEDULE 2" },
-        { label: "EUROCODES", val: "SCHEDULE 4" },
-        { label: "CPD MATRIX", val: "SCHEDULE 5" }
-      ]
-    },
-    {
-      id: 42,
-      badge: "SLIDE 42 • STATUTORY SCHEDULES (PART 2: SCH 8–14)",
-      title: "STATUTORY SCHEDULES 8 TO 14 — COMPREHENSIVE IMPACT MATRIX",
-      subtitle: "Repeal Savings, Sanctions Tariff, Form Fees, Defect Liability, Scale of Fees, Disaster Fund & Forms",
-      type: "CARD_GRID_4",
-      color: "#059669",
-      partRef: "SCHEDULES 8–14",
-      diagramType: "schedules_part2",
-      bullets: [
-        "Schedule 8 & 9: Cap 525 Repeal savings, 12-month migration window, Disciplinary Hearing Protocols & KES 5M fine tariff.",
-        "Schedule 10 & 11: Form A/B/C statutory fee tariffs, 10-Year Defect Liability Risk Allocation Matrix.",
-        "Schedule 12 (Minimum Fee Scale): Gazetted 5.0%–6.5% baseline design tariffs & KES 15,000/hr advisory rates.",
-        "Schedules 13 & 14: Disaster Relief Fund administration, 10 Mandatory Site Stage Inspection Certificate templates (Forms KBERC-1 to 6)."
-      ],
-      cardTags: [
-        "📜 Schedule 8 & 9 Savings",
-        "💵 Schedule 10 & 11 Tariffs",
-        "📊 Schedule 12 Fee Scale",
-        "🏗️ Schedule 13 & 14 Forms"
-      ],
-      metrics: [
-        { label: "SANCTIONS TARIFF", val: "SCHEDULE 9" },
-        { label: "DEFECT LIABILITY", val: "SCHEDULE 11" },
-        { label: "FEE SCALE", val: "SCHEDULE 12" },
-        { label: "SITE TEMPLATES", val: "SCHEDULE 14" }
-      ]
-    },
-    {
-      id: 43,
-      badge: "SLIDE 43 • REGULATORY IMPACT ANALYSIS",
+      id: 57,
+      badge: "SLIDE 57 • REGULATORY IMPACT ANALYSIS",
       title: "REGULATORY IMPACT ANALYSIS & ECONOMIC COMPLIANCE DOSSIER",
       subtitle: "Macro-economic impact, cost-benefit breakdown, public safety gains, and county revenue growth",
       type: "METRIC_STACK",
@@ -1135,7 +1491,57 @@ export default function SlidesPage() {
       ]
     },
     {
-      id: 44,
+      id: 58,
+      badge: "SLIDE 58 • STATUTORY DISCIPLINARY SANCTIONS",
+      title: "STATUTORY DISCIPLINARY SANCTIONS & FINES TARIFF",
+      subtitle: "Schedule 9 statutory fine tariffs, license suspensions, and criminal prosecutions",
+      type: "CARD_GRID_4",
+      color: "#991b1b",
+      partRef: "SCHEDULE 9 SANCTIONS",
+      diagramType: "sanctions_summary",
+      bullets: [
+        "Quackery & Impersonation (Sec 79–80): Statutory fines up to KES 2,000,000 and 3 years imprisonment for using protected titles without a license.",
+        "Stamp Renting Offence (Sec 99): Disciplinary striking off the roll, practicing license revocation, and fines up to KES 5,000,000.",
+        "Digital Seal Forgery (Sec 179): Mandatory 5-year imprisonment term without option of a fine for forging KBERC QR seals or inspection certificates.",
+        "Ignoring Stop-Work Orders (Sec 166): Personal criminal prosecution of developers and county officers who ignore KBERC stop orders."
+      ],
+      cardTags: [
+        "🚨 Quackery Fine (KES 2M / 3 Yrs)",
+        "💸 Stamp Renting Fine (KES 5M)",
+        "🔐 Seal Forgery (5-Yr Prison)",
+        "⚖️ Personal Officer Prosecution"
+      ],
+      metrics: [
+        { label: "QUACKERY FINE", val: "KES 2.0M" },
+        { label: "STAMP RENTING", val: "KES 5.0M" },
+        { label: "SEAL FORGERY", val: "5-YR PRISON" },
+        { label: "STOP-WORK FINES", val: "STATUTORY" }
+      ]
+    },
+    {
+      id: 59,
+      badge: "SLIDE 59 • LEGISLATIVE CONSENSUS SIGN-OFF",
+      title: "LEGISLATIVE CONSENSUS & MULTI-BOARD ENDORSEMENT",
+      subtitle: "Multi-board consensus foundation across AAK, IEK, IQSK, KIP, and Council of Governors",
+      type: "DEEP_DIVE",
+      color: "#059669",
+      partRef: "CONSENSUS SIGN-OFF",
+      diagramType: "consensus_endorsement",
+      bullets: [
+        "Architectural Association of Kenya (AAK): Unanimous endorsement for subsuming BORAQS into KBERC College 1 and gazetting Schedule 12 fee scales.",
+        "Institution of Engineers of Kenya (IEK): Full concurrence preserving EBK statutory autonomy under Cap 530 while coordinating via College 2.",
+        "Institute of Quantity Surveyors of Kenya (IQSK): Full support for College 3 QS statutory cost gatekeeping and mandatory bank disbursement audits.",
+        "Council of Governors (COG): Statutory endorsement for live 47 County E-Permit API integration and Section 58 plan voiding."
+      ],
+      metrics: [
+        { label: "AAK ENDORSED", val: "COLLEGE 1" },
+        { label: "IEK CONCURRENCE", val: "CAP 530 SAVED" },
+        { label: "IQSK SUPPORT", val: "COLLEGE 3" },
+        { label: "COG ENDORSED", val: "47 COUNTIES" }
+      ]
+    },
+    {
+      id: 60,
       badge: "END PAGE • PROPOSED LEGISLATIVE DRAFT ACCREDITATION",
       title: "OFFICIAL LEGISLATIVE DRAFT CLOSING & ACCREDITATION DOSSIER",
       subtitle: "Proposed Legislative Consensus Sign-Off & KBERC Public Register Contact Credentials",
@@ -1482,7 +1888,7 @@ export default function SlidesPage() {
             <span style={{ color: "#CCCCCC" }}>›</span>
             <Link href="/viewer/about" style={{ color: "#666666", fontSize: "13px", fontWeight: 600, textDecoration: "none" }}>About &amp; Treatise</Link>
             <span style={{ color: "#CCCCCC" }}>›</span>
-            <span style={{ color: "#991B1B", fontSize: "13px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em" }}>ENCYCLOPEDIC MASTER DECK (44 SLIDES)</span>
+            <span style={{ color: "#991B1B", fontSize: "13px", fontWeight: 900, textTransform: "uppercase", letterSpacing: "0.05em" }}>ENCYCLOPEDIC MASTER DECK (60 SLIDES)</span>
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
@@ -1507,7 +1913,7 @@ export default function SlidesPage() {
               }}
             >
               {isExportingPresentation ? (
-                <>⏳ Exporting PDF... (Slide {exportProgress} of 44)</>
+                <>⏳ Exporting PDF... (Slide {exportProgress} of 60)</>
               ) : (
                 <>📥 Export Master Presentation PDF (16:9)</>
               )}
@@ -1546,7 +1952,7 @@ export default function SlidesPage() {
                 </button>
 
                 <button
-                  onClick={() => setCurrentSlide(prev => Math.min(prev + 1, 43))}
+                  onClick={() => setCurrentSlide(prev => Math.min(prev + 1, 59))}
                   disabled={currentSlide === 43}
                   style={{
                     padding: "8px 22px", fontSize: "13px", fontWeight: 800, borderRadius: "6px",
