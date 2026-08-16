@@ -317,7 +317,7 @@ export default function PartDetailPage() {
   const partLabel = `PART ${['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'][partNum - 1]}`;
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: "'Inter', system-ui, sans-serif", padding: '32px 24px 96px' }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: "'Inter', system-ui, sans-serif", padding: 'clamp(16px, 4vw, 32px) clamp(12px, 3vw, 24px) 64px' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         
         {/* Navigation Breadcrumb */}

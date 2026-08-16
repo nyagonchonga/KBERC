@@ -140,7 +140,7 @@ export default function Home() {
       background: "#F8FAFC",
       color: "#0F172A",
       fontFamily: "'Inter', system-ui, sans-serif",
-      padding: "48px 24px 96px"
+      padding: "clamp(16px, 4vw, 48px) clamp(12px, 3vw, 24px) 64px"
     }}>
       <div style={{ maxWidth: "1380px", margin: "0 auto" }}>
         
@@ -200,7 +200,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "20px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px" }}>
             {tier1Viewers.map((v, i) => (
               <Link key={i} href={v.href} style={{ textDecoration: "none" }}>
                 <div style={{

@@ -157,7 +157,7 @@ export default function InteractiveToolsHubPage() {
   });
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: "'Inter', system-ui, sans-serif", padding: '32px 24px 96px' }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: "'Inter', system-ui, sans-serif", padding: 'clamp(16px, 4vw, 32px) clamp(12px, 3vw, 24px) 64px' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         {/* Navigation Breadcrumb */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '28px', fontSize: '13px', color: '#475569' }}>
