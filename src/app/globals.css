@@ -76,3 +76,16 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #B45309;
 }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   STRICT MOBILE SINGLE-COLUMN OVERRIDE (< 640px)
+   Eliminates all crowded 2-column card & stat grids on small phone screens.
+   ════════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 639px) {
+  [class*="grid-cols-"],
+  [style*="gridTemplateColumns"],
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
