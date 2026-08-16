@@ -128,6 +128,29 @@ export default function AboutPage() {
     }
   ];
 
+  const Cap525Failures = [
+    {
+      title: "Guild Capture & Lack of Public Protection Focus",
+      problem: "Cap 525 operated primarily as a professional trade guild protecting board member privileges rather than an active public-safety regulator.",
+      solution: "KBERC Bill 2026 establishes an Apex Council balancing professional boards with public-interest consumer advocates and County safety directors."
+    },
+    {
+      title: "Absence of Digital QR Seals & Stamp Renting Vulnerability",
+      problem: "Under 1968 Cap 525, physical rubber stamps were routinely leased to un-accredited quacks, leading to un-checked working drawings on site.",
+      solution: "Section 57 mandates cryptographically verifiable Digital QR Seals tied directly to annual practice licensing databases and County permit systems."
+    },
+    {
+      title: "Exclusion of TVET Technologists & Sub-Degree Cadres",
+      problem: "Cap 525 recognized only university degree holders, forcing thousands of skilled TVET Higher National Diploma graduates into un-regulated practice.",
+      solution: "Section 28 creates statutory indexing, scopes of practice, and bridging exams for TVET Technologists, Technicians, and Artisans."
+    },
+    {
+      title: "No Statutory 10-Year Defect Liability Risk Allocation",
+      problem: "When buildings collapsed under legacy law, developers, architects, structural engineers, and contractors traded blame indefinitely.",
+      solution: "Schedule 11 introduces a mandatory 10-Year Statutory Defect Liability Allocation Matrix (Architect 30%, Structural Eng 30%, QS 15%, Contractor 25%)."
+    }
+  ];
+
   const reformEfforts = [
     {
       domain: "DOMAIN 1: MULTI-BOARD CONSENSUS TASK FORCES (2018–2025)",
@@ -190,176 +213,193 @@ export default function AboutPage() {
       background: "#F8FAFC",
       color: "#0F172A",
       fontFamily: "'Inter', system-ui, sans-serif",
-      padding: "24px 32px 64px"
+      padding: "clamp(16px, 4vw, 32px) clamp(12px, 3vw, 24px) 64px"
     }}>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         
         {/* Navigation Breadcrumb & Presentation Deck Banner Link */}
-        <header style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: "24px",
-          background: "#FFFFFF",
-          padding: "16px 24px",
-          borderRadius: "12px",
-          border: "1px solid #CBD5E1",
-          boxShadow: "0 1px 3px rgba(0,0,0,0.05)"
-        }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <Link href="/" style={{ color: "#64748B", fontSize: "13px", fontWeight: 600 }}>Home</Link>
-            <span style={{ color: "#94A3B8" }}>›</span>
-            <Link href="/viewer" style={{ color: "#64748B", fontSize: "13px", fontWeight: 600 }}>Viewer Portal</Link>
-            <span style={{ color: "#94A3B8" }}>›</span>
-            <span style={{ color: "#0F172A", fontSize: "13px", fontWeight: 800 }}>About &amp; Legislative Treatise</span>
+        <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 bg-white p-4 md:p-6 border border-slate-300 shadow-xs">
+          <div className="flex items-center gap-2 text-xs md:text-sm text-slate-600 flex-wrap">
+            <Link href="/" className="hover:text-red-700 font-semibold">Home</Link>
+            <span className="text-slate-400">›</span>
+            <Link href="/viewer" className="hover:text-red-700 font-semibold">Viewer Portal</Link>
+            <span className="text-slate-400">›</span>
+            <span className="text-slate-900 font-extrabold">About &amp; Legislative Treatise</span>
           </div>
 
           <Link
             href="/viewer/slides"
-            style={{
-              padding: "10px 20px", fontSize: "13px", fontWeight: 900, borderRadius: "8px",
-              background: "#B91C1C", color: "#FFFFFF", textDecoration: "none",
-              display: "flex", alignItems: "center", gap: "8px", boxShadow: "0 4px 12px rgba(185,28,28,0.25)"
-            }}
+            className="px-4 py-2.5 text-xs md:text-sm font-extrabold bg-red-700 hover:bg-red-800 text-white flex items-center justify-center gap-2 shadow-sm transition-all"
           >
             📊 Open Executive Presentation Deck (24 Slides &amp; PDF Export) ▶
           </Link>
         </header>
 
         {/* Main Document Body */}
-        <main style={{ background: "#FFFFFF", border: "1px solid #CBD5E1", borderRadius: "16px", padding: "40px", boxShadow: "0 4px 20px rgba(0,0,0,0.04)" }}>
+        <main className="bg-white border border-slate-300 p-4 sm:p-8 md:p-12 shadow-xs space-y-12">
           
           {/* Document Header Title Block */}
-          <div style={{ borderBottom: "3px solid #0F172A", paddingBottom: "24px", marginBottom: "36px" }}>
-            <span style={{ fontSize: "11px", fontWeight: 900, color: "#B91C1C", textTransform: "uppercase", letterSpacing: "0.15em", background: "#FEF2F2", padding: "4px 10px", borderRadius: "4px", border: "1px solid #FECACA" }}>
+          <div className="border-b-4 border-slate-900 pb-6">
+            <span className="inline-block text-xs font-black text-red-700 uppercase tracking-widest bg-red-50 px-3 py-1 border border-red-200 mb-3">
               NATIONAL ASSEMBLY BILL NO. 14 OF 2026 • OFFICIAL STATUTORY TREATISE
             </span>
-            <h1 style={{ fontSize: "34px", fontWeight: 900, color: "#0F172A", margin: "12px 0 8px 0", letterSpacing: "-0.02em" }}>
+            <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
               Detailed Background &amp; Consensus Origins
             </h1>
-            <p style={{ fontSize: "15.5px", color: "#475569", margin: 0, lineHeight: 1.7, maxWidth: "1000px" }}>
+            <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-4xl">
               The comprehensive statutory history, legislative deficiencies of legacy Cap 525, 2024–2026 sector current affairs, multi-board reform domains, and structural innovations behind <strong>The Built Environment Professions &amp; Practice Bill 2026</strong>.
             </p>
           </div>
 
           {/* 1. 2024-2026 SECTOR CURRENT AFFAIRS & CRISIS BRIEFING */}
-          <section style={{ marginBottom: "44px", background: "#F8FAFC", border: "1px solid #E2E8F0", borderRadius: "12px", padding: "28px" }}>
-            <span style={{ fontSize: "11px", fontWeight: 900, color: "#7C3AED", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+          <section className="bg-slate-50 border border-slate-300 p-6 md:p-8">
+            <span className="text-xs font-black text-purple-700 uppercase tracking-widest block mb-2">
               🚨 2024–2026 SECTOR CURRENT AFFAIRS &amp; CRISIS BRIEFING
             </span>
-            <h2 style={{ fontSize: "22px", fontWeight: 900, color: "#0F172A", margin: "8px 0 16px 0" }}>
+            <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-4">
               Recent Structural Collapses &amp; Statutory Enforcement Drives
             </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
-              <div style={{ background: "#FFFFFF", border: "1px solid #CBD5E1", padding: "18px", borderRadius: "8px" }}>
-                <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#B91C1C", margin: "0 0 6px 0" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white border border-slate-300 p-5">
+                <h3 className="text-base font-extrabold text-red-700 mb-2">
                   Urban Building Collapses (Kahawa West Oct 2024, Kasarani &amp; Kiambu)
                 </h3>
-                <p style={{ fontSize: "13px", color: "#334155", lineHeight: 1.6, margin: 0 }}>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                   Catastrophic failures of un-inspected multi-storey residential towers triggered National Construction Authority (NCA) and County Government audits, highlighting un-sealed building plans and stamp renting practices.
                 </p>
               </div>
-              <div style={{ background: "#FFFFFF", border: "1px solid #CBD5E1", padding: "18px", borderRadius: "8px" }}>
-                <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0284C7", margin: "0 0 6px 0" }}>
+              <div className="bg-white border border-slate-300 p-5">
+                <h3 className="text-base font-extrabold text-sky-700 mb-2">
                   National Building Code 2024 (NBC 2024) &amp; Eurocode Transition
                 </h3>
-                <p style={{ fontSize: "13px", color: "#334155", lineHeight: 1.6, margin: 0 }}>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                   Cabinet Secretary gazetted NBC 2024, enforcing Eurocodes (BS EN 1990 - 1999) structural safety compliance, mandatory geotechnical soil tests, and independent peer reviews for high-occupancy towers.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* 2. 5 KEY INSTITUTIONAL REFORM DOMAINS */}
-          <section style={{ marginBottom: "44px" }}>
-            <h2 style={{ fontSize: "22px", fontWeight: 900, color: "#0F172A", margin: "0 0 18px 0" }}>
-              5 Key Institutional Reform Domains (2018–2026)
+          {/* 2. FORENSIC AUDIT: WHY CAP 525 & CAP 530 FAILED */}
+          <section className="space-y-4">
+            <h2 className="text-xl md:text-2xl font-black text-slate-900">
+              Statutory Forensic Audit: Why Legacy Cap 525 (1968) Failed Modern Kenya
             </h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              {reformEfforts.map((r, rIdx) => (
-                <div key={rIdx} style={{ background: "#F8FAFC", border: "1px solid #CBD5E1", borderLeft: "5px solid #059669", padding: "20px 24px", borderRadius: "8px" }}>
-                  <span style={{ fontSize: "10.5px", fontWeight: 900, color: "#059669", textTransform: "uppercase" }}>{r.domain}</span>
-                  <h3 style={{ fontSize: "17px", fontWeight: 800, color: "#0F172A", margin: "4px 0 6px 0" }}>{r.title}</h3>
-                  <p style={{ fontSize: "12.5px", fontWeight: 700, color: "#64748B", marginBottom: "8px" }}>Lead Stakeholders: {r.lead}</p>
-                  <p style={{ fontSize: "13.5px", color: "#334155", lineHeight: 1.65, margin: 0 }}>{r.desc}</p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Enacted 58 years ago, Cap 525 was built for a pre-digital, colonial-era construction sector. Its structural defects directly contributed to un-regulated urban sprawl and recurring building collapses:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {Cap525Failures.map((item, idx) => (
+                <div key={idx} className="bg-slate-50 border border-slate-300 border-l-4 border-l-red-600 p-5 space-y-2">
+                  <h3 className="text-base font-bold text-slate-900">{item.title}</h3>
+                  <div className="text-xs text-red-700 bg-red-50 p-2 border border-red-200">
+                    <strong>Legacy Defect:</strong> {item.problem}
+                  </div>
+                  <div className="text-xs text-emerald-800 bg-emerald-50 p-2 border border-emerald-200">
+                    <strong>2026 Master Bill Solution:</strong> {item.solution}
+                  </div>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* 3. 19-MILESTONE INTERACTIVE TIMELINE */}
-          <section style={{ marginBottom: "44px" }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "18px" }}>
-              <h2 style={{ fontSize: "22px", fontWeight: 900, color: "#0F172A", margin: 0 }}>
+          {/* 3. 5 KEY INSTITUTIONAL REFORM DOMAINS */}
+          <section className="space-y-4">
+            <h2 className="text-xl md:text-2xl font-black text-slate-900">
+              5 Key Institutional Reform Domains (2018–2026)
+            </h2>
+            <div className="space-y-4">
+              {reformEfforts.map((r, rIdx) => (
+                <div key={rIdx} className="bg-slate-50 border border-slate-300 border-l-4 border-l-emerald-600 p-5 md:p-6 space-y-2">
+                  <span className="text-xs font-black text-emerald-700 uppercase block">{r.domain}</span>
+                  <h3 className="text-base md:text-lg font-bold text-slate-900">{r.title}</h3>
+                  <p className="text-xs font-semibold text-slate-500">Lead Stakeholders: {r.lead}</p>
+                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed">{r.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* 4. 19-MILESTONE INTERACTIVE TIMELINE */}
+          <section className="space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <h2 className="text-xl md:text-2xl font-black text-slate-900">
                 19-Milestone Statutory Timeline (1968 to 2026)
               </h2>
-              <div style={{ display: "flex", gap: "8px" }}>
+              <div className="flex gap-2 flex-wrap">
                 <button
                   onClick={() => setTimelineFilter('all')}
-                  style={{ padding: "6px 14px", fontSize: "12px", fontWeight: 800, borderRadius: "6px", background: timelineFilter === 'all' ? "#0F172A" : "#E2E8F0", color: timelineFilter === 'all' ? "#FFFFFF" : "#475569", border: "none", cursor: "pointer" }}
+                  className={`px-3 py-1.5 text-xs font-bold transition-colors ${
+                    timelineFilter === 'all' ? 'bg-slate-900 text-white' : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
+                  }`}
                 >
                   All Milestones (19)
                 </button>
                 <button
                   onClick={() => setTimelineFilter('enacted')}
-                  style={{ padding: "6px 14px", fontSize: "12px", fontWeight: 800, borderRadius: "6px", background: timelineFilter === 'enacted' ? "#059669" : "#E2E8F0", color: timelineFilter === 'enacted' ? "#FFFFFF" : "#475569", border: "none", cursor: "pointer" }}
+                  className={`px-3 py-1.5 text-xs font-bold transition-colors ${
+                    timelineFilter === 'enacted' ? 'bg-emerald-700 text-white' : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
+                  }`}
                 >
                   Enacted Statutes
                 </button>
                 <button
                   onClick={() => setTimelineFilter('proposed')}
-                  style={{ padding: "6px 14px", fontSize: "12px", fontWeight: 800, borderRadius: "6px", background: timelineFilter === 'proposed' ? "#DC2626" : "#E2E8F0", color: timelineFilter === 'proposed' ? "#FFFFFF" : "#475569", border: "none", cursor: "pointer" }}
+                  className={`px-3 py-1.5 text-xs font-bold transition-colors ${
+                    timelineFilter === 'proposed' ? 'bg-red-700 text-white' : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
+                  }`}
                 >
                   Proposed / Stalled
                 </button>
               </div>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {filteredMilestones.map((m, mIdx) => (
-                <div key={mIdx} style={{ background: "#F8FAFC", border: "1px solid #CBD5E1", padding: "18px", borderRadius: "8px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                    <span style={{ fontSize: "18px", fontWeight: 900, color: "#B91C1C" }}>{m.year}</span>
-                    <span style={{ fontSize: "10px", fontWeight: 900, color: "#FFFFFF", background: m.badgeColor, padding: "3px 8px", borderRadius: "4px" }}>{m.status}</span>
+                <div key={mIdx} className="bg-slate-50 border border-slate-300 p-5 space-y-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-xl font-black text-red-700">{m.year}</span>
+                    <span className="text-xs font-extrabold text-white px-2 py-0.5" style={{ background: m.badgeColor }}>
+                      {m.status}
+                    </span>
                   </div>
-                  <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0F172A", margin: "0 0 6px 0" }}>{m.title}</h3>
-                  <p style={{ fontSize: "12.5px", color: "#475569", lineHeight: 1.55, margin: 0 }}>{m.desc}</p>
+                  <h3 className="text-sm md:text-base font-bold text-slate-900">{m.title}</h3>
+                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed">{m.desc}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* 4. THE 14 STATUTORY SCHEDULES CARDS */}
-          <section style={{ marginBottom: "44px" }}>
-            <h2 style={{ fontSize: "22px", fontWeight: 900, color: "#0F172A", margin: "0 0 18px 0" }}>
+          {/* 5. THE 14 STATUTORY SCHEDULES CARDS */}
+          <section className="space-y-6">
+            <h2 className="text-xl md:text-2xl font-black text-slate-900">
               The 14 Statutory Schedules Regulatory Matrix
             </h2>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {statutorySchedules.map((s, sIdx) => (
-                <div key={sIdx} style={{ background: "#F8FAFC", border: "1px solid #CBD5E1", borderLeft: "5px solid #0284C7", padding: "18px", borderRadius: "8px" }}>
-                  <span style={{ fontSize: "10.5px", fontWeight: 900, color: "#0284C7", textTransform: "uppercase" }}>{s.num}</span>
-                  <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0F172A", margin: "4px 0 6px 0" }}>{s.title}</h3>
-                  <p style={{ fontSize: "12.5px", color: "#475569", lineHeight: 1.55, margin: 0 }}>{s.scope}</p>
+                <div key={sIdx} className="bg-slate-50 border border-slate-300 border-l-4 border-l-sky-600 p-5 space-y-2">
+                  <span className="text-xs font-black text-sky-700 uppercase block">{s.num}</span>
+                  <h3 className="text-sm md:text-base font-bold text-slate-900">{s.title}</h3>
+                  <p className="text-xs md:text-sm text-slate-600 leading-relaxed">{s.scope}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* 5. PRINCIPAL AUTHOR ACCREDITATION DOSSIER CARD */}
-          <footer style={{ background: "#0F172A", color: "#F8FAFC", padding: "32px 36px", borderRadius: "12px", border: "1px solid #334155" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-              <span style={{ fontSize: "11px", fontWeight: 900, color: "#059669", background: "rgba(5,150,105,0.15)", padding: "4px 12px", borderRadius: "4px", textTransform: "uppercase" }}>
+          {/* 6. PRINCIPAL AUTHOR ACCREDITATION DOSSIER CARD */}
+          <footer className="bg-slate-900 text-slate-100 p-6 md:p-8 space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="text-xs font-black text-emerald-400 bg-emerald-950/80 px-3 py-1 border border-emerald-800 uppercase inline-block">
                 🏛️ PRINCIPAL LEGISLATIVE AUTHOR &amp; LEAD ARCHITECT
               </span>
-              <span style={{ fontSize: "11px", color: "#94A3B8" }}>KBERC STATUTORY REGISTER 2026</span>
+              <span className="text-xs text-slate-400 font-semibold">KBERC STATUTORY REGISTER 2026</span>
             </div>
-            <h3 style={{ fontSize: "22px", fontWeight: 900, color: "#FFFFFF", margin: "0 0 6px 0" }}>
+            <h3 className="text-xl md:text-2xl font-black text-white">
               Arch. Brian Nyagonchong&apos;a
             </h3>
-            <p style={{ fontSize: "14px", color: "#CBD5E1", margin: "0 0 14px 0", lineHeight: 1.65 }}>
+            <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
               Lead Legislative Counsel &amp; Principal Architectural Consultant responsible for synthesizing 208 statutory sections, 14 schedules, and 8 regulated disciplines into the consolidated 2026 Master Bill.
             </p>
-            <div style={{ display: "flex", gap: "20px", fontSize: "12px", color: "#94A3B8" }}>
+            <div className="flex flex-wrap gap-4 text-xs text-slate-400 font-medium">
               <span>• BORAQS Registered Architect</span>
               <span>• Lead Counsel to Parliamentary Working Group</span>
               <span>• Co-author NBC 2024</span>
