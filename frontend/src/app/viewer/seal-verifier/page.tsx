@@ -12,11 +12,16 @@ export default function SealVerifierSimulatorPage() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: "'Inter', system-ui, sans-serif", padding: '32px 24px 96px' }}>
+    <div style={{ minHeight: '100vh', background: '#F8FAFC', color: '#0F172A', fontFamily: "'Inter', system-ui, sans-serif", padding: 'clamp(16px, 4vw, 32px) clamp(12px, 3vw, 24px) 64px' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <Link href="/viewer" style={{ color: '#64748B', fontSize: '13px', display: 'inline-block', marginBottom: '24px' }}>
-          ← Back to Viewer Hub
-        </Link>
+        {/* Navigation Breadcrumb */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontSize: '13px', color: '#64748B', flexWrap: 'wrap' }}>
+          <Link href="/" style={{ color: '#64748B' }}>Home</Link>
+          <span>›</span>
+          <Link href="/viewer" style={{ color: '#64748B' }}>Viewer Hub</Link>
+          <span>›</span>
+          <span style={{ color: '#b91c1c', fontWeight: 700 }}>Digital Practice QR Seal Verifier</span>
+        </div>
 
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <span style={{ fontSize: '11px', fontWeight: 900, color: '#ef4444', background: 'rgba(16,185,129,0.1)', padding: '6px 16px', borderRadius: 0, border: '1px solid rgba(16,185,129,0.2)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
