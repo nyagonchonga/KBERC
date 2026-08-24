@@ -63,6 +63,7 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
   const [activeStudyId, setActiveStudyId] = useState(comparisons[0]?.id || '');
   const [activeSection, setActiveSection] = useState('');
   const [isClient, setIsClient] = useState(false);
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -110,6 +111,7 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
   ];
 
   const scrollToElement = (id: string) => {
+    setIsMobileDrawerOpen(false);
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -117,11 +119,62 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans flex flex-col lg:flex-row antialiased selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans flex flex-col lg:flex-row antialiased selection:bg-indigo-500 selection:text-white relative">
       
-      {/* Left Sidebar Navigation (Expanded, Full Vertical Stack) */}
-      <div className="w-full lg:w-84 xl:w-96 bg-slate-900/95 backdrop-blur-md border-b lg:border-b-0 lg:border-r border-slate-800 p-5 lg:p-6 flex flex-col gap-6 flex-shrink-0 h-auto lg:h-screen lg:sticky top-0 overflow-y-auto z-20 scrollbar-thin scrollbar-thumb-slate-700">
+      {/* ─── Mobile Sticky Top Bar (Visible on < lg) ─── */}
+      <div className="lg:hidden sticky top-0 z-30 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-4 py-2.5 flex items-center justify-between shadow-lg">
+        <button
+          onClick={() => setIsMobileDrawerOpen(true)}
+          className="flex items-center gap-2 px-3 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 rounded-xl text-xs font-bold border border-indigo-500/30 transition-colors"
+        >
+          <span>☰</span>
+          <span>Dossiers &amp; Sections</span>
+        </button>
+
+        <div className="flex items-center gap-2">
+          <Link
+            href="/viewer/comparative-study/reader"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-purple-700 to-indigo-700 text-white rounded-xl text-xs font-bold shadow-sm"
+          >
+            <span>📖</span>
+            <span>A4 Reader</span>
+          </Link>
+          <Link
+            href="/viewer/read"
+            className="p-1.5 bg-slate-800 text-slate-300 hover:text-white rounded-xl text-xs border border-slate-700"
+            title="Back to Bill Viewer"
+          >
+            <ArrowLeft className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
+      {/* ─── Mobile Backdrop Overlay ─── */}
+      {isMobileDrawerOpen && (
+        <div 
+          className="fixed inset-0 bg-black/75 backdrop-blur-sm z-40 lg:hidden transition-opacity"
+          onClick={() => setIsMobileDrawerOpen(false)}
+        />
+      )}
+
+      {/* ─── Left Sidebar Navigation (Slide-Over Drawer on Mobile / Sticky Column on Desktop) ─── */}
+      <div className={`
+        fixed inset-y-0 left-0 z-50 w-[300px] sm:w-84 xl:w-96 bg-slate-900/98 backdrop-blur-md border-r border-slate-800 p-5 lg:p-6 flex flex-col gap-6 flex-shrink-0 h-screen overflow-y-auto scrollbar-thin scrollbar-thumb-slate-700 transition-transform duration-300 ease-in-out
+        lg:static lg:translate-x-0 lg:z-20
+        ${isMobileDrawerOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full lg:translate-x-0'}
+      `}>
         
+        {/* Mobile Header Inside Drawer */}
+        <div className="flex items-center justify-between lg:hidden pb-3 border-b border-slate-800">
+          <span className="text-xs font-black uppercase tracking-wider text-indigo-400">Navigation Menu</span>
+          <button 
+            onClick={() => setIsMobileDrawerOpen(false)}
+            className="px-2.5 py-1 text-slate-300 hover:text-white rounded-lg bg-slate-800 text-xs font-bold border border-slate-700"
+          >
+            ✕ Close
+          </button>
+        </div>
+
         {/* Back Link & A4 Reader CTA */}
         <div className="flex flex-col gap-2">
           <Link href="/viewer/read" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-all text-xs font-bold uppercase tracking-wider group">
@@ -150,6 +203,7 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
                 key={study.id}
                 onClick={() => {
                   setActiveStudyId(study.id);
+                  setIsMobileDrawerOpen(false);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className={`text-left px-4 py-3 rounded-2xl text-xs md:text-sm font-bold transition-all flex items-center justify-between group ${
@@ -173,7 +227,7 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
           <div className="pt-4 border-t border-slate-800/80">
             <div className="flex items-center gap-2 text-xs font-black text-indigo-400 uppercase tracking-widest mb-3">
               <Compass className="w-3.5 h-3.5 text-indigo-400" />
-              <span>Part & Section Navigator</span>
+              <span>Part &amp; Section Navigator</span>
             </div>
             <div className="flex flex-col gap-1.5 max-h-[380px] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-800">
               {PART_SHORTCUTS.map((shortcut, idx) => (
