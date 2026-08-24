@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -19,8 +19,35 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
   const [currentSheet, setCurrentSheet] = useState<number>(1);
   const [zoomLevel, setZoomLevel] = useState<number>(100);
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const [isExporting, setIsExporting] = useState<boolean>(false);
+
+  // ─── Auto-Fit Calculation for Mobile & Desktop ────────────────────────────
+  const calculateFitZoom = () => {
+    if (typeof window === 'undefined') return 100;
+    const w = window.innerWidth;
+    if (w < 820) {
+      // 210mm at 96dpi is ~794px. We fit inside (w - 20px)
+      const fit = Math.max(30, Math.min(100, Math.floor(((w - 20) / 794) * 100)));
+      return fit;
+    }
+    return 100;
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setSidebarOpen(false);
+      } else {
+        setSidebarOpen(true);
+      }
+      setZoomLevel(calculateFitZoom());
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // ─── Strict A4 Height-Based Pagination Engine ──────────────────────────────
   const pages: A4PageData[] = useMemo(() => {
@@ -35,7 +62,7 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
       content: ''
     });
 
-    const MAX_PAGE_HEIGHT_PX = 820; // Exact printable vertical budget inside 297mm A4 with 16mm margins
+    const MAX_PAGE_HEIGHT_PX = 820; // Printable vertical budget inside 297mm A4 with 16mm margins
     let currentPageChunks: string[] = [];
     let currentHeightScore = 0;
     let currentSectionTitle = 'Executive Profile & Overview';
@@ -64,7 +91,7 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
 
     rawBlocks.forEach((block) => {
       const trimmed = block.trim();
-      if (trimmed === '---') return; // Skip raw horizontal rules
+      if (trimmed === '---') return;
 
       if (trimmed.startsWith('## ')) {
         const headerMatch = trimmed.match(/^## (\d+\.?\s*[^#\n]+)/);
@@ -74,7 +101,6 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
       const blockHeight = estimateBlockHeight(trimmed);
       const isMajorHeading = trimmed.startsWith('## ');
 
-      // Force a page break if height exceeds budget OR on major heading if page is already populated
       if ((currentHeightScore + blockHeight > MAX_PAGE_HEIGHT_PX) || (isMajorHeading && currentHeightScore > 300)) {
         if (currentPageChunks.length > 0) {
           paginatedList.push({
@@ -92,7 +118,6 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
       currentHeightScore += blockHeight;
     });
 
-    // Push final remaining page
     if (currentPageChunks.length > 0) {
       paginatedList.push({
         pageNumber: paginatedList.length + 1,
@@ -109,6 +134,7 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
 
   const scrollToSheet = (sheetNum: number) => {
     setCurrentSheet(sheetNum);
+    if (window.innerWidth < 1024) setSidebarOpen(false);
     const el = document.getElementById(`a4-sheet-${sheetNum}`);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -162,37 +188,35 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-purple-500 selection:text-white">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-purple-500 selection:text-white relative">
+      
       {/* ─── Top Controls Bar ─── */}
-      <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-4 py-2.5 flex items-center justify-between shadow-xl">
-        <div className="flex items-center gap-3">
+      <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-3 md:px-4 py-2 flex items-center justify-between shadow-xl">
+        <div className="flex items-center gap-2">
           <Link
             href="/viewer/comparative-study"
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-bold border border-slate-700 transition-colors"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-bold border border-slate-700 transition-colors"
           >
             <span>⬅️</span>
-            <span>Back to Web View</span>
+            <span className="hidden sm:inline">Web View</span>
           </Link>
-          <div className="h-4 w-px bg-slate-700 hidden sm:block" />
+
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded text-xs border border-slate-700"
-            title="Toggle Page Navigator"
+            className="px-2.5 py-1.5 bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 rounded-lg text-xs font-bold border border-indigo-500/30 flex items-center gap-1"
+            title="Toggle Index"
           >
-            {sidebarOpen ? '◀ Hide Index' : '▶ Show Index'}
+            <span>☰</span>
+            <span className="hidden sm:inline">Index</span>
           </button>
-          <div className="flex items-center gap-2">
-            <span className="bg-purple-950 text-purple-300 border border-purple-800/80 px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider">
-              Strict A4 Edition
-            </span>
-            <span className="text-xs font-bold text-slate-200 hidden md:inline truncate max-w-[280px]">
-              A&QS Bill 2026 Legal Critique ({totalSheets} Pages)
-            </span>
-          </div>
+
+          <span className="bg-purple-950 text-purple-300 border border-purple-800/80 px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider hidden sm:inline">
+            A4 Strict
+          </span>
         </div>
 
-        {/* Center: Role Switcher & Zoom Controls */}
-        <div className="flex items-center gap-2">
+        {/* Center: Role Switcher & Zoom */}
+        <div className="flex items-center gap-1.5">
           <div className="hidden lg:flex items-center gap-1 bg-slate-950 p-0.5 rounded border border-slate-800 text-[11px]">
             {(['All', 'Architect', 'Lawyer', 'Sponsor'] as UserRole[]).map(r => (
               <button
@@ -207,124 +231,143 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
-                {r === 'All' ? 'All Roles' : r === 'Architect' ? '📐 Architect / PM' : r === 'Lawyer' ? '⚖️ Counsel' : '🏛️ Sponsor'}
+                {r === 'All' ? 'All Roles' : r === 'Architect' ? '📐 Architect' : r === 'Lawyer' ? '⚖️ Counsel' : '🏛️ Sponsor'}
               </button>
             ))}
           </div>
 
+          {/* Zoom Controls */}
           <div className="flex items-center gap-1 bg-slate-800 px-2 py-1 rounded border border-slate-700 text-xs">
             <button
-              onClick={() => setZoomLevel(Math.max(60, zoomLevel - 15))}
+              onClick={() => setZoomLevel(Math.max(25, zoomLevel - 10))}
               className="text-slate-400 hover:text-white font-bold px-1"
               title="Zoom Out"
             >
               -
             </button>
-            <span className="font-mono text-[11px] text-slate-200 min-w-[36px] text-center">{zoomLevel}%</span>
+            <span className="font-mono text-[11px] text-slate-200 min-w-[32px] text-center">{zoomLevel}%</span>
             <button
-              onClick={() => setZoomLevel(Math.min(150, zoomLevel + 15))}
+              onClick={() => setZoomLevel(Math.min(150, zoomLevel + 10))}
               className="text-slate-400 hover:text-white font-bold px-1"
               title="Zoom In"
             >
               +
             </button>
             <button
-              onClick={() => setZoomLevel(100)}
-              className="text-[10px] text-slate-400 hover:text-slate-200 ml-1 underline"
+              onClick={() => setZoomLevel(calculateFitZoom())}
+              className="text-[10px] text-indigo-300 hover:text-white font-bold ml-1 bg-slate-700/60 px-1.5 py-0.5 rounded"
+              title="Fit to Screen Width"
             >
-              100%
+              📱 Fit
             </button>
           </div>
         </div>
 
         {/* Right: Export PDF & Print */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5">
           <button
             onClick={handleExportPdf}
             disabled={isExporting}
-            className="px-3.5 py-1.5 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white text-xs font-bold rounded shadow-md flex items-center gap-1.5 transition-all cursor-pointer disabled:opacity-50"
-            title="Download complete multi-page A4 PDF"
+            className="px-3 py-1.5 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white text-xs font-bold rounded shadow-md flex items-center gap-1 transition-all disabled:opacity-50"
+            title="Download multi-page A4 PDF"
           >
             <span>{isExporting ? '⏳' : '📥'}</span>
-            <span className="hidden sm:inline">{isExporting ? 'Generating PDF...' : 'Export PDF'}</span>
+            <span className="hidden md:inline">{isExporting ? 'Exporting...' : 'PDF'}</span>
           </button>
           <button
             onClick={() => window.print()}
-            className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded border border-slate-700 flex items-center gap-1.5"
-            title="Open print dialog"
+            className="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded border border-slate-700 hidden sm:flex items-center gap-1"
+            title="Print"
           >
             <span>🖨️</span>
-            <span className="hidden sm:inline">Print</span>
           </button>
         </div>
       </header>
 
-      {/* ─── Main Workspace ─── */}
-      <div className="flex-1 flex overflow-hidden">
-        {/* Left Sidebar Navigator */}
-        {sidebarOpen && (
-          <aside className="w-80 bg-slate-900 border-r border-slate-800 flex flex-col shrink-0 overflow-hidden shadow-2xl">
-            <div className="p-3 border-b border-slate-800">
-              <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2">
-                A4 Strict Page Navigator ({totalSheets} Sheets)
-              </div>
-              <input
-                type="text"
-                placeholder="Search clauses, topics, cases..."
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-950 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-purple-500"
-              />
-            </div>
-            <div className="flex-1 overflow-y-auto p-2 space-y-1">
-              {pages
-                .filter(p => searchQuery === '' || p.sectionHeader.toLowerCase().includes(searchQuery.toLowerCase()) || p.content.toLowerCase().includes(searchQuery.toLowerCase()))
-                .map((p) => (
-                  <button
-                    key={p.pageNumber}
-                    onClick={() => scrollToSheet(p.pageNumber)}
-                    className={`w-full text-left p-2 rounded text-xs flex items-start gap-2.5 transition-all ${
-                      currentSheet === p.pageNumber
-                        ? 'bg-purple-950/80 border border-purple-800 text-purple-200 font-semibold shadow-xs'
-                        : 'hover:bg-slate-800/80 text-slate-400 hover:text-slate-200 border border-transparent'
-                    }`}
-                  >
-                    <span className={`px-1.5 py-0.5 rounded text-[10px] font-mono font-bold shrink-0 ${
-                      currentSheet === p.pageNumber ? 'bg-purple-800 text-white' : 'bg-slate-800 text-slate-400'
-                    }`}>
-                      P.{p.pageNumber}
-                    </span>
-                    <div className="truncate flex-1">
-                      <div className="truncate font-medium">{p.sectionHeader}</div>
-                      <div className="text-[10px] text-slate-500 font-mono">
-                        {p.isCover ? 'Cover & Metadata' : `A4 Page ${p.pageNumber}`}
-                      </div>
-                    </div>
-                  </button>
-                ))}
-            </div>
-          </aside>
-        )}
+      {/* ─── Mobile Backdrop Overlay ─── */}
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/75 backdrop-blur-sm z-40 lg:hidden transition-opacity"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
 
-        {/* Center: Strict A4 Viewport */}
-        <main className="flex-1 overflow-y-auto bg-slate-950 p-4 md:p-8 flex flex-col items-center gap-8">
+      {/* ─── Main Workspace ─── */}
+      <div className="flex-1 flex overflow-hidden relative">
+        {/* Sidebar Page Navigator (Off-Canvas Drawer on Mobile / Sticky Column on Desktop) */}
+        <aside className={`
+          fixed inset-y-0 left-0 z-50 w-72 sm:w-80 bg-slate-900/98 backdrop-blur-md border-r border-slate-800 flex flex-col shrink-0 overflow-hidden shadow-2xl transition-transform duration-300 ease-in-out
+          lg:static lg:translate-x-0 lg:z-20
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:hidden'}
+        `}>
+          <div className="p-3 border-b border-slate-800 flex items-center justify-between">
+            <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+              A4 Page Navigator ({totalSheets})
+            </div>
+            <button 
+              onClick={() => setSidebarOpen(false)}
+              className="lg:hidden px-2 py-0.5 text-xs text-slate-400 hover:text-white bg-slate-800 rounded"
+            >
+              ✕
+            </button>
+          </div>
+          <div className="p-2 border-b border-slate-800">
+            <input
+              type="text"
+              placeholder="Search pages, clauses..."
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              className="w-full bg-slate-950 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-purple-500"
+            />
+          </div>
+          <div className="flex-1 overflow-y-auto p-2 space-y-1">
+            {pages
+              .filter(p => searchQuery === '' || p.sectionHeader.toLowerCase().includes(searchQuery.toLowerCase()) || p.content.toLowerCase().includes(searchQuery.toLowerCase()))
+              .map((p) => (
+                <button
+                  key={p.pageNumber}
+                  onClick={() => scrollToSheet(p.pageNumber)}
+                  className={`w-full text-left p-2 rounded text-xs flex items-start gap-2.5 transition-all ${
+                    currentSheet === p.pageNumber
+                      ? 'bg-purple-950/80 border border-purple-800 text-purple-200 font-semibold shadow-xs'
+                      : 'hover:bg-slate-800/80 text-slate-400 hover:text-slate-200 border border-transparent'
+                  }`}
+                >
+                  <span className={`px-1.5 py-0.5 rounded text-[10px] font-mono font-bold shrink-0 ${
+                    currentSheet === p.pageNumber ? 'bg-purple-800 text-white' : 'bg-slate-800 text-slate-400'
+                  }`}>
+                    P.{p.pageNumber}
+                  </span>
+                  <div className="truncate flex-1">
+                    <div className="truncate font-medium">{p.sectionHeader}</div>
+                    <div className="text-[10px] text-slate-500 font-mono">
+                      {p.isCover ? 'Cover & Metadata' : `A4 Page ${p.pageNumber}`}
+                    </div>
+                  </div>
+                </button>
+              ))}
+          </div>
+        </aside>
+
+        {/* Center: Scaled A4 Viewport */}
+        <main className="flex-1 overflow-y-auto overflow-x-hidden bg-slate-950 p-2 sm:p-4 md:p-8 flex flex-col items-center gap-6 pb-20">
           <div
             id="a4-critique-pages-container"
-            style={{ transform: `scale(${zoomLevel / 100})`, transformOrigin: 'top center', transition: 'transform 0.2s ease-out' }}
-            className="flex flex-col items-center gap-10 w-full max-w-[850px]"
+            style={{ 
+              transform: `scale(${zoomLevel / 100})`, 
+              transformOrigin: 'top center', 
+              transition: 'transform 0.15s ease-out' 
+            }}
+            className="flex flex-col items-center gap-8 shrink-0"
           >
             {pages.map((p) => {
               if (p.isCover) {
-                {/* ═══════════════════════════════════════════════════════════════════════
-                    PAGE 1: OFFICIAL PARLIAMENTARY TITLE & EXECUTIVE FORENSIC DASHBOARD
-                ═══════════════════════════════════════════════════════════════════════ */}
                 return (
                   <div
                     key={p.pageNumber}
                     id={`a4-sheet-${p.pageNumber}`}
                     className="a4-sheet-canvas w-[210mm] h-[297mm] max-h-[297mm] bg-white text-slate-900 p-[16mm] shadow-2xl border border-slate-300 relative flex flex-col justify-between overflow-hidden font-sans shrink-0 box-border"
                   >
-                    {/* Outer Double Frame */}
                     <div className="absolute inset-3 border-2 border-slate-900 pointer-events-none" />
 
                     <div>
@@ -340,7 +383,7 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
                       </div>
 
                       {/* Metadata Badges */}
-                      <div className="flex justify-center gap-2 mb-3 font-mono text-[9.5px]">
+                      <div className="flex justify-center gap-1.5 mb-3 font-mono text-[9.5px]">
                         <span className="bg-slate-900 text-white px-2 py-0.5 rounded font-bold">
                           FORENSIC LEGAL TREATISE
                         </span>
@@ -433,9 +476,6 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
                 );
               }
 
-              {/* ═══════════════════════════════════════════════════════════════════════
-                  SUBSEQUENT STRICT A4 SHEETS (PAGES 2+)
-              ═══════════════════════════════════════════════════════════════════════ */}
               return (
                 <div
                   key={p.pageNumber}
@@ -543,6 +583,32 @@ export default function A4CritiqueReaderClient({ content }: { content: string })
           </div>
         </main>
       </div>
+
+      {/* ─── Floating Mobile Bottom Navigation Bar (Visible on < lg) ─── */}
+      <nav aria-label="Mobile Page Controls" className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-2.5 flex items-center justify-between shadow-2xl">
+        <button
+          onClick={() => scrollToSheet(Math.max(1, currentSheet - 1))}
+          disabled={currentSheet <= 1}
+          className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-white rounded-lg text-xs font-bold border border-slate-700 flex items-center gap-1"
+        >
+          <span>◀</span>
+          <span>Prev</span>
+        </button>
+
+        <div className="text-xs font-bold text-slate-200 font-mono">
+          Page {currentSheet} of {totalSheets}
+        </div>
+
+        <button
+          onClick={() => scrollToSheet(Math.min(totalSheets, currentSheet + 1))}
+          disabled={currentSheet >= totalSheets}
+          className="px-3 py-1.5 bg-purple-700 hover:bg-purple-600 disabled:opacity-40 text-white rounded-lg text-xs font-bold shadow-sm flex items-center gap-1"
+        >
+          <span>Next</span>
+          <span>▶</span>
+        </button>
+      </nav>
+
     </div>
   );
 }
