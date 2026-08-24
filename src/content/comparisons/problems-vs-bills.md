@@ -86,9 +86,9 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > *"1. This Act may be cited as the Architectural and Quantity Surveying Practitioners Act, 2026."*
 
 * **Legal Critique:** By retaining "Architectural and Quantity Surveying" in the principal title while purporting to regulate five distinct professions (including Interior Design, Landscape Architecture, and CPM), the statute establishes a discriminatory hierarchy on its face, violating the principle of equal statutory dignity.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Redrafted Short Title:** *"This Act may be cited as the Built Environment Practitioners and Professional Regulation Act, 2026 (or The Built Environment Federation Act, 2026)."*  
-  * **Jurisprudential Benefit:** Establishes an inclusive, non-hierarchical umbrella framework that gives equal statutory dignity to all five specialized disciplines, eliminating inter-professional resentment and reflecting the multi-disciplinary reality of modern construction.
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 1):**  
+  * **Proposed Amendment:** Amend Clause 1 to read: *"This Act may be cited as the Built Environment Practitioners and Professional Regulation Act, 2026."*  
+  * **Legislative Benefit:** Establishes an inclusive, non-hierarchical statutory title giving equal recognition to all regulated disciplines (Architecture, Quantity Surveying, Landscape Architecture, Interior Design, and Construction Project Management) under Article 27 of the Constitution.
 
 ---
 
@@ -110,12 +110,12 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citations:** *National Building Inspectorate (NBI) & National Construction Authority (NCA) Joint Audit Reports on the Kasarani Seasons Collapse (November 2022, Investigation File No. NCA/ENF/2022/11)*; *NBI Investigation into the Ruaka 6-Storey Collapse (October 2022)*.  
 > **Official Finding:** The NBI forensic investigation established that the collapsed 7-storey building in Kasarani was designed and supervised by an unregistered draftsman operating under a registered business name as a "Building Design Consultant." Because Cap 525 (and similarly Bill No. 47 under Clause 43) only penalized the use of the specific title "Architect," the draftsman operated legally in the market and paid a registered professional a fee of KES 20,000 for "proxy plan submission." The developer bypassed technical oversight, resulting in fatal structural collapse that killed 3 workers.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Insert explicit functional definitions:  
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 2):**  
+  * **Proposed Amendment:** Amend Clause 2 by inserting explicit functional definitions:  
     * *"Architectural Spatial Function"* means the conceptualization, spatial layout, and technical specification of human habitable structures.  
     * *"Structural Life-Safety Verification"* means the calculation and engineering sign-off on structural load paths and foundations.  
     * *"Construction Project Management Function"* means the executive planning, site resource coordination, and quality compliance management of physical works.  
-  * **The Function-Lock Rule:** Enact that *"No person shall perform any reserved built environment function without holding a valid practicing license, regardless of the job title, business name, or commercial description adopted."* This permanently closes the "Design Consultant" title evasion loophole.
+  * **Statutory Rule:** Enact that *"No person shall perform any reserved built environment function without holding a valid practicing license, regardless of the job title, business name, or commercial description adopted."*
 
 ---
 
@@ -129,8 +129,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (e) construction project management."*
 
 * **Legal Critique:** While expanding beyond Cap 525 is necessary, the clause fails to harmoniously demarcate operational boundaries with the *Engineers Act (Cap 530)*, *Physical and Land Use Planning Act (PLUPA 2019)*, and *NCA Act 2011*, guaranteeing ongoing jurisdictional conflict on construction sites.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Add Sub-clause 3(2): *"This Act shall apply in mutual recognition and statutory complementarity with the Engineers Act (Cap 530), the Physical and Land Use Planning Act, 2019, and the National Construction Authority Act, 2011, under the multi-disciplinary joint regulatory framework established under this Act."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 3):**  
+  * **Proposed Amendment:** Amend Clause 3 by inserting Sub-clause (2): *"This Act shall apply in mutual recognition and statutory complementarity with the Engineers Act (Cap 530), the Physical and Land Use Planning Act, 2019, and the National Construction Authority Act, 2011, under joint regulatory guidelines issued under this Act."*
 
 ---
 
@@ -142,8 +142,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (2) The Board shall be a body corporate with perpetual succession and a common seal, and shall, in its corporate name, be capable of— (a) suing and being sued; (b) taking, purchasing or otherwise acquiring, holding, charging or disposing of both movable and immovable property; (c) borrowing money; (d) entering into contract; and (e) doing or performing all such other acts necessary for the proper performance of its functions under this Act..."*
 
 * **Legal Critique:** Standard statutory incorporation clause; however, it lacks statutory regional decentralization mandates, leaving the Board entirely centralized in Nairobi with no devolved presence across the 47 Counties.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Add Sub-clause 4(3): *"The Board/Council shall, in consultation with the Council of Governors, establish regional branch offices across the established economic regional blocs of Kenya to decentralize licensing verification, public complaint resolution, and joint site inspection support."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 4):**  
+  * **Proposed Amendment:** Amend Clause 4 by inserting Sub-clause (3): *"The Board shall, in consultation with the Council of Governors, establish regional liaison offices across designated economic regional blocs to decentralize licensing verification, public complaint resolution, and joint site inspection support."*
 
 ---
 
@@ -161,9 +161,9 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *High Court of Kenya Constitutional Petition No. 289 of 2018: Engineers Board of Kenya (EBK) v. Attorney General, Board of Registration of Architects and Quantity Surveyors (BORAQS) & National Construction Authority (NCA) [2018] eKLR*.  
 > **Official Finding:** The High Court was called upon to adjudicate bitter jurisdictional conflict where regulatory bodies claimed statutory supremacy over site supervision and project registration. The Court ruled that no professional regulatory body has the constitutional authority to unilaterally declare supremacy over other regulated disciplines without clear statutory harmonization enacted by Parliament. Clause 5(3) of Bill No. 47 directly violates this established jurisprudence.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Delete the unilateral supremacy clause 5(3) entirely. Replace it with a statutory **Joint Regulatory Coordinating Committee (JRCC)**:  
-    * *"5(3) There is established a Joint Built Environment Regulatory Coordinating Committee comprising the Registrars of the Built Environment Council, the Engineers Board of Kenya, the National Construction Authority, and the National Environment Management Authority to resolve jurisdictional boundary matters, harmonize site inspection protocols, and issue joint practice guidelines."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 5):**  
+  * **Proposed Amendment:** Delete Sub-clause 5(3) entirely and substitute therefor the following:  
+    * *"5(3) The Board shall establish a Joint Regulatory Coordinating Committee comprising representatives of the Engineers Board of Kenya, the National Construction Authority, and the National Environment Management Authority to resolve jurisdictional boundary matters and issue synchronized site inspection guidelines."*
 
 ---
 
@@ -192,17 +192,17 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *Official Parliamentary Records & Joint Stakeholder Memorandum to the National Assembly Departmental Committee on Housing, Urban Planning and Public Works by the Interior Designers Association of Kenya (IDAK), Kenya Society of Environmental Landscape Architects (KSELA), and Association of Construction Managers of Kenya (ACMK) (Parliament of Kenya, 12th & 13th Parliaments, 2021/2026)*.  
 > **Official Finding:** In their joint memorandum submitted to Parliament, the three allied professional associations formally rejected the A&QS Practitioners Bill, demonstrating that allocating 7 of 11 voting seats to Architects and QSs while giving allied disciplines 1 token seat each was a deliberate mechanism for regulatory capture, designed to stifle independent degree accreditation and maintain market subjugation.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **The Co-Equal Council of Colleges Model (Federation Model):** Redraft Clause 7 into a balanced 16-member Governing Council where no single discipline holds more than 15% voting power:  
-    * (a) 2 Registered Architects (elected by the College of Architects);  
-    * (b) 2 Registered Quantity Surveyors (elected by the College of Quantity Surveyors);  
-    * (c) 2 Registered Consulting Structural/Civil Engineers (nominated by EBK/IEK);  
-    * (d) 2 Registered Landscape Architects (elected by the College of Landscape Architects);  
-    * (e) 2 Registered Interior Architects/Designers (elected by the College of Interior Designers);  
-    * (f) 2 Registered Construction Project Managers (elected by the College of CPM);  
-    * (g) 2 TVET Certified Site Inspectors (elected by the National Association of Technicians);  
-    * (h) 2 Representatives of the Council of Governors (nominated by CoG Urban Planning Committee);  
-    * (i) Rotational Chairperson elected by the Council members from among the registered professionals every 2 years.
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 7):**  
+  * **Proposed Amendment:** Amend Clause 7(1) to establish an equitable, peer-elected Council structure:  
+    * (a) 2 Registered Architects elected by registered architects through secret ballot;  
+    * (b) 2 Registered Quantity Surveyors elected by registered quantity surveyors through secret ballot;  
+    * (c) 2 Registered Landscape Architects elected by registered landscape architects through secret ballot;  
+    * (d) 2 Registered Interior Designers elected by registered interior designers through secret ballot;  
+    * (e) 2 Registered Construction Project Managers elected by registered CPMs through secret ballot;  
+    * (f) 1 Registered Structural Engineer nominated by the Engineers Board of Kenya;  
+    * (g) 1 Enrolled Technician elected by enrolled technicians;  
+    * (h) 1 Representative nominated by the Council of Governors; and  
+    * (i) A Chairperson elected by the Board members from among the registered professionals.
 
 ---
 
@@ -212,8 +212,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > *(2) The Chief Executive Officer shall— (a) subject to the directions of the Board, be responsible for the day-to-day management of the affairs and staff of the Board; (b) implement the decisions of the Board under this Act; and (c) perform such other functions as may be provided for in this Act or as the Board may from time to time, determine."*
 
 * **Legal Critique (The Executive Subjugation Chain):** Under Clause 7, the Cabinet Secretary appoints the Chairperson and all professional members of the Board. Under Clause 11(1), this CS-appointed Board appoints the CEO. This creates an indirect chain of executive patronage where the executive officer of what should be an independent, self-regulating professional body is subordinate to political appointees, violating **Article 232 (Values of Public Service)** and stripping the institution of genuine professional autonomy.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Require that the CEO be recruited by an independent Governing Council whose members are directly elected by practitioners through secret ballot (as under the *Law Society of Kenya Act, 2014*), insulating the CEO and regulatory inspectors from ministerial interference.
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 11):**  
+  * **Proposed Amendment:** Amend Clause 11(1) to require that the Chief Executive Officer be competitively recruited through a public, transparent process overseen by an independent, peer-elected Board, insulating the executive office and regulatory inspectors from ministerial interference.
 
 ---
 
@@ -223,8 +223,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (2) The provisions of sub-section (1) shall not relieve the Board of the liability to pay compensation or damages to any person for any injury done to him, his property or any of his interests caused by the exercise of any power conferred by this Act, or by the failure, whether wholly or partially, of any works."*
 
 * **Legal Critique:** Shields board inspectors and officers from personal criminal and civil accountability even when issuing negligent or fraudulent site clearance letters, undermining the accountability standards established under the *Public Finance Management Act 2012*.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Add Sub-clause 13(3): *"The immunity conferred under subsection (1) shall not apply where an officer or agent acts with gross negligence, willful blindness, or corrupt intent in issuing inspection clearance certificates for compromised structural works."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 13):**  
+  * **Proposed Amendment:** Amend Clause 13 by inserting Sub-clause (3): *"The immunity conferred under subsection (1) shall not apply where an officer or agent acts with gross negligence, willful blindness, or corrupt intent in issuing inspection clearance certificates for compromised structural works."*
 
 ---
 
@@ -249,13 +249,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *Report of the Presidential Taskforce on the Investigation of Building Collapses in Kenya (The Huruma 2016 Commission Report, Government Printer, Nairobi)*.  
 > **Official Finding:** The Taskforce audited over 4,000 buildings in Nairobi and established that over 51% were structurally unfit for human habitation. The primary cause identified was that neither the municipal County planning directorates nor national regulatory boards had dedicated statutory funding or non-destructive testing (NDT) diagnostic equipment (such as ultrasonic pulse velocity testers and core drills) to verify concrete strengths on site, relying instead on visual inspections. Bill No. 47 repeats this exact financial flaw.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Enactment of the Statutory Built Environment Safety Levy:** Insert Clause 14A:  
-    * *"14A. (1) There is established a Built Environment Safety & Quality Assurance Levy of 0.1% assessed on the construction cost of all private and commercial developments exceeding KES 10,000,000.  
-    * (2) Monies collected under the Levy shall be ring-fenced and distributed through a statutory formula:  
-      &nbsp;&nbsp;&nbsp;&nbsp;(a) 40% directly disbursed as conditional grants to the 47 County Planning Directorates for procurement of NDT testing equipment and hiring of certified building inspectors;  
-      &nbsp;&nbsp;&nbsp;&nbsp;(b) 30% for Council regulatory operations, digital database maintenance, and continuous professional education;  
-      &nbsp;&nbsp;&nbsp;&nbsp;(c) 30% deposited into a standing Disaster Forensic Investigation & Victim Compensation Escrow Fund."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 14):**  
+  * **Proposed Amendment:** Insert New Clause 14A to establish a statutory Built Environment Safety & Compliance Fund, with a defined revenue-sharing formula allocating resources between national regulatory oversight and county planning enforcement units for site diagnostic equipment.
 
 ---
 
@@ -273,9 +268,9 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *Court of Appeal of Kenya, Civil Appeal No. 408 of 2017: Commission for University Education (CUE) v. Law Society of Kenya, Engineers Board of Kenya & 7 other Professional Bodies [2020] eKLR*.  
 > **Official Finding:** The Court of Appeal decisively held that the *Universities Act (No. 42 of 2012)* confers the sole statutory mandate to approve, regulate, and accredit university degree programmes upon the Commission for University Education (CUE). The Court ruled that professional regulatory boards cannot unilaterally usurp university governance or invalidate degree qualifications. Clause 20(4) of Bill No. 47 directly attempts to re-legislate powers already struck down by the appellate courts.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Harmonize with Section 5A of the *Universities Act, 2012*:  
-    * *"20(1) The Council shall collaborate with the Commission for University Education (CUE) through Joint Sectoral Curriculum Advisory Panels to provide industry input on degree syllabi, ensuring that academic standards align with national professional competencies without encroaching upon CUE's statutory accreditation authority."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 20):**  
+  * **Proposed Amendment:** Amend Clause 20(1) to harmonize with Section 5A of the *Universities Act, 2012*:  
+    * *"20(1) The Board shall collaborate with the Commission for University Education (CUE) through Joint Sectoral Curriculum Advisory Panels to provide industry input on degree syllabi, ensuring academic standards align with national professional competencies without encroaching upon CUE's statutory accreditation authority."*
 
 ---
 
@@ -290,8 +285,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (f) has paid the prescribed registration fee."*
 
 * **Legal Critique (The 2-Tier Education Ambiguity):** Under Kenya’s university framework (e.g. UoN, JKUAT), architectural training is split into a **4-year Bachelor of Architectural Studies (BAS)** and a subsequent **2-year Bachelor of Architecture (B.Arch) or Master of Architecture (M.Arch)**. Clause 22(2)(b) ambiguously states *"holds a degree in the respective discipline"*. This creates a severe legal loophole: 4-year pre-professional BAS holders can claim statutory entitlement to register after 2 years of work experience, bypassing the mandatory 6-year professional degree requirement. Conversely, it leaves the Board with arbitrary discretion to reject applicants without clear statutory guidance.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Amend Clause 22(2)(b): *"holds a professional degree comprising not less than five (5) or six (6) years of continuous university training (such as a professional Bachelor of Architecture, professional Bachelor of Quantity Surveying, or a Master of Architecture preceded by an accredited Bachelor of Architectural Studies) recognized by the Commission for University Education and the Council."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 22):**  
+  * **Proposed Amendment:** Amend Clause 22(2)(b) to read: *"holds a professional degree comprising not less than five (5) or six (6) years of continuous university training (such as a professional Bachelor of Architecture, professional Bachelor of Quantity Surveying, or a Master of Architecture preceded by an accredited Bachelor of Architectural Studies) recognized by the Commission for University Education and the Board."*
 
 ---
 
@@ -303,9 +298,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (5) Where the Board is not satisfied that a person has fulfilled any of the requirements... the Board may require that person to— (a) attend such interview as may be appropriate; (b) undergo and pass such written or oral examination as it may specify; or (c) undergo such further period of training..."*
 
 * **Legal Critique (Friction with Modern Competency Frameworks):** Internationally, major accreditation bodies (e.g. the UK Architects Registration Board [ARB] and the Royal Institute of British Architects [RIBA]) have transitioned from rigid, time-served metrics (such as the legacy 2-year requirement) toward modernized, competency-based and outcome-driven learning pathways. Clause 22(4)–(5) forces foreign-trained Kenyans through archaic, rigid time-served hurdles and subjective oral interviews, creating unfair barriers for diaspora-trained Kenyan scholars returning from world-class accredited institutions.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Enactment of an Objective Mutual Recognition & Competence-Based Equivalence Framework:** Redraft Clause 22(4):  
-    * *"22(4) The Council shall gazette an objective Mutual Recognition Agreement (MRA) and Competency Equivalence Framework aligned with international accreditation bodies (including ARB, RIBA, SACAP, and CAA), allowing foreign-trained Kenyan graduates who have satisfied accredited competency-based portfolios to be admitted directly to the local professional practice examination (PPE) without discriminatory training delays."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 22(4)):**  
+  * **Proposed Amendment:** Amend Clause 22(4) to provide for an objective Mutual Recognition Agreement (MRA) and Competency Equivalence Framework aligned with international accreditation bodies, allowing foreign-trained Kenyan graduates who have satisfied accredited competency-based portfolios to be admitted directly to the local professional practice examination (PPE) without discriminatory training delays.
 
 ---
 
@@ -322,10 +316,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *Technical and Vocational Education and Training (TVET) Act No. 29 of 2013 & Kenya National Qualifications Framework (KNQF Act No. 22 of 2014, KNQF Regulations 2018)*.  
 > **Official Finding:** The KNQF statutory framework mandates that professional regulatory statutes must provide recognized career progression pathways and articulation mechanisms allowing Level 6 TVET diploma holders with documented industry competence to bridge into Level 7/8 professional practice. Bill No. 47 completely violates the KNQF by permanently locking polytechnic graduates into an un-bridged, subordinate technician roll.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Enactment of the TVET Career Progression & Bridging Track:** Insert Clause 23A:  
-    * *"23A. (1) The Council shall, in collaboration with the Kenya National Qualifications Authority (KNQA), establish a Competency-Based Bridging Examination and Recognition of Prior Learning (RPL) Program.  
-    * (2) An enrolled technician holding a recognized Level 6 diploma with a minimum of seven (7) years documented supervisory site experience and verified CPD logbooks shall be eligible to sit for the Professional Practice Examinations (PPE) and, upon passing, be registered as a full Professional Practitioner."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 23):**  
+  * **Proposed Amendment:** Insert New Clause 23A establishing a Competency-Based Bridging Examination and Recognition of Prior Learning (RPL) Program in collaboration with KNQA, allowing Level 6 diploma holders with at least seven (7) years of documented supervisory experience and verified CPD logs to sit for the Professional Practice Examinations (PPE).
 
 ---
 
@@ -338,9 +330,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
   1. Professional associations (AAK, IQSK, IDAK, KSELA, ACMK) have **0 statutory nomination seats** on the Board (Clause 7).
   2. The Board sets up state-controlled internal "Chapters" (Clause 24), duplicating and usurping the specialized functions of independent professional societies.
   3. Clause 22(2)(e) gives the Board unilateral power to "recognize" or "derecognize" an association, converting independent civil society bodies into subservient administrative clients.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Recognition of Independent Member Societies as Co-Regulators:** Redraft Clause 24:  
-    * *"24. (1) The Council shall formally recognize established professional membership associations (including AAK, IQSK, IDAK, KSELA, and ACMK) as statutory co-regulatory partners responsible for administering Continuous Professional Development (CPD), publishing standard forms of building contracts, and nominating peer examiners for the Professional Practice Examinations (PPE)."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 24):**  
+  * **Proposed Amendment:** Amend Clause 24 to formally recognize established professional membership associations (including AAK, IQSK, IDAK, KSELA, and ACMK) as statutory partners responsible for administering Continuous Professional Development (CPD) programs and nominating peer examiners.
 
 ---
 
@@ -349,8 +340,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > *"26. (1) Subject to the provisions of this Act, a person may register an architectural, quantity surveying, landscape architectural, interior design or construction project management firm if the firm is duly registered and — (a) has a certificate of registration as a business or a certificate of incorporation; (b) the majority partner or principal shareholder is registered... and (e) is accompanied by a valid professional indemnity insurance..."*
 
 * **Legal Critique:** While introducing mandatory PII for corporate firms is commendable, the clause leaves PII voluntary for sole proprietorships (which account for over 70% of residential drawing submissions in Kenya).
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Amend Clause 26(1)(e): *"Mandatory Professional Indemnity Insurance (PII) of a minimum prescribed cover shall apply to all registered firms, corporate partnerships, and individual sole proprietors prior to the issuance or renewal of any annual practicing certificate."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 26):**  
+  * **Proposed Amendment:** Amend Clause 26(1)(e) to mandate that Professional Indemnity Insurance (PII) of a minimum prescribed cover shall apply to all registered firms, corporate partnerships, and individual sole proprietors prior to the issuance or renewal of any annual practicing certificate.
 
 ---
 
@@ -371,10 +362,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *Nairobi City County Urban Planning Directorate e-DAMS Compliance Audit (2020–2023) & National Construction Authority Compliance Reports on Fraudulent Plan Submissions*.  
 > **Official Finding:** County audits revealed that due to the absence of a live programmatic API link between regulatory board registers (BORAQS/EBK) and municipal electronic development application management systems (e-DAMS), suspended practitioners and quacks routinely uploaded scanned PDF images of old paper licenses and physical stamps to secure development approvals for high-rise buildings across Roysambu, Kasarani, and Kilimani without detection.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Mandate of Cryptographic Digital QR Seals & Live API Synchronization:** Insert Clause 31A:  
-    * *"31A. (1) Every licensed practitioner shall be issued a unique Cryptographic Digital QR Seal authenticated through the Council’s central public key infrastructure.  
-    * (2) No county planning directorate, state agency, or financial institution shall accept or approve any architectural, structural, or quantity surveying document unless it bears a verifiable Digital QR Seal that dynamically confirms the practitioner’s active license and PII status via real-time API sync."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 31):**  
+  * **Proposed Amendment:** Insert New Clause 31A mandating that every licensed practitioner be issued a unique Cryptographic Digital QR Seal authenticated through the Board's central public key infrastructure, required on all development applications and integrated with county e-permit portals.
 
 ---
 
@@ -388,7 +377,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
   * **Court Congestion:** Diverting technical licensing disputes to the backlogged High Court causes 3- to 7-year delays, demonstrating the urgent need for a specialized **Built Environment Appeals Tribunal (BEAT)**.
 * **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
   * **Statutory Redraft:** Replace the Cabinet Secretary and High Court appeal detour with a direct appeal to the independent **Built Environment Appeals Tribunal (BEAT)**:  
-    * *"35(3) Any applicant aggrieved by a decision of the Council regarding licensing or registration may, within thirty (30) days, appeal to the Built Environment Appeals Tribunal established under this Act, which shall hear and determine the matter within sixty (60) days."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 35):**  
+  * **Proposed Amendment:** Amend Clause 35(3) to replace the Cabinet Secretary appeal with an independent, fast-track Built Environment Appeals Tribunal (BEAT) mandated to hear and determine technical appeals within sixty (60) days.
 
 ---
 
@@ -400,9 +390,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (3) The right to privacy enshrined in Article 31 of the Constitution and the right to property enshrined in Article 40 of the Constitution are limited as specified in this section for the purpose of ensuring the health and safety of the public."*
 
 * **Legal Critique:** Legally sound limitation under Article 24 of the Constitution; however, it creates direct operational overlap and jurisdictional conflict with the *National Construction Authority (NCA Act 2011)* and County Government enforcement directorates.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Enact a **Unified Multi-Agency Inspection Directorate**:  
-    * *"38(4) Inspections of building sites shall be conducted under a unified multi-agency protocol coordinated with the National Construction Authority and County Government Planning Enforcement Directorates to eliminate duplicative compliance notices and enforce synchronized safety orders."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 38):**  
+  * **Proposed Amendment:** Amend Clause 38 by inserting Sub-clause (4): *"Inspections of building sites shall be conducted under a unified multi-agency protocol coordinated with the National Construction Authority and County Government Planning Enforcement Directorates to eliminate duplicative compliance notices and enforce synchronized safety orders."*
 
 ---
 
@@ -420,10 +409,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *National Construction Authority (NCA) Collapse Investigation Report on the Kirigiti 6-Storey Building Collapse, Kiambu County (September 2022)*.  
 > **Official Finding:** The NCA investigation revealed that enforcement officers had conducted site visits weeks prior to the disaster and issued non-compliance advisories. However, due to slow administrative reporting protocols, lack of immediate statutory stop-work powers, and delayed board processing, the developer continued casting slabs unchecked until the structural framework collapsed, killing 5 people including a mother and two children.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Enactment of Mandatory NDT Diagnostic Tooling & Rapid 2-Hour Digital Stop-Work Orders:** Insert Clause 40A:  
-    * *"40A. (1) Authorized inspection officers shall be equipped with calibrated Non-Destructive Testing (NDT) diagnostic kits (digital concrete test hammers and ultrasonic testing apparatus).  
-    * (2) Where an inspection reveals critical structural non-compliance or unapproved slab extensions, the officer shall immediately issue an electronic Stop-Work Order uploaded directly to the central public safety portal within two (2) hours, instantly suspending county water and electrical site connections until structural integrity is verified by a certified Consulting Structural Engineer."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clauses 39 & 40):**  
+  * **Proposed Amendment:** Insert Clause 40A requiring authorized inspection officers to be equipped with calibrated Non-Destructive Testing (NDT) diagnostic kits and mandating that digital Stop-Work Orders for severe structural non-compliance be uploaded to the central safety portal within two (2) hours.
 
 ---
 
@@ -438,8 +425,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 * **Legal Critique & Fatal Loophole:**
   * **The "Design Consultant" Loophole:** The Bill strictly protects *titles*, not *reserved professional functions*. Unqualified draftsmen and quacks simply advertise as "Spatial Planners", "Building Designers", "Turnkey Contractors", or "Project Consultants", legally bypassing Clause 43 and submitting dangerous plans through proxy developers.
   * **Arbitrary Exemption Powers:** Clause 43(3) grants the Board sweeping powers to grant title exemptions to unregulated persons, creating potential for corrupt waivers.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Delete Clause 43(3) exemptions. Amend Clause 43(1) to protect both the title and the function: *"Any person who, without a valid license, performs any reserved architectural, quantity surveying, structural engineering, or project management function, under any title, style, or business description whatsoever, commits a strict liability offense."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 43):**  
+  * **Proposed Amendment:** Delete Clause 43(3) exemptions. Amend Clause 43(1) to protect both the title and the function: *"Any person who, without a valid license, performs any reserved architectural, quantity surveying, structural engineering, or project management function, under any title, style, or business description whatsoever, commits an offence."*
 
 ---
 
@@ -449,8 +436,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (2) Where a partner or director of a body mentioned under subsection (1), dies, that body of persons may, despite the provision of subsection (1), continue to carry on the business of architecture or quantity surveying for not more than six months, after which the body of persons shall cease..."*
 
 * **Legal Critique:** Creates a dangerous 6-month unsupervised operational window where non-professional shareholders can continue submitting building plans without licensed technical oversight.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Amend Clause 44(2): *"Upon the death or incapacity of a registered director or partner, the body corporate shall, within fourteen (14) days, appoint a registered practitioner as a temporary technical supervisor approved by the Council to oversee ongoing technical submissions, failing which the firm's license shall stand suspended."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 44):**  
+  * **Proposed Amendment:** Amend Clause 44(2) to require that upon the death or incapacity of a registered director or partner, the body corporate shall, within fourteen (14) days, appoint a registered practitioner as a temporary technical supervisor approved by the Board, failing which the firm's license shall stand suspended.
 
 ---
 
@@ -461,8 +448,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (3) A person who contravenes any provision of this section commits an offence."*
 
 * **Legal Critique:** Fails to mandate joint structural-architectural submission packages, allowing developers to submit architectural plans without corresponding certified structural calculation reports.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Mandate Joint Multi-Disciplinary Submission Packages:** Add Clause 46(4): *"Every development application for a building exceeding two storeys shall be submitted as a consolidated multi-disciplinary package bearing joint certifications from a registered Architect, a registered Consulting Structural Engineer, a registered Quantity Surveyor, and a registered NEMA Lead Expert."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 46):**  
+  * **Proposed Amendment:** Add Clause 46(4): *"Every development application for a building exceeding two storeys shall be submitted as a consolidated multi-disciplinary package bearing joint certifications from a registered Architect, a registered Consulting Structural Engineer, and a registered Quantity Surveyor."*
 
 ---
 
@@ -471,8 +458,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > *"47. A person who engages in the practice of architecture, quantity surveying, interior designing, construction project management and charges a professional fee without a valid license issued by the Board commits an offence and shall be liable on conviction to a fine not exceeding two million shillings or to imprisonment for a term not exceeding three years, or both."*
 
 * **Legal Critique:** Penalizes practicing without a license; however, it fails to provide for the forfeiture of illegal fee revenues or asset recovery for victims of structural failure.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Add Sub-clause 47(2): *"In addition to the fine and imprisonment imposed under subsection (1), the court shall order the immediate forfeiture of all professional fees charged and earned by the unlicensed person, and such funds shall be paid into the Victims Compensation Escrow Fund."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 47):**  
+  * **Proposed Amendment:** Add Sub-clause 47(2) empowering courts to order the immediate forfeiture of all professional fees charged and earned by an unlicensed person.
 
 ---
 
@@ -487,10 +474,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *Nairobi City County Physical Planning & Enforcement Directorate Case Files on Unauthorized Commercial High-Rise Developments, Kilimani and Kileleshwa (2019–2024)*.  
 > **Official Finding:** Enforcement records demonstrate that developers adding 4 to 6 unauthorized floors to multi-storey developments (yielding over KES 350 Million in additional capital value) routinely factored municipal and statutory fines into their development budgets. The statutory maximum penalty under Clause 50 (KES 500,000) represents less than 0.14% of the illegal developer profit, completely failing to act as a punitive deterrence against rogue construction.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Enactment of Proportionate Capital-Value Penalties & Piercing the Corporate Veil:** Redraft Clause 50:  
-    * *"50. (1) Any person or corporate body convicted of an offence under this Act for which no other penalty is provided shall be liable to a fine equivalent to not less than fifteen percent (15%) and not more than twenty-five percent (25%) of the total estimated construction value of the development, or ten million shillings (KES 10,000,000), whichever is higher, or to imprisonment for a term not exceeding ten (10) years.  
-    * (2) Where an offence under this Act is committed by a body corporate, the court shall pierce the corporate veil and hold every director, partner, and principal officer personally, civilly, and criminally liable unless they prove that the offence was committed without their knowledge or consent."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 50):**  
+  * **Proposed Amendment:** Redraft Clause 50 to introduce graduated, project-value linked penalties (such as 15% to 25% of the unauthorized development cost) and explicit statutory provisions piercing the corporate veil to hold directors personally liable for fatal negligence.
 
 ---
 
@@ -506,8 +491,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 
 * **Legal Critique:**
   * **Inherent Bias & Lack of Natural Justice:** An internal committee where traditional Architects and QSs hold the voting majority will sit in judgment over allied Interior Designers and Landscape Architects. This structural bias violates Article 47 (Right to Fair Administrative Action).
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Establishment of Independent Peer Discipline Panels:** Redraft Clause 51(1): *"Disciplinary inquiries involving an alleged breach by a practitioner shall be heard by an independent Peer Disciplinary Panel consisting of a majority of registered practitioners from the respondent's specific professional College, chaired by an independent legal counsel nominated by the Law Society of Kenya."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 51):**  
+  * **Proposed Amendment:** Redraft Clause 51(1) to require that disciplinary inquiries involving an alleged breach by a practitioner be heard by a Peer Disciplinary Panel consisting of registered practitioners from the respondent's specific discipline, chaired by an independent legal counsel nominated by the Law Society of Kenya.
 
 ---
 
@@ -524,11 +509,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citation:** *High Court of Kenya at Nairobi, Judicial Review Miscellaneous Application No. 445 of 2017: Republic v. Board of Registration of Architects and Quantity Surveyors (BORAQS) Ex Parte [Practitioner] [2017] eKLR*.  
 > **Official Finding:** Following disciplinary proceedings where a practitioner’s license was revoked for professional misconduct on a failed building project, the practitioner filed a Judicial Review application under Section 13/14 of Cap 525 (and Article 47 of the Constitution). The High Court granted an *ex-parte* conservatory stay order staying the Board's decision. Due to severe court backlog and multiple adjournments, the disciplinary sanction remained suspended for over 5 years, during which the individual continued active public practice. This underscores the total failure of Clause 53(4) and the absolute necessity of a fast-track **Built Environment Appeals Tribunal (BEAT)**.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Establishment of the Built Environment Appeals Tribunal (BEAT):** Replace Clause 53(4) with a specialized quasi-judicial Tribunal:  
-    * *"53A. (1) There is established the Built Environment Appeals Tribunal (BEAT) consisting of a Chairperson qualified to be a Judge of the High Court, and four technical assessors representing Architecture, Structural Engineering, Quantity Surveying, and Physical Planning.  
-    * (2) Any appeal against a disciplinary decision of the Council shall lie to the Tribunal, which shall hear and deliver its final ruling within sixty (60) days.  
-    * (3) No court shall issue an ex-parte stay against a safety-related license suspension unless the applicant posts a mandatory cash security bond equal to the structural indemnity value of the affected projects."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 53):**  
+  * **Proposed Amendment:** Replace Clause 53(4) with a specialized quasi-judicial Built Environment Appeals Tribunal (BEAT) mandated to hear and deliver final rulings within sixty (60) days, preventing indefinite delays in safety-critical disciplinary enforcement.
 
 ---
 
@@ -551,10 +533,10 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > **Citations:** *Competition Authority of Kenya (CAK) Advisory and Enforcement Decision under Section 21 of the Competition Act (No. 12 of 2010) on Professional Fee Price-Fixing*; *Public Procurement Administrative Review Board (PPARB) Application No. 45 of 2019*.  
 > **Official Finding:** The CAK and the PPARB established that professional regulatory bodies cannot enforce mandatory minimum fee scales to prevent competitive bidding in public tenders governed by Section 86 of the *Public Procurement and Asset Disposal Act (PPADA 2015)*. Consequently, public entities routinely award consultancy tenders at 80%–90% discounts below BORAQS scales. Bill No. 47 fails to provide statutory quality-cost-based selection (QCBS) protections, locking the profession into a cycle of destructive undercutting.
 
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Enactment of Statutory Quality-Cost-Based Selection (QCBS 80/20 Rule) & Anti-Undercutting Floor:** Insert Clause 56A:  
-    * *"56A. (1) Pursuant to Article 227 of the Constitution and notwithstanding Section 86 of the Public Procurement and Asset Disposal Act, 2015, all public procurement of built environment consultancy services shall be evaluated strictly under a Quality and Cost-Based Selection (QCBS) ratio of 80% Technical Quality and 20% Financial Price.  
-    * (2) Any financial bid submitted below seventy percent (70%) of the gazetted professional scale of fees shall be deemed technically unviable and non-responsive, preventing destructive undercutting and ensuring adequate site supervision resources."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 56):**  
+  * **Proposed Amendment:** Insert New Clause 56A:  
+    * *"56A. (1) Pursuant to Article 227 of the Constitution, all public procurement of built environment consultancy services shall be evaluated strictly under a Quality and Cost-Based Selection (QCBS) framework of 80% Technical Competence and 20% Financial Proposal.  
+    * (2) Any financial tender submitted below seventy percent (70%) of the gazetted professional scale of fees shall be deemed non-responsive, preventing destructive price undercutting and ensuring adequate site supervision resources."*
 
 ---
 
@@ -572,8 +554,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 > (iv) was registered as an architect or quantity surveyor by the former Board shall be deemed to be registered by the Board under this Act..."*
 
 * **Legal Critique:** Re-entrenches the old guard. Rather than conducting competitive recruitment for executive leadership or restructuring board oversight, it automatically carries over the entire legacy BORAQS administrative apparatus without technical modernization.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Amend Clause 58(2)(c)(ii): *"The Chief Executive Officer and senior directors of the new Council shall be competitively recruited through a public and transparent recruitment process conducted within twelve (12) months of the effective date to establish modern digital governance and institutional dynamism."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Clause 58):**  
+  * **Proposed Amendment:** Amend Clause 58(2)(c)(ii) to mandate that the Chief Executive Officer and senior directors be competitively recruited through a public and transparent recruitment process within twelve (12) months of the effective date to establish modern digital governance and institutional dynamism.
 
 ---
 
@@ -585,8 +567,8 @@ While National Assembly Bill No. 47 is presented as a progressive modernization 
 
 ### Juristic Analysis of the Quorum & Casting Vote:
 * **The "5-Member Quorum" Trap:** With a quorum of just 5 members out of 11, the Architect and Quantity Surveyor bloc (which holds 7 members) can convene and hold official Board meetings **without a single allied professional (Landscape, Interior Design, CPM) present**, legally passing binding policies, budgets, and disciplinary rulings in total exclusion of allied disciplines.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Statutory Redraft:** Amend Schedule Paragraph 3(4): *"The quorum of the Council shall be nine (9) members, provided that no meeting shall be properly constituted unless at least one representative from each of the five constituent Professional Colleges and one representative of the Council of Governors is present."*
+* **💡 Proposed Legislative Amendment to Bill No. 47 (The Schedule):**  
+  * **Proposed Amendment:** Amend Schedule Paragraph 3(4) by raising the quorum to at least seven (7) members, provided that no official meeting shall be properly constituted unless at least one representative from each constituent professional discipline is present.
 
 ---
 
@@ -601,8 +583,8 @@ The official Memorandum of Objects and Reasons signed by Hon. Joseph K. Tonui co
 1. **Academic Reality:** Landscape Architecture is an independent discipline rooted in ecological science, geomorphology, and urban environmental planning; Interior Architecture is a specialized discipline governed by human ergonomics, fire life safety, and acoustic engineering; CPM is a rigorous management science governed by international PMBOK/ISO standards.
 2. **Constitutional Concern:** Subordinating autonomous professions as mere "offshoots" to justify allocating them only token seats on a statutory board raises serious questions under **Article 10 (National Values of Equity, Inclusiveness & Protection of Minorities)** and **Article 27 (Freedom from Discrimination)**.
 3. **The Stakeholder Memoranda:** This premise has triggered formal joint petitions to Parliament by IDAK, KSELA, ACMK, and TVETA urging the Departmental Committee to reject the "Offshoot Doctrine" in favor of co-equal representation.
-* **💡 Proposed Optimal Legislative Redraft / Solution (The K-BELIR Reform Angle):**  
-  * **Memorandum Replacement:** Replace the "Offshoot Doctrine" with the **"Built Environment Co-Equal Ecosystem Principle"**, affirming that each discipline possesses an autonomous body of scientific knowledge, equal constitutional dignity, and distinct life-safety responsibilities within the built environment lifecycle.
+* **💡 Proposed Legislative Amendment to Bill No. 47 (Memorandum):**  
+  * **Proposed Amendment:** Recommend that the Departmental Committee amend the Memorandum of Objects and Reasons to recognize that each discipline possesses an autonomous body of knowledge, equal constitutional dignity, and distinct life-safety responsibilities within the built environment lifecycle.
 
 ---
 
