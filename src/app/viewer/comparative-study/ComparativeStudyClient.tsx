@@ -122,11 +122,21 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
       {/* Left Sidebar Navigation (Expanded, Full Vertical Stack) */}
       <div className="w-full lg:w-84 xl:w-96 bg-slate-900/95 backdrop-blur-md border-b lg:border-b-0 lg:border-r border-slate-800 p-5 lg:p-6 flex flex-col gap-6 flex-shrink-0 h-auto lg:h-screen lg:sticky top-0 overflow-y-auto z-20 scrollbar-thin scrollbar-thumb-slate-700">
         
-        {/* Back Link */}
-        <Link href="/viewer/read" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-all text-xs font-bold uppercase tracking-wider group">
-          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" /> 
-          <span>Back to Bill Viewer</span>
-        </Link>
+        {/* Back Link & A4 Reader CTA */}
+        <div className="flex flex-col gap-2">
+          <Link href="/viewer/read" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-all text-xs font-bold uppercase tracking-wider group">
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" /> 
+            <span>Back to Bill Viewer</span>
+          </Link>
+
+          <Link
+            href="/viewer/comparative-study/reader"
+            className="w-full py-2.5 px-3 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white rounded-xl text-xs font-bold shadow-lg shadow-purple-900/30 flex items-center justify-center gap-2 border border-purple-500/40 transition-all group mt-1"
+          >
+            <BookOpen className="w-4 h-4 text-purple-200 group-hover:scale-110 transition-transform" />
+            <span>📖 Open A4 Critique Reader</span>
+          </Link>
+        </div>
         
         {/* Comparative Dossiers Section (Vertical List) */}
         <div>
