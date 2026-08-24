@@ -6,10 +6,11 @@ export default async function ComparativeStudyPage() {
   const contentDir = path.join(process.cwd(), 'src/content/comparisons');
   
   const files = [
+    'problems-vs-bills.md',
     'cap-525.md',
-    'qs-bill.md',
-    'architects-bill.md',
     'a-qs-professionals-bill.md',
+    'architects-bill.md',
+    'qs-bill.md',
     'engineers-act.md'
   ];
 
