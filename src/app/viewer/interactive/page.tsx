@@ -1,8 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { billData } from '../data';
+
+/* ─── Preset Statutory Keyword Search Chips ───────────────────────────── */
+const STATUTORY_KEYWORD_CHIPS = [
+  'EBK Cap 530',
+  'Digital QR Seal',
+  'BEAT Tribunal',
+  '51%+ Local Equity',
+  'Risk Class C/D',
+  'Stamp Renting',
+  '6-Stage Inspection',
+  'Disciplinary Hearing',
+  'Peer Review',
+  'Escrow Account'
+];
 
 /* ─── Exhaustive Authoritative Part Descriptions ────────────────────────── */
 const RICH_PART_DESCRIPTIONS: Record<number, string> = {
@@ -44,34 +58,9 @@ const RICH_SCHEDULE_DESCRIPTIONS: Record<number, string> = {
   13: "Schedule 13: Discipline Registration Boards Governance Charter (ARB, QSRB, EBK) for board elections and registrar duties."
 };
 
-/* ─── Part colour palette ─────────────────────────────────────────────── */
-const PALETTE = [
-  { from: '#64748B', to: '#475569' },
-  { from: '#b91c1c', to: '#dc2626' },
-  { from: '#0284C7', to: '#0891B2' },
-  { from: '#D97706', to: '#EA580C' },
-  { from: '#B91C1C', to: '#DC2626' },
-  { from: '#7C3AED', to: '#9333EA' },
-  { from: '#1D4ED8', to: '#2563EB' },
-  { from: '#B45309', to: '#CA8A04' },
-  { from: '#4F46E5', to: '#4338CA' },
-  { from: '#BE185D', to: '#DB2777' },
-  { from: '#0D9488', to: '#0F766E' },
-  { from: '#D97706', to: '#B45309' },
-  { from: '#65A30D', to: '#4D7C0F' },
-  { from: '#6B21A8', to: '#7C3AED' },
-  { from: '#E11D48', to: '#BE123C' },
-  { from: '#0284C7', to: '#0369A1' },
-  { from: '#C026D3', to: '#A21CAF' },
-  { from: '#57534E', to: '#44403C' },
-  { from: '#4B5563', to: '#374151' },
-  { from: '#b91c1c', to: '#991b1b' },
-];
-
 /* ─── Part Card Component ─────────────────────────────────────────────── */
 function PartCard({ part, index }: { part: typeof billData.structure[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
-  const palette = PALETTE[index % PALETTE.length];
   const partNum = index + 1;
   const description = RICH_PART_DESCRIPTIONS[partNum] || `Sections governing ${part.title} under the Act.`;
 
@@ -95,9 +84,8 @@ function PartCard({ part, index }: { part: typeof billData.structure[0]; index: 
         minHeight: '210px',
       }}
     >
-      {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-        <span style={{ fontSize: '11px', fontWeight: 900, color: '#b91c1c', background: 'rgba(4,120,87,0.1)', padding: '4px 10px', borderRadius: '0px', border: '1px solid rgba(4,120,87,0.2)' }}>
+        <span style={{ fontSize: '11px', fontWeight: 900, color: '#b91c1c', background: 'rgba(185,28,28,0.1)', padding: '4px 10px', borderRadius: '0px', border: '1px solid rgba(185,28,28,0.2)' }}>
           PART {['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'][index]}
         </span>
         <span style={{ fontSize: '11px', fontWeight: 800, color: '#64748B' }}>
@@ -105,7 +93,6 @@ function PartCard({ part, index }: { part: typeof billData.structure[0]; index: 
         </span>
       </div>
 
-      {/* Body */}
       <h3 style={{
         fontSize: '15px', fontWeight: 800, color: hovered ? '#b91c1c' : '#0F172A',
         marginBottom: '10px', lineHeight: 1.3, letterSpacing: '-0.01em',
@@ -117,7 +104,6 @@ function PartCard({ part, index }: { part: typeof billData.structure[0]; index: 
         {description}
       </p>
 
-      {/* Footer */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '18px', paddingTop: '14px', borderTop: '1px solid #E2E8F0', fontSize: '11px', fontWeight: 800, color: '#b91c1c', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
         <span>Explore Part {partNum} Dossier</span>
         <span>→</span>
@@ -184,13 +170,76 @@ function ScheduleCard({ schedule, index }: { schedule: typeof billData.schedules
 export default function InteractiveViewerIndex() {
   const [activeTab, setActiveTab] = useState<'all' | 'parts' | 'schedules'>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Keyboard shortcut listener for Ctrl+K or /
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        inputRef.current?.focus();
+      } else if (e.key === '/' && document.activeElement !== inputRef.current) {
+        e.preventDefault();
+        inputRef.current?.focus();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  const query = searchQuery.trim().toLowerCase();
+
+  // Deep Section Matches
+  const deepSectionMatches: Array<{
+    partNum: number;
+    partTitle: string;
+    sectionNumber: string;
+    sectionTitle: string;
+    snippet: string;
+  }> = [];
+
+  if (query) {
+    billData.structure.forEach((part, partIdx) => {
+      part.sections.forEach(sec => {
+        const titleMatch = sec.title.toLowerCase().includes(query);
+        const numMatch = sec.section.toLowerCase().includes(query);
+        const textMatch = sec.bill_text?.toLowerCase().includes(query);
+        const doesMatch = sec.analysis?.what_it_does?.toLowerCase().includes(query);
+        const englishMatch = sec.analysis?.plain_english?.toLowerCase().includes(query);
+
+        if (titleMatch || numMatch || textMatch || doesMatch || englishMatch) {
+          let snippet = sec.analysis?.plain_english || sec.analysis?.what_it_does || sec.bill_text || '';
+          if (snippet.length > 120) snippet = snippet.slice(0, 120) + '...';
+
+          deepSectionMatches.push({
+            partNum: partIdx + 1,
+            partTitle: part.title,
+            sectionNumber: sec.section,
+            sectionTitle: sec.title,
+            snippet
+          });
+        }
+      });
+    });
+  }
 
   const filteredParts = billData.structure.filter(p =>
-    !searchQuery || p.title.toLowerCase().includes(searchQuery.toLowerCase()) || p.part.toLowerCase().includes(searchQuery.toLowerCase()) || p.sections.some(s => s.title.toLowerCase().includes(searchQuery.toLowerCase()) || s.section.includes(searchQuery))
+    !query ||
+    p.title.toLowerCase().includes(query) ||
+    p.part.toLowerCase().includes(query) ||
+    p.sections.some(s =>
+      s.title.toLowerCase().includes(query) ||
+      s.section.toLowerCase().includes(query) ||
+      s.bill_text?.toLowerCase().includes(query) ||
+      s.analysis?.plain_english?.toLowerCase().includes(query)
+    )
   );
 
   const filteredSchedules = billData.schedules.filter(s =>
-    !searchQuery || s.title.toLowerCase().includes(searchQuery.toLowerCase()) || s.content.toLowerCase().includes(searchQuery.toLowerCase())
+    !query ||
+    s.title.toLowerCase().includes(query) ||
+    s.content.toLowerCase().includes(query)
   );
 
   return (
@@ -230,7 +279,7 @@ export default function InteractiveViewerIndex() {
 
         {/* Hero Section */}
         <div style={{ textAlign: 'center', marginBottom: '44px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '16px', background: 'rgba(4,120,87,0.1)', padding: '6px 16px', border: '1px solid rgba(4,120,87,0.2)' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '16px', background: 'rgba(185,28,28,0.1)', padding: '6px 16px', border: '1px solid rgba(185,28,28,0.2)' }}>
             <span style={{ fontSize: '11px', fontWeight: 900, color: '#b91c1c', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
               KBERC STATUTORY FRAMEWORK DIRECTORY
             </span>
@@ -244,21 +293,76 @@ export default function InteractiveViewerIndex() {
             Interactive visual directory containing all <strong>20 Statutory Parts, 208 Enacted Sections, and 13 Schedules</strong> of the Built Environment Professions &amp; Practice Bill 2026.
           </p>
 
-          {/* Search & Filter Controls */}
-          <div style={{ maxWidth: '720px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '14px' }}>
-            <input
-              type="text"
-              placeholder="Search Parts, Sections, Schedules, keywords, or titles..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              style={{
-                width: '100%', padding: '16px 22px', borderRadius: '0px',
-                background: '#FFFFFF', border: '1px solid #CBD5E1',
-                color: '#0F172A', fontSize: '14px', outline: 'none',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-              }}
-            />
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
+          {/* Search & Filter Controls Container */}
+          <div style={{ maxWidth: '820px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '14px', position: 'relative' }}>
+            
+            {/* Input with Search Icon, Clear Button, and Keyboard Badge */}
+            <div style={{ position: 'relative', width: '100%' }}>
+              <span style={{ position: 'absolute', left: '18px', top: '50%', transform: 'translateY(-50%)', fontSize: '16px', color: '#64748B' }}>
+                🔍
+              </span>
+              <input
+                ref={inputRef}
+                type="text"
+                placeholder="Search Parts, Sections, Schedules, keywords, or titles... (Press Ctrl+K or /)"
+                value={searchQuery}
+                onFocus={() => setDropdownOpen(true)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setDropdownOpen(true);
+                }}
+                style={{
+                  width: '100%', padding: '16px 48px 16px 48px', borderRadius: '0px',
+                  background: '#FFFFFF', border: '2px solid #CBD5E1',
+                  color: '#0F172A', fontSize: '14px', outline: 'none',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.06)'
+                }}
+              />
+              {searchQuery ? (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  style={{
+                    position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)',
+                    background: 'none', border: 'none', color: '#64748B', fontSize: '16px', cursor: 'pointer', padding: '4px'
+                  }}
+                  title="Clear Search"
+                >
+                  ✕
+                </button>
+              ) : (
+                <span style={{ position: 'absolute', right: '16px', top: '50%', transform: 'translateY(-50%)', fontSize: '10px', fontWeight: 800, background: '#E2E8F0', color: '#475569', padding: '3px 7px', border: '1px solid #CBD5E1' }}>
+                  Ctrl + K
+                </span>
+              )}
+            </div>
+
+            {/* Curated Preset Statutory Keyword Chips */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', flexWrap: 'wrap' }}>
+              <span style={{ fontSize: '10px', fontWeight: 900, color: '#64748B', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Quick Tags:
+              </span>
+              {STATUTORY_KEYWORD_CHIPS.map(chip => (
+                <button
+                  key={chip}
+                  onClick={() => {
+                    setSearchQuery(chip);
+                    setDropdownOpen(true);
+                  }}
+                  style={{
+                    padding: '4px 10px', fontSize: '11px', fontWeight: 700,
+                    background: searchQuery === chip ? '#b91c1c' : '#FFFFFF',
+                    color: searchQuery === chip ? '#FFFFFF' : '#334155',
+                    border: '1px solid #CBD5E1', cursor: 'pointer',
+                    transition: 'all 0.15s'
+                  }}
+                >
+                  {chip}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab Controls */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', marginTop: '6px' }}>
               {(['all', 'parts', 'schedules'] as const).map(tab => (
                 <button
                   key={tab}
@@ -276,6 +380,64 @@ export default function InteractiveViewerIndex() {
                 </button>
               ))}
             </div>
+
+            {/* Live Search Results Dropdown Overlay */}
+            {query && dropdownOpen && (
+              <div style={{
+                position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 100,
+                background: '#FFFFFF', border: '2px solid #b91c1c',
+                boxShadow: '0 12px 28px rgba(0,0,0,0.15)', marginTop: '8px',
+                maxHeight: '380px', overflowY: 'auto', textAlign: 'left'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 16px', background: '#F8FAFC', borderBottom: '1px solid #E2E8F0' }}>
+                  <span style={{ fontSize: '11px', fontWeight: 900, color: '#b91c1c', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    Found {deepSectionMatches.length} Section Matches &amp; {filteredSchedules.length} Schedules
+                  </span>
+                  <button
+                    onClick={() => setDropdownOpen(false)}
+                    style={{ background: 'none', border: 'none', color: '#64748B', fontSize: '12px', cursor: 'pointer', fontWeight: 800 }}
+                  >
+                    Close [Esc]
+                  </button>
+                </div>
+
+                {deepSectionMatches.length === 0 && filteredSchedules.length === 0 ? (
+                  <div style={{ padding: '20px', textAlign: 'center', color: '#64748B', fontSize: '13px' }}>
+                    No statutory sections found matching &quot;<strong>{searchQuery}</strong>&quot;.
+                  </div>
+                ) : (
+                  <div>
+                    {deepSectionMatches.slice(0, 10).map((match, idx) => (
+                      <Link
+                        key={idx}
+                        href={`/viewer/read#section-${match.sectionNumber.replace(/[^0-9a-zA-Z]/g, '')}`}
+                        onClick={() => setDropdownOpen(false)}
+                        style={{
+                          display: 'block', padding: '12px 16px', borderBottom: '1px solid #F1F5F9',
+                          transition: 'background 0.15s'
+                        }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                          <span style={{ fontSize: '10px', fontWeight: 900, background: '#b91c1c', color: '#FFFFFF', padding: '2px 6px' }}>
+                            SECTION {match.sectionNumber}
+                          </span>
+                          <span style={{ fontSize: '12px', fontWeight: 800, color: '#0F172A' }}>
+                            {match.sectionTitle}
+                          </span>
+                          <span style={{ fontSize: '10px', color: '#64748B', marginLeft: 'auto' }}>
+                            Part {match.partNum}
+                          </span>
+                        </div>
+                        <p style={{ margin: 0, fontSize: '11px', color: '#475569', lineHeight: 1.4 }}>
+                          {match.snippet}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
           </div>
         </div>
 
@@ -286,7 +448,7 @@ export default function InteractiveViewerIndex() {
               <h2 style={{ fontSize: '22px', fontWeight: 900, color: '#0F172A', margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <span>🏛️</span> 20 Statutory Parts
               </h2>
-              <span style={{ fontSize: '11px', fontWeight: 800, color: '#b91c1c', background: 'rgba(4,120,87,0.1)', padding: '4px 12px', border: '1px solid rgba(4,120,87,0.3)' }}>
+              <span style={{ fontSize: '11px', fontWeight: 800, color: '#b91c1c', background: 'rgba(185,28,28,0.1)', padding: '4px 12px', border: '1px solid rgba(185,28,28,0.3)' }}>
                 {filteredParts.length} Parts Enacted
               </span>
             </div>
