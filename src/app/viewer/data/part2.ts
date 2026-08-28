@@ -133,33 +133,33 @@ export const part2Data = {
     {
             "section": "10",
             "title": "Composition",
-            "bill_text": "(1) The Council shall consist of\u2014\n(a) a Chairperson appointed by the President;\n(b) the Principal Secretary in the Ministry responsible for matters relating to the built environment or their designated representative;\n(c) the Attorney General or their designated representative;\n(d) four members appointed by the Cabinet Secretary from nominees submitted by the recognized professional associations of architects, engineers, quantity surveyors, and physical planners; and\n(e) two independent members representing consumer protection organizations.\n(2) The Council shall be gender-balanced and represent the regional diversity of Kenya.",
+            "bill_text": "(1) The Council shall consist of—\n(a) a Chairperson appointed by the President;\n(b) the Principal Secretary in the Ministry responsible for matters relating to the built environment or their designated representative;\n(c) the Attorney General or their designated representative;\n(d) four members appointed by the Cabinet Secretary from nominees submitted on a rotational basis by recognized professional associations representing architects, engineers, quantity surveyors, physical planners, construction project managers, landscape architects, interior designers, environmental experts, and TVET technologists; and\n(e) two independent members representing consumer protection organizations.\n(2) The Council shall be gender-balanced and represent the regional diversity of Kenya.",
             "analysis": {
-                    "what_it_does": "Sets out the composition of the KBERC Council: a Chairperson appointed by the President; the Principal Secretary and Attorney General ex-officio; four members appointed by the CS from professional association nominees (Architects, Engineers, QS, Physical Planners); and two consumer-protection representatives. Requires gender balance and regional diversity.",
-                    "why_it_exists": "Board composition determines whose interests the regulator serves. By limiting professional associations to only 4 of 9 seats (44%) and mandating consumer, government, and legal representation, the Act prevents professional capture. The gender and regional requirements implement constitutional obligations.",
-                    "plain_english": "The KBERC Council has 9 members. Professionals (Architects, Engineers, QS, Planners) share only 4 seats \u2014 they do not control their own regulator. The public interest is protected by consumer representatives, the government, and the Attorney General. No single profession or political coalition can dominate.",
-                    "policy_objective": "To structurally prevent regulatory capture by implementing the OECD best practice of ensuring regulated industries hold a minority of seats on their regulatory boards, while public-interest and consumer representatives hold a meaningful share.",
+                    "what_it_does": "Sets out the composition of the KBERC Council: a Chairperson appointed by the President; the Principal Secretary and Attorney General ex-officio; four members appointed by the CS from professional association nominees on a rotational basis across all 8 regulated disciplines and TVET cadres; and two consumer-protection representatives. Requires gender balance and regional diversity.",
+                    "why_it_exists": "Board composition determines whose interests the regulator serves. By limiting professional associations to 4 of 9 seats (44.4%) on a rotational basis across all 8 disciplines and TVET technologists while mandating consumer, government, and legal representation, the Act prevents professional capture and eliminates discipline exclusion bias.",
+                    "plain_english": "The KBERC Council has 9 members. Professional associations across all 8 regulated disciplines (Architects, Engineers, QS, Planners, CPM, Landscape, Interior Design, Environmental Experts) and TVET Technologists share 4 seats on a rotational basis — ensuring no single guild dominates. Public interest is protected by consumer representatives, government, and the Attorney General.",
+                    "policy_objective": "To structurally prevent regulatory capture while ensuring all 8 regulated built environment professions and TVET cadres have equitable statutory access to the Apex Council.",
                     "who_is_affected": [
-                            "Professional associations (AAK, IQSK, ISK, IEK) \u2014 lose majority control over their regulator",
-                            "Consumer organizations \u2014 gain statutory power to participate in professional regulation for the first time",
-                            "The President \u2014 gains power to appoint the Chairperson, a significant executive influence"
+                            "Professional associations across all 8 disciplines (AAK, IQSK, ISK, IEK, KIP, ACMK, IDAK, KSELA) — share rotational representation on the Apex Council",
+                            "Consumer organizations — gain statutory power to participate in professional regulation for the first time",
+                            "The President — gains power to appoint the Chairperson, a significant executive influence"
                     ],
                     "related_sections": [
                             "Section 11 (Appointment and tenure)",
-                            "Section 12 (Qualifications and disqualifications)",
-                            "Section 17 (Conflict of interest)"
+                            "Section 14 (8 Regulated Built Environment Disciplines & Schedule 3)",
+                            "Section 26 (6 Tiered Registration Categories)"
                     ],
-                    "constitutional_context": "Implements Article 27 (gender equality \u2014 'not more than two-thirds of the same gender'). The Presidential appointment of the Chairperson engages Article 166's approach to independent appointments, potentially requiring parliamentary vetting for legitimacy.",
-                    "implementation": "Professional associations must establish transparent, competitive nomination processes before the Council is constituted. The Cabinet Secretary must receive multiple nominees per seat to allow genuine selection.",
+                    "constitutional_context": "Implements Article 27 (gender equality — 'not more than two-thirds of the same gender') and Article 10 (inclusivity and non-discrimination across all technical professions).",
+                    "implementation": "Recognized professional associations must establish a Joint Nomination Committee to manage rotational nominations across all 8 disciplines prior to Council gazettement.",
                     "potential_issues": [
-                            "The 4 professional seats \u2014 one each for Architecture, Engineering, QS, and Physical Planning \u2014 exclude newer disciplines like Landscape Architecture and Interior Design.",
-                            "Presidential appointment of the Chairperson, without parliamentary vetting, undermines the independence guaranteed in Section 9."
+                            "Rotational representation requires strict inter-association coordination to ensure smooth 3-year term transitions.",
+                            "Presidential appointment of the Chairperson, without parliamentary vetting, requires transparent vetting under Chapter Six."
                     ],
                     "red_team": [
-                            "Capture Risk: The CS appoints 4 professional members and the President appoints the Chair \u2014 the Executive effectively controls 5 of 9 seats, potentially defeating the purpose of independence.",
-                            "Exclusion Bias: Interior Designers, Construction Managers, and Landscape Architects are not given a seat at the table despite being regulated professions under Section 20."
+                            "Inclusivity Protection: Rotational representation under Section 10(1)(d) guarantees that allied disciplines (CPM, Landscape, Interior Design, EDC) and TVET Technologists participate in Apex Council governance.",
+                            "Executive Balance: Mandating association nominations on a 3-year rotational schedule prevents permanent dominance by any single professional guild."
                     ]
-            }
+            },
     },
     {
             "section": "11",
