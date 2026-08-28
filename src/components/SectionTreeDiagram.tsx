@@ -13,6 +13,55 @@ export default function SectionTreeDiagram({ sectionNumber }: Props) {
   let description = '';
 
   switch (sectionNumber) {
+    case '10':
+      title = 'SECTION 10 • APEX COUNCIL MULTI-DISCIPLINARY ROTATIONAL COMPOSITION';
+      description = 'Statutory 9-member Council balance with 3-year rotational representation across all 8 regulated professions and TVET cadres.';
+      chart = `
+graph TD
+    A[KBERC Apex Council: 9 Voting Seats] --> B[State & Legal Oversight: 3 Seats / 33.3%]
+    A --> C[Multi-Disciplinary Guilds: 4 Seats / 44.4%]
+    A --> D[Consumer Protection Bodies: 2 Seats / 22.2%]
+    
+    B --> B1[Presidential Chair: 15+ Yrs Experience]
+    B --> B2[Principal Secretary: Ministry of Housing]
+    B --> B3[Attorney General / AG Representative]
+
+    C --> C1[Rotational Group A: Architecture, Engineering, QS, Planning]
+    C --> C2[Rotational Group B: CPM, Landscape, Interior Design, EDC, TVET]
+
+    D --> D1[2 Independent Consumer Representatives]
+
+    style A fill:#b91c1c,stroke:#991b1b,color:#fff
+    style C fill:#7c3aed,stroke:#6d28d9,color:#fff
+    style D fill:#059669,stroke:#047857,color:#fff
+      `;
+      break;
+
+    case '13':
+      title = 'SECTION 13 • 8-DISCIPLINE TECHNICAL COMMITTEES & TVET CADRES';
+      description = 'Mandatory standing Technical Committees providing peer oversight for every regulated profession.';
+      chart = `
+graph TD
+    A[KBERC Apex Council] --> B[Registration & Disciplinary Committees]
+    A --> C[8 Discipline Technical Committees]
+    A --> D[TVET Technical Education Committee]
+
+    C --> C1[Architectural Technical Committee]
+    C --> C2[Engineering Technical Committee - Joint EBK]
+    C --> C3[Quantity Surveying Technical Committee]
+    C --> C4[Physical Planning Technical Committee]
+    C --> C5[Construction Project Management Committee]
+    C --> C6[Landscape Architecture Committee]
+    C --> C7[Interior Design Committee]
+    C --> C8[Environmental Design Committee]
+
+    D --> D1[Technologists, Technicians & Craftsmen Cadres]
+
+    style A fill:#7c3aed,stroke:#6d28d9,color:#fff
+    style C fill:#0284c7,stroke:#0369a1,color:#fff
+      `;
+      break;
+
     case '14':
       title = 'SECTION 14 • REGULATED DISCIPLINES DELEGATION TREE';
       description = 'Statutory breakdown of the 8 regulated built environment professions and technical cadres.';
@@ -97,6 +146,34 @@ graph TD
       `;
       break;
 
+    case '42':
+    case '43':
+      title = 'SECTION 42/43 • DISCIPLINE BOARD (ARB/QRB/ERB) 3-STAGE VETTING WORKFLOW';
+      description = 'Statutory 3-stage peer registration workflow for ARB, QRB, ERB, CPMRB, and allied boards.';
+      chart = `
+graph TD
+    A[Applicant Portal Submission] --> B[Registrar Pre-Verification: Degrees & IDs]
+    B -->|Verified Authenticity| C[Forward to Relevant Discipline Board]
+    
+    C --> C1[Architects Board - ARB]
+    C --> C2[Quantity Surveyors Board - QRB]
+    C --> C3[Engineers Board - ERB / EBK]
+    C --> C4[Project Managers Board - CPMRB]
+
+    C1 --> D{Peer Logbook & Exam Review}
+    C2 --> D
+    C3 --> D
+    C4 --> D
+
+    D -->|Approved| E[National Register Enrollment + Digital QR Seal Issued]
+    D -->|Rejected| F[Written Statutory Reasons Issued within 14 Days]
+    F --> G[Appeal to BEAT Tribunal - Sec 141]
+
+    style E fill:#16a34a,stroke:#15803d,color:#fff
+    style F fill:#dc2626,stroke:#b91c1c,color:#fff
+      `;
+      break;
+
     case '57':
       title = 'SECTION 57 • CRYPTOGRAPHIC DIGITAL QR SEAL VERIFICATION PIPELINE';
       description = 'Machine-readable plan approval verification and PII verification pipeline.';
@@ -146,6 +223,34 @@ graph TD
     F --> G[Built Environment Appeals Tribunal - BEAT]
 
     style F fill:#dc2626,stroke:#b91c1c,color:#fff
+      `;
+      break;
+
+    case '125':
+      title = 'SECTION 125 • DISCIPLINARY HEARING PANEL & PEER REPRESENTATION PROVISO';
+      description = 'Mandatory same-discipline peer inclusion on every disciplinary hearing panel under Article 47.';
+      chart = `
+graph TD
+    A[Investigation Committee Prima Facie Finding] --> B[Disciplinary Committee Hearing Panel Convened]
+    B --> C[Advocate of High Court: Legal Chair]
+    B --> D[Senior Profession Peers]
+    B --> E[MANDATORY SAME-DISCIPLINE PEER PROVISO]
+
+    E -->|Accused is Architect| E1[Senior Architect Panelist]
+    E -->|Accused is Structural Eng| E2[Senior Structural Engineer Panelist]
+    E -->|Accused is Interior Designer| E3[Senior Interior Designer Panelist]
+    E -->|Accused is Technologist| E4[Senior TVET Technologist Panelist]
+
+    D --> F{Fair Hearing & Evidence Review}
+    E1 --> F
+    E2 --> F
+    E3 --> F
+    E4 --> F
+
+    F -->|Decision within 30 Days| G[Binding Sanction or Exoneration]
+
+    style E fill:#7c3aed,stroke:#6d28d9,color:#fff
+    style G fill:#0284c7,stroke:#0369a1,color:#fff
       `;
       break;
 
