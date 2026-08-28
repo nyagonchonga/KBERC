@@ -597,8 +597,180 @@ export default function AboutPage() {
         {/* Main Document Body */}
         <main className="bg-white border border-slate-300 p-4 sm:p-8 md:p-12 shadow-xs space-y-16">
           
+          {/* ─── Promotional Hero Banner & Key Metrics Bar ─────────────────────── */}
+          <div style={{
+            background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #7F1D1D 100%)',
+            color: '#FFFFFF',
+            padding: 'clamp(24px, 5vw, 48px)',
+            border: '1px solid #334155',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            <div style={{ position: 'relative', zIndex: 10 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '11px', fontWeight: 900, color: '#FCA5A5', background: 'rgba(239, 68, 68, 0.2)', padding: '4px 12px', border: '1px solid rgba(239, 68, 68, 0.4)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  🇰🇪 National Assembly Bill No. 14 of 2026 • Executive Master Treatise
+                </span>
+                <span style={{ fontSize: '11px', fontWeight: 800, color: '#38BDF8', background: 'rgba(56, 189, 248, 0.15)', padding: '4px 12px', border: '1px solid rgba(56, 189, 248, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+                  Repeal of Colonial Cap 525 (1934)
+                </span>
+              </div>
+
+              <h1 style={{ fontSize: 'clamp(24px, 4vw, 42px)', fontWeight: 900, lineHeight: 1.15, letterSpacing: '-0.02em', marginBottom: '16px', color: '#FFFFFF' }}>
+                Unifying Kenya&apos;s Built Environment Under One Modern Apex Regulator
+              </h1>
+
+              <p style={{ fontSize: 'clamp(14px, 1.8vw, 17px)', color: '#CBD5E1', lineHeight: 1.6, maxWidth: '960px', marginBottom: '28px' }}>
+                Replacing 92 years of colonial legal fragmentation with <strong>20 Statutory Parts</strong>, <strong>218 Enacted Sections</strong>, <strong>14 Schedules</strong>, <strong>8 Unified Regulated Professions</strong>, Cryptographic Digital QR Seals, and 60-Day Fast-Track Judicial Appeals.
+              </p>
+
+              {/* Key Performance Metrics Bar */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px', paddingTop: '20px', borderTop: '1px solid rgba(255,255,255,0.15)' }}>
+                {[
+                  { label: 'Statutory Parts', val: '20 Parts', sub: 'Enacted Structure' },
+                  { label: 'Enacted Sections', val: '218 Sections', sub: 'Statutory Clauses' },
+                  { label: 'Statutory Schedules', val: '14 Schedules', sub: 'Fee Tariffs & Rules' },
+                  { label: 'Regulated Disciplines', val: '8 Professions', sub: '+ TVET Cadres' },
+                  { label: 'Devolution Sync', val: '47 Counties', sub: 'County Desks' },
+                  { label: 'Anti-Quackery Penalty', val: 'KES 50M Fine', sub: '& 5-Yr Jail' }
+                ].map((m, i) => (
+                  <div key={i} style={{ background: 'rgba(255,255,255,0.06)', padding: '14px 16px', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    <div style={{ fontSize: '10px', fontWeight: 800, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{m.label}</div>
+                    <div style={{ fontSize: '18px', fontWeight: 900, color: '#F8FAFC', margin: '3px 0' }}>{m.val}</div>
+                    <div style={{ fontSize: '10px', fontWeight: 700, color: '#38BDF8' }}>{m.sub}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ─── 8 Regulated Professions & TVET Showcase ─────────────────────────── */}
+          <section className="space-y-6">
+            <div className="border-b-2 border-slate-900 pb-3">
+              <span className="text-xs font-black text-emerald-700 uppercase tracking-widest block mb-1">
+                🤝 UNIFIED REGULATORY FRAMEWORK
+              </span>
+              <h2 className="text-xl md:text-2xl font-black text-slate-900">
+                The 8 Regulated Built Environment Professions &amp; TVET Inclusion
+              </h2>
+              <p className="text-sm text-slate-600 mt-1">
+                Section 14 &amp; Part III formally unify all eight technical built environment disciplines alongside TVET Technologists and Craftsmen into dedicated statutory Colleges under KBERC:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { title: "Architecture", society: "AAK / BORAQS Legacy", code: "College 1", desc: "Spatial masterplanning, structural aesthetics, building envelope design & statutory plan sign-offs.", color: "#B91C1C", sec: "/viewer/interactive/3" },
+                { title: "Civil & Structural Engineering", society: "IEK / EBK Cap 530", code: "College 2", desc: "Eurocode structural design (BS EN 1990), foundation engineering & high-consequence risk audits.", color: "#2563EB", sec: "/viewer/interactive/3" },
+                { title: "Quantity Surveying", society: "IQSK / BORAQS Legacy", code: "College 3", desc: "Building cost planning, Bills of Quantities (BOQ), financial valuation & contract administration.", color: "#D97706", sec: "/viewer/interactive/3" },
+                { title: "Physical & Land Use Planning", society: "KIP / PPRB (PLUPA)", code: "College 4", desc: "Regional spatial masterplanning, zoning density control, FAR calculations & urban policy framework.", color: "#059669", sec: "/viewer/interactive/3" },
+                { title: "Construction Project Management", society: "ACMK / CPMRB", code: "College 5", desc: "Directing site construction execution, quality assurance, safety coordination & project timelines.", color: "#7C3AED", sec: "/viewer/interactive/3" },
+                { title: "Landscape Architecture", society: "KSELA / LARB", code: "College 6", desc: "Outdoor site ecology, urban park design, environmental spatial planning & site drainage integration.", color: "#0D9488", sec: "/viewer/interactive/3" },
+                { title: "Interior Design", society: "IDAK / IDRB", code: "College 7", desc: "Interior spatial ergonomics, acoustic performance, interior specifications & fire egress layouts.", color: "#C026D3", sec: "/viewer/interactive/3" },
+                { title: "Environmental & Energy Auditing", society: "NEMA / EDC", code: "College 8", desc: "Environmental Impact Assessment (EIA), green building sustainability & energy efficiency audits.", color: "#16A34A", sec: "/viewer/interactive/3" }
+              ].map((prof, pIdx) => (
+                <Link key={pIdx} href={prof.sec} className="bg-white border border-slate-300 p-5 hover:border-red-700 transition-all shadow-xs flex flex-col justify-between group">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[10px] font-black px-2 py-0.5 text-white uppercase" style={{ backgroundColor: prof.color }}>
+                        {prof.code}
+                      </span>
+                      <span className="text-[10px] font-extrabold text-slate-500">{prof.society}</span>
+                    </div>
+                    <h3 className="text-base font-extrabold text-slate-900 group-hover:text-red-700 transition-colors mb-2">
+                      {prof.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      {prof.desc}
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-slate-200 text-[11px] font-extrabold text-red-700 uppercase flex items-center gap-1">
+                    <span>Inspect College Charter</span>
+                    <span>→</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* TVET Inclusion Banner */}
+            <div className="bg-emerald-50 border border-emerald-300 p-4 md:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <span className="text-xs font-black text-emerald-800 uppercase tracking-widest block mb-1">
+                  🎓 HISTORIC TVET CADRE INCLUSION (SECTION 28)
+                </span>
+                <h3 className="text-base md:text-lg font-black text-slate-900">
+                  College of Built Environment Technologists &amp; TVET Craftsmen
+                </h3>
+                <p className="text-xs md:text-sm text-slate-700 leading-relaxed max-w-3xl mt-1">
+                  Overcomes 92 years of exclusion by statutorily indexing Higher National Diploma and B.Tech graduates, establishing defined site inspection scopes and bridging pathways to full professional registration.
+                </p>
+              </div>
+              <Link href="/viewer/interactive/4" className="px-4 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-extrabold whitespace-nowrap self-start md:self-auto shadow-xs">
+                Explore Section 28 TVET Rules →
+              </Link>
+            </div>
+          </section>
+
+          {/* ─── 4 Game-Changer Statutory Feature Spotlights ──────────────────────── */}
+          <section className="space-y-6">
+            <div className="border-b-2 border-slate-900 pb-3">
+              <span className="text-xs font-black text-purple-700 uppercase tracking-widest block mb-1">
+                ⚡ STATUTORY BREAKTHROUGHS &amp; INNOVATIONS
+              </span>
+              <h2 className="text-xl md:text-2xl font-black text-slate-900">
+                4 Core Game-Changers of the KBERC 2026 Reform
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white border-2 border-purple-200 p-6 space-y-3 relative overflow-hidden">
+                <span className="text-xs font-black text-purple-700 bg-purple-100 px-3 py-1 uppercase border border-purple-300">
+                  Section 57 • Digital QR Verification
+                </span>
+                <h3 className="text-lg font-black text-slate-900">1. Mandatory Cryptographic Digital QR Practice Seals</h3>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Replaces forged rubber stamps with dynamic, machine-readable digital practice seals embedded on all drawing sheets and BOQs. County planning desks automatically validate QR seals against the KBERC national registry before issuing development permits.
+                </p>
+                <Link href="/viewer/interactive/5" className="text-xs font-bold text-purple-700 hover:underline block pt-2">Read Section 57 Statutory Clause →</Link>
+              </div>
+
+              <div className="bg-white border-2 border-blue-200 p-6 space-y-3 relative overflow-hidden">
+                <span className="text-xs font-black text-blue-700 bg-blue-100 px-3 py-1 uppercase border border-blue-300">
+                  Section 45 &amp; Sec 32 • Local Equity Rule
+                </span>
+                <h3 className="text-lg font-black text-slate-900">2. 51%+ Local Equity Rule for Corporate Practices</h3>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Requires foreign consultancy firms and joint ventures operating in Kenya to maintain at least 51% local practitioner voting equity and contractually mandated skills transfer to local lead professionals.
+                </p>
+                <Link href="/viewer/interactive/5" className="text-xs font-bold text-blue-700 hover:underline block pt-2">Read Section 45 Corporate Rules →</Link>
+              </div>
+
+              <div className="bg-white border-2 border-red-200 p-6 space-y-3 relative overflow-hidden">
+                <span className="text-xs font-black text-red-700 bg-red-100 px-3 py-1 uppercase border border-red-300">
+                  Section 89 &amp; Schedule 4 • Building Risk
+                </span>
+                <h3 className="text-lg font-black text-slate-900">3. Eurocode Consequence &amp; Independent Dual Peer Review</h3>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Classifies buildings into Risk Classes A to E based on Eurocodes (BS EN 1990). High-consequence structures (Classes C, D &amp; E) mandate independent 3rd-party specialist engineering peer audits before site excavation.
+                </p>
+                <Link href="/viewer/building-navigator" className="text-xs font-bold text-red-700 hover:underline block pt-2">Open Building Risk Navigator →</Link>
+              </div>
+
+              <div className="bg-white border-2 border-emerald-200 p-6 space-y-3 relative overflow-hidden">
+                <span className="text-xs font-black text-emerald-700 bg-emerald-100 px-3 py-1 uppercase border border-emerald-300">
+                  Section 135 &amp; Sec 168 • Forensic Fund
+                </span>
+                <h3 className="text-lg font-black text-slate-900">4. 6-Hour Emergency Collapse Forensic Audit Protocol</h3>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Empowers KBERC to immediately dispatch a certified Forensic Structural Audit Team within 6 hours of any structural failure, backed by a standing 5% Disaster Emergency Inquiry Fund.
+                </p>
+                <Link href="/viewer/interactive/16" className="text-xs font-bold text-emerald-700 hover:underline block pt-2">Inspect Forensic Protocol →</Link>
+              </div>
+            </div>
+          </section>
+
           {/* Document Header Title Block */}
-          <div className="border-b-4 border-slate-900 pb-6">
+          <div className="border-b-4 border-slate-900 pb-6 pt-4">
             <span className="inline-block text-xs font-black text-red-700 uppercase tracking-widest bg-red-50 px-3 py-1 border border-red-200 mb-3">
               NATIONAL ASSEMBLY BILL NO. 14 OF 2026 • OFFICIAL STATUTORY TREATISE
             </span>
@@ -1476,6 +1648,56 @@ export default function AboutPage() {
                   <p className="text-xs md:text-sm text-slate-600 leading-relaxed">{s.scope}</p>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* ─── PROMOTIONAL CALL-TO-ACTION (CTA) CONVERSION HUB ───────────────────── */}
+          <section style={{
+            background: 'linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #831843 100%)',
+            color: '#FFFFFF',
+            padding: 'clamp(24px, 4vw, 48px)',
+            border: '2px solid #334155',
+            position: 'relative'
+          }}>
+            <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 32px' }}>
+              <span style={{ fontSize: '11px', fontWeight: 900, color: '#F472B6', background: 'rgba(244, 114, 182, 0.15)', padding: '4px 14px', border: '1px solid rgba(244, 114, 182, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'inline-block', marginBottom: '12px' }}>
+                🚀 Explore the Complete KBERC Platform
+              </span>
+              <h2 style={{ fontSize: 'clamp(22px, 3.5vw, 36px)', fontWeight: 900, color: '#FFFFFF', lineHeight: 1.2, marginBottom: '12px' }}>
+                Ready to Deep-Dive Into Kenya&apos;s 2026 Built Environment Act?
+              </h2>
+              <p style={{ fontSize: '14px', color: '#E2E8F0', lineHeight: 1.6 }}>
+                Access the full unabridged statutory reader, explore the interactive 20-Part directory, or analyze building risk classifications under Eurocodes.
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
+              <Link href="/viewer/read" style={{ background: '#B91C1C', padding: '20px', textDecoration: 'none', border: '1px solid #EF4444', transition: 'transform 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '11px', fontWeight: 900, color: '#FCA5A5', textTransform: 'uppercase' }}>Full Statutory Text</div>
+                  <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#FFFFFF', margin: '6px 0' }}>📖 Launch A4 Document Reader</h3>
+                  <p style={{ fontSize: '12px', color: '#FEE2E2', lineHeight: 1.5 }}>Read all 208 unabridged legal sections in high-resolution A4 document reader format.</p>
+                </div>
+                <div style={{ marginTop: '16px', fontSize: '12px', fontWeight: 800, color: '#FFFFFF', textTransform: 'uppercase' }}>Open Document Reader →</div>
+              </Link>
+
+              <Link href="/viewer/interactive" style={{ background: '#1E293B', padding: '20px', textDecoration: 'none', border: '1px solid #475569', transition: 'transform 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '11px', fontWeight: 900, color: '#38BDF8', textTransform: 'uppercase' }}>Interactive Directory</div>
+                  <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#FFFFFF', margin: '6px 0' }}>🗺️ Explore Interactive Framework</h3>
+                  <p style={{ fontSize: '12px', color: '#CBD5E1', lineHeight: 1.5 }}>Search sections, inspect Plain-English summaries, and explore flowcharts for every Part.</p>
+                </div>
+                <div style={{ marginTop: '16px', fontSize: '12px', fontWeight: 800, color: '#38BDF8', textTransform: 'uppercase' }}>Launch Interactive Explorer →</div>
+              </Link>
+
+              <Link href="/viewer/building-navigator" style={{ background: '#1E293B', padding: '20px', textDecoration: 'none', border: '1px solid #475569', transition: 'transform 0.2s', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: '11px', fontWeight: 900, color: '#F59E0B', textTransform: 'uppercase' }}>Eurocode Risk Matrix</div>
+                  <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#FFFFFF', margin: '6px 0' }}>📊 Building Risk Navigator</h3>
+                  <p style={{ fontSize: '12px', color: '#CBD5E1', lineHeight: 1.5 }}>Determine building Risk Classes A–E and inspect mandatory dual peer review rules.</p>
+                </div>
+                <div style={{ marginTop: '16px', fontSize: '12px', fontWeight: 800, color: '#F59E0B', textTransform: 'uppercase' }}>Open Risk Navigator →</div>
+              </Link>
             </div>
           </section>
 
