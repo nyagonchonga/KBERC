@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { billData, SectionData } from '../data';
+import SectionTreeDiagram from '@/components/SectionTreeDiagram';
 
 type UserMode = 'Architect' | 'Lawyer' | 'Sponsor';
 type AnalysisTab = 'Overview' | 'Affected' | 'Related' | 'Constitutional' | 'Implementation' | 'Issues' | 'RedTeam';
