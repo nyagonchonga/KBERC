@@ -144,48 +144,125 @@ export default function Home() {
     }}>
       <div style={{ maxWidth: "1380px", margin: "0 auto" }}>
         
-        {/* Top Header & Status Badge */}
-        <header style={{ marginBottom: "48px", textAlign: "center" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(4,120,87,0.1)", border: "1px solid rgba(4,120,87,0.25)", padding: "6px 18px", borderRadius: 0, marginBottom: "20px" }}>
-            <span style={{ width: "8px", height: "8px", borderRadius: 0, background: "#b91c1c", display: "inline-block" }}></span>
-            <span style={{ fontSize: "11px", fontWeight: 900, color: "#b91c1c", textTransform: "uppercase", letterSpacing: "0.15em" }}>
-              {billData?.metadata?.status || "KENYA NATIONAL ASSEMBLY • CONSOLIDATED CONSENSUS MASTER BILL 2026"}
+        {/* ─── Executive Dark Hero Banner ─────────────────────────────────── */}
+        <header style={{
+          background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #7F1D1D 100%)',
+          color: '#FFFFFF',
+          padding: 'clamp(28px, 5vw, 56px)',
+          border: '1px solid #334155',
+          marginBottom: '40px',
+          boxShadow: '0 10px 30px -5px rgba(0,0,0,0.15)'
+        }}>
+          {/* Header Badges */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '11px', fontWeight: 900, color: '#FCA5A5', background: 'rgba(239, 68, 68, 0.2)', padding: '4px 14px', border: '1px solid rgba(239, 68, 68, 0.4)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              🇰🇪 PROPOSED MASTER CONSENSUS DRAFT BILL, 2026
+            </span>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: '#38BDF8', background: 'rgba(56, 189, 248, 0.15)', padding: '4px 14px', border: '1px solid rgba(56, 189, 248, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              FLOATED FOR STAKEHOLDER CONSULTATION &amp; REVIEW
+            </span>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: '#4ADE80', background: 'rgba(74, 222, 128, 0.15)', padding: '4px 14px', border: '1px solid rgba(74, 222, 128, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              PROPOSED APEX REGULATOR (KBERC)
             </span>
           </div>
 
-          <h1 style={{ fontSize: "clamp(32px, 5vw, 54px)", fontWeight: 900, color: "#0F172A", letterSpacing: "-0.02em", margin: "0 0 16px 0", lineHeight: 1.15 }}>
-            The Built Environment Professions &amp; Practice Bill 2026
+          {/* Main Title & Subtitle */}
+          <h1 style={{ fontSize: 'clamp(28px, 4.5vw, 48px)', fontWeight: 900, color: '#FFFFFF', letterSpacing: '-0.02em', margin: '0 0 16px 0', lineHeight: 1.15 }}>
+            The Built Environment Professions and Practice Bill, 2026
           </h1>
+          
+          <h2 style={{ fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 700, color: '#FCA5A5', margin: '0 0 20px 0', lineHeight: 1.4 }}>
+            A Practitioner-Led Master Consensus Draft Resolving Legislative Fragmentation &amp; Industry Impasse
+          </h2>
 
-          <p style={{ fontSize: "16px", color: "#334155", maxWidth: "900px", margin: "0 auto", lineHeight: 1.7 }}>
-            A landmark consensus Bill created directly from public feedback, professional association memoranda, and institutional reviews of legacy legislation — consolidating regulation of all 8 built environment professions (Architects, Engineers, QSs, Planners, Landscape Architects, Interior Designers, CPMs &amp; Technologists) under a unified public-safety statutory framework.
+          <p style={{ fontSize: 'clamp(14px, 1.8vw, 16px)', color: '#CBD5E1', maxWidth: '1080px', margin: '0 0 32px 0', lineHeight: 1.7 }}>
+            Drafted by <strong>Arch. Brian Nyagonchong&apos;a</strong> from extensive built environment forum discussions and technical working groups, this proposed master Bill is floated for industry-wide review and stakeholder consideration. It synthesizes the <strong>3 separate competing draft bills</strong> (BORAQS/A&amp;QS Practitioners Bill, Project Management Bill, Landscape Architecture &amp; Interior Design Bill) into a single consolidated framework — establishing the <strong>Kenya Built Environment Regulatory Council (KBERC)</strong> to protect public safety, guarantee <strong>51% local professional equity</strong>, mandate <strong>Cryptographic Digital QR Practice Seals</strong> (Sec 57), enforce <strong>Eurocode Risk Peer Reviews</strong> (Sec 89), and establish a <strong>60-Day Fast-Track Appeals Tribunal</strong> (Sec 141).
           </p>
 
-          {/* Quick Nav Action Buttons */}
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "12px", marginTop: "28px" }}>
-            <Link href="/viewer/read" style={{ background: "#b91c1c", color: "#FFFFFF", padding: "12px 24px", borderRadius: 0, fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", boxShadow: "0 4px 14px rgba(4,120,87,0.25)" }}>
-              📖 Read Unabridged Bill
+          {/* Action CTAs */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+            <Link href="/viewer/read" style={{ background: "#B91C1C", color: "#FFFFFF", padding: "14px 28px", fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", boxShadow: "0 4px 14px rgba(185,28,28,0.4)", textDecoration: 'none' }}>
+              📖 Read Unabridged Proposed Bill
             </Link>
-            <Link href="/viewer/interactive" style={{ background: "#FFFFFF", color: "#0F172A", border: "1px solid #CBD5E1", padding: "12px 24px", borderRadius: 0, fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-              🏛️ 20 Parts &amp; 13 Schedules Directory
+            <Link href="/viewer/interactive" style={{ background: "#1E293B", color: "#FFFFFF", border: "1px solid #475569", padding: "14px 28px", fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", textDecoration: 'none' }}>
+              🏛️ 20 Parts &amp; 14 Schedules Directory
             </Link>
-            <Link href="/viewer/visual-audit" style={{ background: "#FFFFFF", color: "#0F172A", border: "1px solid #CBD5E1", padding: "12px 24px", borderRadius: 0, fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-              📊 20 Master Visual Instruments
+            <Link href="/viewer/building-navigator" style={{ background: "#1E293B", color: "#FFFFFF", border: "1px solid #475569", padding: "14px 28px", fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", textDecoration: 'none' }}>
+              📊 Building Risk Navigator
             </Link>
-            <Link href="/viewer/tools" style={{ background: "#FFFFFF", color: "#0F172A", border: "1px solid #CBD5E1", padding: "12px 24px", borderRadius: 0, fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em" }}>
-              ✨ All Interactive Tools (14)
-            </Link>
-            <Link href="/viewer/about" style={{ background: "#0284C7", color: "#FFFFFF", padding: "12px 24px", borderRadius: 0, fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", boxShadow: "0 4px 14px rgba(2,132,199,0.25)" }}>
-              📜 About &amp; Reform Dossier
+            <Link href="/viewer/about" style={{ background: "#0284C7", color: "#FFFFFF", padding: "14px 28px", fontSize: "12px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", boxShadow: "0 4px 14px rgba(2,132,199,0.3)", textDecoration: 'none' }}>
+              📜 About &amp; Consensus Reform Dossier
             </Link>
           </div>
         </header>
 
+        {/* ─── 3 Competing Drafts Harmonization Showcase Box ──────────────────── */}
+        <section style={{ background: '#FFFFFF', border: '1px solid #CBD5E1', borderTop: '5px solid #0284C7', padding: '28px', marginBottom: '40px', boxShadow: '0 4px 12px rgba(0,0,0,0.04)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '16px', borderBottom: '1px solid #E2E8F0', paddingBottom: '12px' }}>
+            <div>
+              <span style={{ fontSize: '11px', fontWeight: 900, color: '#0284C7', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '2px' }}>
+                🤝 HARMONIZATION OF THE 3 COMPETING LEGISLATIVE DRAFTS
+              </span>
+              <h2 style={{ fontSize: '20px', fontWeight: 900, color: '#0F172A', margin: 0 }}>
+                Synthesizing Industry Disagreements into One Master Consensus Framework
+              </h2>
+            </div>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: '#059669', background: 'rgba(5,150,105,0.1)', padding: '6px 14px', border: '1px solid rgba(5,150,105,0.3)' }}>
+              Unified Multi-Disciplinary Solution
+            </span>
+          </div>
+
+          <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, marginBottom: '20px' }}>
+            Instead of pursuing separate piecemeal statutes that create inter-professional conflict and overlapping registries, this Master Draft harmonizes the three competing legislative initiatives into unified statutory Colleges under the <strong>Kenya Built Environment Regulatory Council (KBERC)</strong>:
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
+            {[
+              {
+                title: "1. A&QS / BORAQS Practitioners Bill",
+                status: "Integrated into KBERC Master Draft",
+                color: "#B91C1C",
+                desc: "Resolves BORAQS title-only limitations by introducing function protection, reserved work scopes, and discipline-specific ARB/QRB Registration Boards under Part III & IV."
+              },
+              {
+                title: "2. Construction Project Management (CPM) Bill",
+                status: "Integrated as College 5",
+                color: "#7C3AED",
+                desc: "Overcomes past legislative shelving by granting Construction Project Managers (CPMs) full statutory college recognition, site execution authority, and reserved scopes."
+              },
+              {
+                title: "3. Landscape Architects & Interior Designers Bill",
+                status: "Integrated as Colleges 6 & 7",
+                color: "#0D9488",
+                desc: "Ends decades of legal exclusion for Landscape Architects and Interior Designers, establishing dedicated statutory registration boards, title protection, and fee scales."
+              },
+              {
+                title: "4. TVET Technologists & Craftsmen Cadres",
+                status: "Integrated under Section 28 & College 8",
+                color: "#059669",
+                desc: "Statutorily indexes B.Tech and Higher Diploma graduates under Section 28, establishing defined site inspection scopes, NDT testing authority, and bridging pathways."
+              }
+            ].map((hb, hIdx) => (
+              <div key={hIdx} style={{ background: '#F8FAFC', border: '1px solid #CBD5E1', borderLeft: `4px solid ${hb.color}`, padding: '16px' }}>
+                <span style={{ fontSize: '10px', fontWeight: 900, color: hb.color, textTransform: 'uppercase', display: 'block', marginBottom: '4px' }}>
+                  {hb.status}
+                </span>
+                <h3 style={{ fontSize: '14px', fontWeight: 800, color: '#0F172A', margin: '0 0 6px 0' }}>
+                  {hb.title}
+                </h3>
+                <p style={{ fontSize: '12px', color: '#334155', lineHeight: 1.5, margin: 0 }}>
+                  {hb.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Stats Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "16px", marginBottom: "56px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "16px", marginBottom: "48px" }}>
           {stats.map((st, i) => (
             <div key={i} style={{ background: "#FFFFFF", padding: "20px", borderRadius: 0, border: "1px solid #CBD5E1", textAlign: "center", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
-              <div style={{ fontSize: "30px", fontWeight: 900, color: "#b91c1c", marginBottom: "4px" }}>{st.value}</div>
+              <div style={{ fontSize: "28px", fontWeight: 900, color: "#b91c1c", marginBottom: "4px" }}>{st.value}</div>
               <div style={{ fontSize: "11px", fontWeight: 800, color: "#64748B", textTransform: "uppercase", letterSpacing: "0.05em" }}>{st.label}</div>
             </div>
           ))}
@@ -277,13 +354,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TIER 4: Enactment Action Plan, Maps & Dictionary */}
+        {/* TIER 4: Operations, Inter-Agency Maps & Glossary */}
         <section>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "20px", borderBottom: "2px solid #CBD5E1", paddingBottom: "12px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <span style={{ fontSize: "10px", fontWeight: 900, color: "#6B21A8", background: "rgba(107,33,168,0.1)", padding: "4px 12px", border: "1px solid rgba(107,33,168,0.3)", textTransform: "uppercase" }}>TIER 4</span>
-              <h2 style={{ fontSize: "22px", fontWeight: 900, color: "#0F172A", margin: 0 }}>Enactment Action Plan, Maps &amp; Dictionary</h2>
+              <span style={{ fontSize: "10px", fontWeight: 900, color: "#059669", background: "rgba(5,150,105,0.1)", padding: "4px 12px", border: "1px solid rgba(5,150,105,0.3)", textTransform: "uppercase" }}>TIER 4</span>
+              <h2 style={{ fontSize: "22px", fontWeight: 900, color: "#0F172A", margin: 0 }}>Operations, Inter-Agency Maps &amp; Glossary</h2>
             </div>
+            <span style={{ fontSize: "12px", fontWeight: 700, color: "#64748B" }}>Enactment &amp; Operations</span>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "18px" }}>
@@ -292,7 +370,7 @@ export default function Home() {
                 <div style={{ height: "100%", padding: "22px", borderRadius: 0, background: "#FFFFFF", border: "1px solid #CBD5E1", transition: "all 0.2s ease", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
                     <span style={{ fontSize: "28px" }}>{m.icon}</span>
-                    <span style={{ fontSize: "10px", fontWeight: 800, color: "#6B21A8", background: "rgba(107,33,168,0.1)", padding: "3px 8px" }}>{m.badge}</span>
+                    <span style={{ fontSize: "10px", fontWeight: 800, color: "#059669", background: "rgba(5,150,105,0.1)", padding: "3px 8px" }}>{m.badge}</span>
                   </div>
                   <h3 style={{ fontSize: "16px", fontWeight: 800, color: "#0F172A", margin: "0 0 8px 0" }}>{m.title}</h3>
                   <p style={{ fontSize: "12px", color: "#475569", lineHeight: 1.6, margin: 0 }}>{m.desc}</p>
@@ -301,6 +379,20 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* ─── Footer Author Accreditation ───────────────────────────────────── */}
+        <footer style={{ background: '#0F172A', color: '#F8FAFC', padding: '32px', border: '1px solid #334155', marginTop: '56px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '12px' }}>
+            <span style={{ fontSize: '11px', fontWeight: 900, color: '#34D399', background: 'rgba(52,211,153,0.15)', padding: '4px 12px', border: '1px solid rgba(52,211,153,0.3)', textTransform: 'uppercase' }}>
+              🏛️ PRINCIPAL LEGISLATIVE AUTHOR &amp; LEAD ARCHITECT
+            </span>
+            <span style={{ fontSize: '11px', color: '#94A3B8' }}>PROPOSED MASTER CONSENSUS DRAFT 2026</span>
+          </div>
+          <h3 style={{ fontSize: '20px', fontWeight: 900, color: '#FFFFFF', margin: '0 0 8px 0' }}>Arch. Brian Nyagonchong&apos;a</h3>
+          <p style={{ fontSize: '13px', color: '#94A3B8', lineHeight: 1.6, margin: 0, maxWidth: '960px' }}>
+            Principal Legislative Author responsible for formulating and drafting this consolidated master Bill from multi-disciplinary industry forum discussions — harmonizing the 3 separate competing draft bills into a single unified statutory framework for public safety, professional practice, and devolved County building regulation.
+          </p>
+        </footer>
 
       </div>
     </div>
