@@ -192,7 +192,14 @@ export default function InteractiveViewerIndex() {
   const normalizedQuery = query.replace(/[^\w\s]/gi, ' ').trim();
   const queryTokens = (normalizedQuery || query).split(/\s+/).filter(t => t.length > 0);
 
-  // Deep Section Matches
+  // Helper to safely stringify text or array fields
+  const stringifyField = (field: unknown): string => {
+    if (!field) return '';
+    if (Array.isArray(field)) return field.join(' ');
+    return String(field);
+  };
+
+  // Exhaustive Deep Section Matches across 100% of text fields
   const deepSectionMatches: Array<{
     partNum: number;
     partTitle: string;
@@ -204,24 +211,41 @@ export default function InteractiveViewerIndex() {
   if (query) {
     billData.structure.forEach((part, partIdx) => {
       part.sections.forEach(sec => {
-        const fullContent = `
-          ${sec.section} 
-          ${sec.title} 
-          ${part.title} 
-          ${part.part} 
-          ${sec.bill_text || ''} 
-          ${sec.analysis?.what_it_does || ''} 
-          ${sec.analysis?.plain_english || ''} 
-          ${sec.analysis?.policy_objective || ''}
-        `.toLowerCase();
+        const fullContent = [
+          sec.section,
+          sec.title,
+          part.part,
+          part.title,
+          sec.bill_text || '',
+          sec.analysis?.what_it_does || '',
+          sec.analysis?.why_it_exists || '',
+          sec.analysis?.plain_english || '',
+          sec.analysis?.policy_objective || '',
+          stringifyField(sec.analysis?.who_is_affected),
+          stringifyField(sec.analysis?.related_sections),
+          sec.analysis?.constitutional_context || '',
+          sec.analysis?.implementation || '',
+          stringifyField(sec.analysis?.potential_issues),
+          stringifyField(sec.analysis?.red_team)
+        ].join(' ').toLowerCase();
 
         const directMatch = fullContent.includes(query);
         const tokensMatch = queryTokens.length > 0 && queryTokens.every(token => fullContent.includes(token));
-        const anyTokenMatch = queryTokens.length > 0 && queryTokens.some(token => token.length > 3 && fullContent.includes(token));
+        const anyTokenMatch = queryTokens.length > 0 && queryTokens.some(token => token.length > 2 && fullContent.includes(token));
 
         if (directMatch || tokensMatch || anyTokenMatch) {
-          let snippet = sec.analysis?.plain_english || sec.analysis?.what_it_does || sec.bill_text || '';
-          if (snippet.length > 120) snippet = snippet.slice(0, 120) + '...';
+          // Dynamic Contextual Snippet Extraction around matching keyword
+          let textForSnippet = sec.analysis?.plain_english || sec.analysis?.what_it_does || sec.bill_text || '';
+          let matchIndex = textForSnippet.toLowerCase().indexOf(queryTokens[0] || query);
+          
+          let snippet = '';
+          if (matchIndex !== -1) {
+            const start = Math.max(0, matchIndex - 30);
+            const end = Math.min(textForSnippet.length, matchIndex + 110);
+            snippet = (start > 0 ? '...' : '') + textForSnippet.slice(start, end) + (end < textForSnippet.length ? '...' : '');
+          } else {
+            snippet = textForSnippet.slice(0, 130) + (textForSnippet.length > 130 ? '...' : '');
+          }
 
           deepSectionMatches.push({
             partNum: partIdx + 1,
