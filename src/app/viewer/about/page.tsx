@@ -667,7 +667,7 @@ export default function AboutPage() {
                 { title: "Construction Project Management", society: "ACMK / CPMRB", code: "College 5", desc: "Directing site construction execution, quality assurance, safety coordination & project timelines.", color: "#7C3AED", sec: "/viewer/interactive/3" },
                 { title: "Landscape Architecture", society: "KSELA / LARB", code: "College 6", desc: "Outdoor site ecology, urban park design, environmental spatial planning & site drainage integration.", color: "#0D9488", sec: "/viewer/interactive/3" },
                 { title: "Interior Design", society: "IDAK / IDRB", code: "College 7", desc: "Interior spatial ergonomics, acoustic performance, interior specifications & fire egress layouts.", color: "#C026D3", sec: "/viewer/interactive/3" },
-                { title: "Environmental & Energy Auditing", society: "NEMA / EDC", code: "College 8", desc: "Environmental Impact Assessment (EIA), green building sustainability & energy efficiency audits.", color: "#16A34A", sec: "/viewer/interactive/3" }
+                { title: "Built Environment Technologists", society: "TVETA / KBERC Indexed", code: "College 8", desc: "Technical design execution, site inspection sign-offs, NDT testing & bridging pathways to lead registration.", color: "#16A34A", sec: "/viewer/interactive/4" }
               ].map((prof, pIdx) => (
                 <Link key={pIdx} href={prof.sec} className="bg-white border border-slate-300 p-5 hover:border-red-700 transition-all shadow-xs flex flex-col justify-between group">
                   <div>
