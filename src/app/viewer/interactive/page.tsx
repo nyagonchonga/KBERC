@@ -313,21 +313,66 @@ export default function InteractiveViewerIndex() {
           </Link>
         </nav>
 
-        {/* Hero Section */}
-        <div style={{ textAlign: 'center', marginBottom: '44px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '16px', background: 'rgba(185,28,28,0.1)', padding: '6px 16px', border: '1px solid rgba(185,28,28,0.2)' }}>
-            <span style={{ fontSize: '11px', fontWeight: 900, color: '#b91c1c', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-              KBERC STATUTORY FRAMEWORK DIRECTORY
+        {/* ─── Informative Executive Hero Section ───────────────────────────── */}
+        <div style={{
+          background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #7F1D1D 100%)',
+          color: '#FFFFFF',
+          padding: 'clamp(24px, 4vw, 40px)',
+          border: '1px solid #334155',
+          marginBottom: '36px',
+          boxShadow: '0 10px 25px -5px rgba(0,0,0,0.1)'
+        }}>
+          {/* Badges Bar */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '11px', fontWeight: 900, color: '#FCA5A5', background: 'rgba(239, 68, 68, 0.2)', padding: '4px 12px', border: '1px solid rgba(239, 68, 68, 0.4)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              🇰🇪 National Assembly Bill No. 14 of 2026
+            </span>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: '#38BDF8', background: 'rgba(56, 189, 248, 0.15)', padding: '4px 12px', border: '1px solid rgba(56, 189, 248, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              Repeal of Colonial Cap 525 (1934)
+            </span>
+            <span style={{ fontSize: '11px', fontWeight: 800, color: '#4ADE80', background: 'rgba(74, 222, 128, 0.15)', padding: '4px 12px', border: '1px solid rgba(74, 222, 128, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              Apex Regulator (KBERC)
             </span>
           </div>
 
-          <h1 style={{ fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 900, color: '#0F172A', letterSpacing: '-0.02em', margin: '0 0 16px 0', lineHeight: 1.15 }}>
-            20 Parts &amp; 13 Schedules Directory
+          {/* Main Title & Subtitle */}
+          <h1 style={{ fontSize: 'clamp(26px, 4.2vw, 40px)', fontWeight: 900, color: '#FFFFFF', letterSpacing: '-0.02em', margin: '0 0 12px 0', lineHeight: 1.2 }}>
+            The Built Environment Professions and Practice Bill, 2026
           </h1>
-
-          <p style={{ fontSize: '15px', color: '#334155', maxWidth: '780px', margin: '0 auto 28px', lineHeight: 1.7 }}>
-            Interactive visual directory containing all <strong>20 Statutory Parts, 208 Enacted Sections, and 13 Schedules</strong> of the Built Environment Professions &amp; Practice Bill 2026.
+          <p style={{ fontSize: 'clamp(14px, 1.8vw, 16px)', color: '#CBD5E1', maxWidth: '1000px', margin: '0 0 24px 0', lineHeight: 1.6 }}>
+            An Act of Parliament repealing 92 years of colonial legal fragmentation under Cap 525 to establish the <strong>Kenya Built Environment Regulatory Council (KBERC)</strong>. The Bill unifies <strong>8 Regulated Professions &amp; TVET Cadres</strong>, mandates <strong>Cryptographic Digital QR Practice Seals</strong> (Sec 57), enforces <strong>51% Local Equity</strong> (Sec 45), enacts <strong>Eurocode Risk Peer Reviews</strong> (Sec 89), establishes the <strong>Built Environment Appeals Tribunal</strong> (Sec 141), and creates a <strong>6-Hour Emergency Collapse Forensic Audit Protocol</strong> (Sec 168).
           </p>
+
+          {/* 6 Key Statutory Pillars Grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: '10px', marginBottom: '24px' }}>
+            {[
+              { icon: '🏛️', title: 'Apex Council (KBERC)', text: 'Sec 6 — 15-member multi-disciplinary body coordinating 47 Counties under Art 185.' },
+              { icon: '🤝', title: '8 Unified Professions', text: 'Sec 14 — Architecture, Engineering, QS, Planning, CPM, Landscape, Interior, & TVET.' },
+              { icon: '🔒', title: 'Digital QR Seals', text: 'Sec 57 — Dynamic QR stamps on drawings authenticated against County e-Permit portals.' },
+              { icon: '🛡️', title: 'Eurocode Peer Review', text: 'Sec 89 — Risk Classes A–E mandating independent dual structural peer audits.' },
+              { icon: '⚖️', title: 'Appeals Tribunal (BEAT)', text: 'Sec 141 — Subordinate Court powers with 60-day binding appellate determinations.' },
+              { icon: '🚨', title: '6-Hour Forensic Audit', text: 'Sec 168 — Rapid disaster dispatch funded by 5% Disaster Emergency Fund.' }
+            ].map((p, pIdx) => (
+              <div key={pIdx} style={{ background: 'rgba(255,255,255,0.06)', padding: '12px 14px', border: '1px solid rgba(255,255,255,0.12)', textAlign: 'left' }}>
+                <div style={{ fontSize: '12px', fontWeight: 800, color: '#F8FAFC', marginBottom: '4px' }}>
+                  {p.icon} {p.title}
+                </div>
+                <div style={{ fontSize: '11px', color: '#94A3B8', lineHeight: 1.4 }}>
+                  {p.text}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Metrics Bar */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', flexWrap: 'wrap', marginBottom: '28px', paddingTop: '14px', borderTop: '1px solid rgba(255,255,255,0.15)', fontSize: '11px', fontWeight: 800, color: '#FCA5A5' }}>
+            <span>• 20 STATUTORY PARTS</span>
+            <span>• 208 ENACTED SECTIONS</span>
+            <span>• 14 STATUTORY SCHEDULES</span>
+            <span>• 8 REGULATED PROFESSIONS</span>
+            <span>• 47 COUNTIES SYNCHRONIZED</span>
+            <span>• KES 50M ANTI-QUACKERY FINE</span>
+          </div>
 
           {/* Search & Filter Controls Container */}
           <div style={{ maxWidth: '820px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '14px', position: 'relative' }}>
