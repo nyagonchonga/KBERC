@@ -140,9 +140,9 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
             <span>A4 Reader</span>
           </Link>
           <Link
-            href="/viewer/read"
+            href="/"
             className="p-1.5 bg-slate-800 text-slate-300 hover:text-white rounded-xl text-xs border border-slate-700"
-            title="Back to Bill Viewer"
+            title="Back to Landing Page"
           >
             <ArrowLeft className="w-4 h-4" />
           </Link>
@@ -177,9 +177,9 @@ export default function ComparativeStudyClient({ comparisons }: { comparisons: C
 
         {/* Back Link & A4 Reader CTA */}
         <div className="flex flex-col gap-2">
-          <Link href="/viewer/read" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-all text-xs font-bold uppercase tracking-wider group">
+          <Link href="/" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-all text-xs font-bold uppercase tracking-wider group">
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" /> 
-            <span>Back to Bill Viewer</span>
+            <span>Back to Landing Page</span>
           </Link>
 
           <Link
