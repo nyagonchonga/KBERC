@@ -25,10 +25,10 @@ export const billData = {
   metadata: {
     title: "THE BUILT ENVIRONMENT PROFESSIONS AND PRACTICE BILL, 2026",
     short_title: "Built Environment Professions and Practice Act, 2026",
-    bill_no: "Proposed Practitioner-Led Master Consensus Draft, 2026",
+    bill_no: "Practitioner-Led Master Alternative Consensus Draft, 2026",
     date: "2026-08-14",
-    status: "Proposed Draft • Floated for Industry Stakeholder Discussion & Harmonization",
-    sponsor: "Drafted by Arch. Brian Nyagonchong'a (Synthesizing Industry Forums & Working Group Discussions)",
+    status: "Proposed Master Draft • Floated as Practitioner Alternative to NA Bill No. 47 of 2026",
+    sponsor: "Authored by Arch. Brian Nyagonchong'a (Synthesizing Professional Association Memoranda & Forum Discussions)",
     jurisdiction: "Republic of Kenya"
   },
   preamble: "AN ACT of Parliament to establish a comprehensive, coordinated regulatory framework for all built environment professions in Kenya; to establish the Kenya Built Environment Regulatory Council; to provide for competency-based registration, professional indemnity, risk-based practice regulation, continuous professional development, and professional conduct; to repeal the Architects and Quantity Surveyors Act (Cap. 525); and for connected purposes.",

@@ -159,7 +159,7 @@ export default function Home() {
               🇰🇪 PROPOSED MASTER CONSENSUS DRAFT BILL, 2026
             </span>
             <span style={{ fontSize: '11px', fontWeight: 800, color: '#38BDF8', background: 'rgba(56, 189, 248, 0.15)', padding: '4px 14px', border: '1px solid rgba(56, 189, 248, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-              FLOATED FOR STAKEHOLDER CONSULTATION &amp; REVIEW
+              PRACTITIONER ALTERNATIVE TO NA BILL NO. 47 OF 2026
             </span>
             <span style={{ fontSize: '11px', fontWeight: 800, color: '#4ADE80', background: 'rgba(74, 222, 128, 0.15)', padding: '4px 14px', border: '1px solid rgba(74, 222, 128, 0.3)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
               PROPOSED APEX REGULATOR (KBERC)
@@ -172,11 +172,11 @@ export default function Home() {
           </h1>
           
           <h2 style={{ fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 700, color: '#FCA5A5', margin: '0 0 20px 0', lineHeight: 1.4 }}>
-            A Practitioner-Led Master Consensus Draft Resolving Legislative Fragmentation &amp; Industry Impasse
+            A Practitioner-Led Master Consensus Alternative Resolving the Contestation Over National Assembly Bill No. 47 of 2026
           </h2>
 
           <p style={{ fontSize: 'clamp(14px, 1.8vw, 16px)', color: '#CBD5E1', maxWidth: '1080px', margin: '0 0 32px 0', lineHeight: 1.7 }}>
-            Drafted by <strong>Arch. Brian Nyagonchong&apos;a</strong> from extensive built environment forum discussions and technical working groups, this proposed master Bill is floated for industry-wide review and stakeholder consideration. It synthesizes the <strong>3 separate competing draft bills</strong> (BORAQS/A&amp;QS Practitioners Bill, Project Management Bill, Landscape Architecture &amp; Interior Design Bill) into a single consolidated framework — establishing the <strong>Kenya Built Environment Regulatory Council (KBERC)</strong> to protect public safety, guarantee <strong>51% local professional equity</strong>, mandate <strong>Cryptographic Digital QR Practice Seals</strong> (Sec 57), enforce <strong>Eurocode Risk Peer Reviews</strong> (Sec 89), and establish a <strong>60-Day Fast-Track Appeals Tribunal</strong> (Sec 141).
+            Formulated by <strong>Arch. Brian Nyagonchong&apos;a</strong> in response to industry-wide feedback and professional association memoranda (ACMK, Architects Alliance, IDAK, TVETA) rejecting BORAQS dominance in National Assembly Bill No. 47 of 2026 — this master draft proposes an <strong>equal 8-College Apex Council (KBERC)</strong>, rotational leadership, independent registration boards, <strong>51% local professional equity</strong> (Sec 45), <strong>Cryptographic Digital QR Practice Seals</strong> (Sec 57), and <strong>Eurocode Risk Peer Reviews</strong> (Sec 89).
           </p>
 
           {/* Action CTAs */}
@@ -196,51 +196,45 @@ export default function Home() {
           </div>
         </header>
 
-        {/* ─── 3 Competing Drafts Harmonization Showcase Box ──────────────────── */}
+        {/* ─── Factual Legislative Reform Comparison Showcase Box ──────────────── */}
         <section style={{ background: '#FFFFFF', border: '1px solid #CBD5E1', borderTop: '5px solid #0284C7', padding: '28px', marginBottom: '40px', boxShadow: '0 4px 12px rgba(0,0,0,0.04)' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '16px', borderBottom: '1px solid #E2E8F0', paddingBottom: '12px' }}>
             <div>
               <span style={{ fontSize: '11px', fontWeight: 900, color: '#0284C7', textTransform: 'uppercase', letterSpacing: '0.12em', display: 'block', marginBottom: '2px' }}>
-                🤝 HARMONIZATION OF THE 3 COMPETING LEGISLATIVE DRAFTS
+                ⚖️ LEGISLATIVE REFORM &amp; PARLIAMENTARY CONTEXT
               </span>
               <h2 style={{ fontSize: '20px', fontWeight: 900, color: '#0F172A', margin: 0 }}>
-                Synthesizing Industry Disagreements into One Master Consensus Framework
+                Synthesizing Industry Feedback &amp; Resolving Contestation Over NA Bill No. 47 of 2026
               </h2>
             </div>
             <span style={{ fontSize: '11px', fontWeight: 800, color: '#059669', background: 'rgba(5,150,105,0.1)', padding: '6px 14px', border: '1px solid rgba(5,150,105,0.3)' }}>
-              Unified Multi-Disciplinary Solution
+              Practitioner Consensus Solution
             </span>
           </div>
 
           <p style={{ fontSize: '13px', color: '#475569', lineHeight: 1.6, marginBottom: '20px' }}>
-            Instead of pursuing separate piecemeal statutes that create inter-professional conflict and overlapping registries, this Master Draft harmonizes the three competing legislative initiatives into unified statutory Colleges under the <strong>Kenya Built Environment Regulatory Council (KBERC)</strong>:
+            Following the First Reading of National Assembly Bill No. 47 of 2026 (August 2026), professional groups expressed grave concern over BORAQS-dominated governance and single-seat tokenism. This proposed KBERC Master Consensus Draft resolves the impasse through a balanced multi-disciplinary model:
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
             {[
               {
-                title: "1. A&QS / BORAQS Practitioners Bill",
-                status: "Integrated into KBERC Master Draft",
+                title: "1. Colonial Cap 525 (1934)",
+                status: "Outdated Legacy Statute",
+                color: "#64748B",
+                desc: "Limited strictly to Architects and Quantity Surveyors, lacking function protection, digital QR seals, or statutory coverage for CPMs, Landscape, Interior Design, and TVET Cadres."
+              },
+              {
+                title: "2. NA Bill No. 47 of 2026 (Aug 2026)",
+                status: "Contested Parliamentary Bill",
                 color: "#B91C1C",
-                desc: "Resolves BORAQS title-only limitations by introducing function protection, reserved work scopes, and discipline-specific ARB/QRB Registration Boards under Part III & IV."
+                desc: "Subordinates 8 distinct disciplines under a BORAQS-dominated council with 1-seat tokenism per discipline, leading to formal rejection by ACMK, Architects Alliance, and IDAK."
               },
               {
-                title: "2. Construction Project Management (CPM) Bill",
-                status: "Integrated as College 5",
-                color: "#7C3AED",
-                desc: "Overcomes past legislative shelving by granting Construction Project Managers (CPMs) full statutory college recognition, site execution authority, and reserved scopes."
-              },
-              {
-                title: "3. Landscape Architects & Interior Designers Bill",
-                status: "Integrated as Colleges 6 & 7",
-                color: "#0D9488",
-                desc: "Ends decades of legal exclusion for Landscape Architects and Interior Designers, establishing dedicated statutory registration boards, title protection, and fee scales."
-              },
-              {
-                title: "4. TVET Technologists & Craftsmen Cadres",
-                status: "Integrated under Section 28 & College 8",
+                title: "3. Proposed KBERC Consensus Draft",
+                status: "Practitioner Consensus Alternative",
                 color: "#059669",
-                desc: "Statutorily indexes B.Tech and Higher Diploma graduates under Section 28, establishing defined site inspection scopes, NDT testing authority, and bridging pathways."
+                desc: "Establishes an autonomous, equal 8-College Apex Council with rotational chairing, dedicated statutory registration boards, 51% local equity, and TVET site inspection indexing."
               }
             ].map((hb, hIdx) => (
               <div key={hIdx} style={{ background: '#F8FAFC', border: '1px solid #CBD5E1', borderLeft: `4px solid ${hb.color}`, padding: '16px' }}>
