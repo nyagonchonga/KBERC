@@ -6,16 +6,16 @@ import { billData } from '../data';
 
 /* ─── Preset Statutory Keyword Search Chips ───────────────────────────── */
 const STATUTORY_KEYWORD_CHIPS = [
-  'EBK Cap 530',
-  'Digital QR Seal',
-  'BEAT Tribunal',
-  '51%+ Local Equity',
-  'Risk Class C/D',
-  'Stamp Renting',
-  '6-Stage Inspection',
-  'Disciplinary Hearing',
-  'Peer Review',
-  'Escrow Account'
+  { label: 'EBK Cap 530', query: 'Cap 530' },
+  { label: 'Digital QR Seal', query: 'Digital QR Seal' },
+  { label: 'BEAT Tribunal', query: 'Tribunal' },
+  { label: '51%+ Local Equity', query: 'equity' },
+  { label: 'Risk Class C/D', query: 'Risk Class' },
+  { label: 'Stamp Renting', query: 'Stamp Renting' },
+  { label: '6-Stage Inspection', query: 'Stage Inspection' },
+  { label: 'Disciplinary Hearing', query: 'Disciplinary' },
+  { label: 'Peer Review', query: 'Peer Review' },
+  { label: 'Escrow Account', query: 'Escrow' }
 ];
 
 /* ─── Exhaustive Authoritative Part Descriptions ────────────────────────── */
@@ -189,6 +189,8 @@ export default function InteractiveViewerIndex() {
   }, []);
 
   const query = searchQuery.trim().toLowerCase();
+  const normalizedQuery = query.replace(/[^\w\s]/gi, ' ').trim();
+  const queryTokens = (normalizedQuery || query).split(/\s+/).filter(t => t.length > 0);
 
   // Deep Section Matches
   const deepSectionMatches: Array<{
@@ -202,13 +204,22 @@ export default function InteractiveViewerIndex() {
   if (query) {
     billData.structure.forEach((part, partIdx) => {
       part.sections.forEach(sec => {
-        const titleMatch = sec.title.toLowerCase().includes(query);
-        const numMatch = sec.section.toLowerCase().includes(query);
-        const textMatch = sec.bill_text?.toLowerCase().includes(query);
-        const doesMatch = sec.analysis?.what_it_does?.toLowerCase().includes(query);
-        const englishMatch = sec.analysis?.plain_english?.toLowerCase().includes(query);
+        const fullContent = `
+          ${sec.section} 
+          ${sec.title} 
+          ${part.title} 
+          ${part.part} 
+          ${sec.bill_text || ''} 
+          ${sec.analysis?.what_it_does || ''} 
+          ${sec.analysis?.plain_english || ''} 
+          ${sec.analysis?.policy_objective || ''}
+        `.toLowerCase();
 
-        if (titleMatch || numMatch || textMatch || doesMatch || englishMatch) {
+        const directMatch = fullContent.includes(query);
+        const tokensMatch = queryTokens.length > 0 && queryTokens.every(token => fullContent.includes(token));
+        const anyTokenMatch = queryTokens.length > 0 && queryTokens.some(token => token.length > 3 && fullContent.includes(token));
+
+        if (directMatch || tokensMatch || anyTokenMatch) {
           let snippet = sec.analysis?.plain_english || sec.analysis?.what_it_does || sec.bill_text || '';
           if (snippet.length > 120) snippet = snippet.slice(0, 120) + '...';
 
@@ -224,23 +235,24 @@ export default function InteractiveViewerIndex() {
     });
   }
 
-  const filteredParts = billData.structure.filter(p =>
-    !query ||
-    p.title.toLowerCase().includes(query) ||
-    p.part.toLowerCase().includes(query) ||
-    p.sections.some(s =>
-      s.title.toLowerCase().includes(query) ||
-      s.section.toLowerCase().includes(query) ||
-      s.bill_text?.toLowerCase().includes(query) ||
-      s.analysis?.plain_english?.toLowerCase().includes(query)
-    )
-  );
+  const filteredParts = billData.structure.filter((p, pIdx) => {
+    if (!query) return true;
+    const partNum = pIdx + 1;
+    const partContent = `${p.part} ${p.title} ${RICH_PART_DESCRIPTIONS[partNum] || ''}`.toLowerCase();
+    const matchesTitle = partContent.includes(query);
+    const matchesTokens = queryTokens.length > 0 && queryTokens.some(t => t.length > 2 && partContent.includes(t));
+    const matchesSection = deepSectionMatches.some(m => m.partNum === partNum);
+    return matchesTitle || matchesTokens || matchesSection;
+  });
 
-  const filteredSchedules = billData.schedules.filter(s =>
-    !query ||
-    s.title.toLowerCase().includes(query) ||
-    s.content.toLowerCase().includes(query)
-  );
+  const filteredSchedules = billData.schedules.filter((s, idx) => {
+    if (!query) return true;
+    const schNum = idx + 1;
+    const schContent = `schedule ${schNum} ${s.title} ${s.content} ${RICH_SCHEDULE_DESCRIPTIONS[schNum] || ''}`.toLowerCase();
+    const matchesDirect = schContent.includes(query);
+    const matchesTokens = queryTokens.length > 0 && queryTokens.some(t => t.length > 2 && schContent.includes(t));
+    return matchesDirect || matchesTokens;
+  });
 
   return (
     <div style={{
@@ -343,20 +355,20 @@ export default function InteractiveViewerIndex() {
               </span>
               {STATUTORY_KEYWORD_CHIPS.map(chip => (
                 <button
-                  key={chip}
+                  key={chip.label}
                   onClick={() => {
-                    setSearchQuery(chip);
+                    setSearchQuery(chip.query);
                     setDropdownOpen(true);
                   }}
                   style={{
                     padding: '4px 10px', fontSize: '11px', fontWeight: 700,
-                    background: searchQuery === chip ? '#b91c1c' : '#FFFFFF',
-                    color: searchQuery === chip ? '#FFFFFF' : '#334155',
+                    background: searchQuery === chip.query ? '#b91c1c' : '#FFFFFF',
+                    color: searchQuery === chip.query ? '#FFFFFF' : '#334155',
                     border: '1px solid #CBD5E1', cursor: 'pointer',
                     transition: 'all 0.15s'
                   }}
                 >
-                  {chip}
+                  {chip.label}
                 </button>
               ))}
             </div>
