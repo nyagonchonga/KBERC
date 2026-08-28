@@ -170,12 +170,12 @@ export const part11Data = {
     {
             "section": "125",
             "title": "Disciplinary Committee",
-            "bill_text": "(1) The Council shall establish an independent Disciplinary Committee composed of senior professionals and at least one Advocate of the High Court of Kenya.\n(2) The Committee shall adjudicate cases of professional misconduct forwarded by the Investigation Committee.",
+            "bill_text": "(1) The Council shall establish an independent Disciplinary Committee composed of senior professionals representing all regulated disciplines, a representative of TVET technologists, and at least one Advocate of the High Court of Kenya: Provided that any hearing panel adjudicating a complaint against a practitioner shall include at least one senior practitioner of the same discipline or technical cadre as the accused.\n(2) The Committee shall adjudicate cases of professional misconduct forwarded by the Investigation Committee.",
             "analysis": {
-                    "what_it_does": "Section 125 mandates the specific procedures and obligations relating to disciplinary committee within the Unlawful practice framework of the Act. It sets out the legal requirements that KBERC and registered professionals must observe regarding disciplinary committee.",
-                    "why_it_exists": "This provision is essential to the operational integrity of PART XI's targeting and penalizing unregistered practice and related offences. Without a clear statutory basis for disciplinary committee, KBERC would lack the legal authority to act consistently and transparently in this area, exposing its decisions to legal challenge.",
-                    "plain_english": "This section establishes the rules for disciplinary committee. It tells KBERC what it must do, tells professionals what they are required to comply with, and creates the legal basis for enforcement of those obligations.",
-                    "policy_objective": "To provide a clear, constitutionally grounded statutory framework for disciplinary committee, ensuring that KBERC's actions are lawful, transparent, and aligned with the Act's core objective of prioritizing public safety in Kenya's built environment.",
+                    "what_it_does": "Establishes an independent Disciplinary Committee and mandates that every disciplinary hearing panel must include at least one senior peer of the exact same discipline or technical cadre as the accused practitioner.",
+                    "why_it_exists": "Guarantees Article 47 natural justice and fair hearing by ensuring that technical misconduct allegations (whether in Structural Engineering, Quantity Surveying, Architecture, Interior Design, CPM, or TVET execution) are evaluated by peers who understand the specific technical standard of care.",
+                    "plain_english": "When a professional or technologist is accused of misconduct, the hearing panel must include at least one senior practitioner from their exact profession (e.g. an Interior Designer on trial is judged with an Interior Designer on the panel).",
+                    "policy_objective": "To eliminate peer bias and uphold constitutional fair administrative action by embedding statutory peer representation in all disciplinary hearing panels.",
                     "who_is_affected": [
                             "the public",
                             "Unregistered practitioners",
